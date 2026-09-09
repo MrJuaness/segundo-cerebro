@@ -10,7 +10,14 @@ Popularmente se le llama "Linux" al sistema operativo completo. Sin embargo, Lin
 
 Historia y origen:
 - En el comienzo, **Richard Stallman** quería construir herramientas que fuesen de código libre construyó muchas aplicaciones dentro de esta capa en un proyecto llamado GNU , que consta de muchas apps q son de código libre tmb llamado código abierto
-- Richard para poder crear un SO completo él tmb necesitaba un kernel, y en ese momento Richard concoció a Linux Torvald, quién estaba creando un kernel de código abierto , y entre los 2 se juntaron y crearon un proyecti llamdo GNU linux.
-- En la actualidad esto ha cambiado , puedes estar usando mucha apps que perte 
-- Para crear un sistema operativo completo necesitaba un kernel, y ahí fue cuando conoció a **Linus Torvalds**, quien estaba creando un kernel de código abierto. Se juntaron y crearon el proyecto GNU/Linux
-Distribuciones ("Sabores" de Linux): son sistemas operativos creados al combinar un conjunto de aplicaciones con el kernel de Linux
+- Richard para poder crear un SO completo él tmb necesitaba un kernel, y en ese momento Richard concoció a Linux Torvald, quién estaba creando un kernel de código abierto , y entre los 2 se juntaron y crearon un proyecti llamdo GNU linux
+- En la actualidad esto ha cambiado , puedes estar usando muchasapps que pertenecen al proyecto GNU , y tmb otras que no , en conjunto con el kernel de Linux, para poder crearte tú tu propio SO. 
+- A estos SOs que usan Linux como su kernel se les concoe como Distribuiones o Sabores de Linux
+	- Entonces nosotros podemos tomar un grupo de apps A + el kernel de Linux, y así crear una distribución 
+	- EN otro lado tenemos un grupo de apps las B y las vamos ajuntar tmb con el kernel de Linux y crearíamos otra distribución bajo el nomer de por ejemplo chanchito Feliz
+- Distribuiones más usadas: Debian, Fedora, Ubunut, Linux Mint
+- Y si te gusta el hacking : kali linux, Parrot OS, 
+- Para nuestro curso usaremos Ubuntu
+- Con código libre puedea hacer lo que quieras.
+
+Empresas que mantienen distribuciones:Canonical (Ubuntu), Oracle (Oracle Linux/Solaris), Novell (SUSE) 
