@@ -11,10 +11,14 @@
             "id": "ba5dd5a9121f9450",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "VM-Ubuntu-Desktop/LINUX.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "LINUX"
             }
           }
         ]
@@ -187,9 +191,11 @@
   },
   "active": "ba5dd5a9121f9450",
   "lastOpenFiles": [
-    "cree un enlace.md",
     "Bienvenido.md",
+    "VM-Ubuntu-Desktop/LINUX.md",
     "hola mundo.md",
+    "VM-Ubuntu-Desktop",
+    "cree un enlace.md",
     "README.md"
   ]
 }
