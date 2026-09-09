@@ -17,7 +17,7 @@ Historia y origen:
 	- EN otro lado tenemos un grupo de apps las B y las vamos ajuntar tmb con el kernel de Linux y crearíamos otra distribución bajo el nomer de por ejemplo chanchito Feliz
 - Distribuiones más usadas: Debian, Fedora, Ubunut, Linux Mint
 - Y si te gusta el hacking : kali linux, Parrot OS, 
-- Para nuestro curso usaremos Ubuntu
-- Con código libre puedea hacer lo que quieras.
+- Para nuestro curso usaremos Ubuntu mantenida por Canonical
+- Con código libre puedes hacer lo que quieras, modificarlo, redistribuirlo , etc
 
 Empresas que mantienen distribuciones:Canonical (Ubuntu), Oracle (Oracle Linux/Solaris), Novell (SUSE) 
