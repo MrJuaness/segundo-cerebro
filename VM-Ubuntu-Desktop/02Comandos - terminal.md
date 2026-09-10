@@ -3,6 +3,10 @@ Interactuaremos con la linea de comandos , la CLI (Interfaz de Línea de comando
 	- ![[pwd.png]]
 	- /home/usuario1 , el directorio home almacena a los usuarios 
 	- /usuario1, es el directorio que almacena todos los datos del ususario1
-- listar todos los directorios y archivos q se encuentran dentro de nuestro direcorio usuario1
+- ls (listar todos los directorios y archivos q se encuentran dentro de nuestro direcorio usuario1) "list"
 	- ![[ls.png]]
-	- Esto lo podemos ver en el explorador de archivos 
+	- Esto  tmabién lo podemos ver en el explorador de archivos 
+		- ![[explorador de archivos.png]]
+- ls -al (listar todos los directorios y archivos q se encuentran dentro de nuestr odirectorio usuario1, pero quiero ver un listado con más información )
+	- ![[Pasted image 20260910001306.png]]
+	- a la izquieerda los permisos, después 
