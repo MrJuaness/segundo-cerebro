@@ -9,4 +9,5 @@ Interactuaremos con la linea de comandos , la CLI (Interfaz de Línea de comando
 		- ![[explorador de archivos.png]]
 - ls -al (listar todos los directorios y archivos q se encuentran dentro del odirectorio usuario1, pero quiero ver un listado con más información )
 	- ![[Pasted image 20260910001306.png]]
-	- a la izquieerda los permisos, después 
+	- Permisos y tipo (-rw-rw-r--):)
+		- El primer
