@@ -8,6 +8,5 @@ Interactuaremos con la linea de comandos , la CLI (Interfaz de Línea de comando
 	- Esto  tmabién lo podemos ver en el explorador de archivos 
 		- ![[explorador de archivos.png]]
 - ls -al (listar todos los directorios y archivos q se encuentran dentro del odirectorio usuario1, pero quiero ver un listado con más información )
-	- ![[Pasted image 20260910001306.png]]
-	- Permisos y tipo (-rw-rw-r--):)
-		- El primer
+	- El comando `ls -al` le pide al sistema: **"Muestra la lista (`ls`) de todos los archivos (`a` de ALL, incluidos los ocultos) en formato detallado (`l` de LONG)"**![[Pasted image 20260910001306.png]]
+	- 
