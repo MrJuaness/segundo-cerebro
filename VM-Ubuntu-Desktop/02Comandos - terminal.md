@@ -9,7 +9,7 @@ Interactuaremos con la linea de comandos , la CLI (Interfaz de Línea de comando
 		- ![[explorador de archivos.png]]
 - ls -al (listar todos los directorios y archivos q se encuentran dentro del odirectorio usuario1, pero quiero ver un listado con más información )
 	- El comando `ls -al` le pide al sistema: **"Muestra la lista (`ls`) de todos los archivos (`a` de ALL, incluidos los ocultos) en formato detallado (`l` de LONG)"**![[Pasted image 20260910001306.png]]
-	- #### 1. El encabezado y las columnas
+	- #### 1.El encabezado y las columnas
 	- En la primera línea **`total 88`**, indica el bloque de espacio en disco (en kilobytes aproximados) que ocupan las entradas del directorio.
 	- Vemos elementos organizados en **7 columnas principales**.Por ej; la línea `mi_ip.txt`:-rw-rw-r-- 1 usuario1 usuario1 881 Sep 9 08:11 mi_ip.txt
 		- 1. **Permisos y Tipo (`-rw-rw-r--`):**
@@ -32,17 +32,11 @@ Interactuaremos con la linea de comandos , la CLI (Interfaz de Línea de comando
 	- #### Los archivos y carpetas ocultas (empiezan con un `.`)
 	- En Linux, cualquier archivo que empiece con un punto está oculto a la vista normal para no molestar la navegación diaria. Guardan configuraciones de tu usuario:
 		- - **`.bash_history`:** Guarda el historial de todos los comandos que has escrito en la terminal.
-	- **`.bash_logout`:** Contiene instrucciones que se ejecutan cuando cierras sesión en la terminal.
-	- **`.bashrc`:** Guarda configuraciones personalizadas de tu terminal (como colores, accesos directos, etc.).
-	    
-	- **`.cache`:** Guarda datos temporales de aplicaciones para que carguen más rápido.
-	    
-	- **`.config`:** Guarda las configuraciones personales de tus aplicaciones de escritorio.
-	    
-	- **`.gnupg`:** Carpeta donde se guardan llaves de seguridad y firmas digitales (GPG).
-	    
-	- **`.local`:** Contiene datos y configuraciones específicas del usuario (como aplicaciones instaladas solo para ti o carpetas de estado).
-	    
-	- **`.profile`:** Se ejecuta al iniciar sesión para configurar tus variables de entorno globales.
-	    
-	- **`.ssh`:** Guarda las claves de seguridad para conectarte por SSH a otros servidores.
+		- **`.bash_logout`:** Contiene instrucciones que se ejecutan cuando cierras sesión en la terminal.
+		- **`.bashrc`:** Guarda configuraciones personalizadas de tu terminal (como colores, accesos directos, etc.)
+		- **`.cache`:** Guarda datos temporales de aplicaciones para que carguen más rápido.
+		- **`.config`:** Guarda las configuraciones personales de tus aplicaciones de escritorio.
+		- **`.gnupg`:** Carpeta donde se guardan llaves de seguridad y firmas digitales (GPG).
+		- **`.local`:** Contiene datos y configuraciones específicas del usuario (como aplicaciones instaladas solo para ti o carpetas de estado).
+		- **`.profile`:** Se ejecuta al iniciar sesión para configurar tus variables de entorno globales.
+		- **`.ssh`:** Guarda las claves de seguridad para conectarte por SSH a otros servidores.
