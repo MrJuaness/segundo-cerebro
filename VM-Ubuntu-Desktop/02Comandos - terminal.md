@@ -9,4 +9,20 @@ Interactuaremos con la linea de comandos , la CLI (Interfaz de Línea de comando
 		- ![[explorador de archivos.png]]
 - ls -al (listar todos los directorios y archivos q se encuentran dentro del odirectorio usuario1, pero quiero ver un listado con más información )
 	- El comando `ls -al` le pide al sistema: **"Muestra la lista (`ls`) de todos los archivos (`a` de ALL, incluidos los ocultos) en formato detallado (`l` de LONG)"**![[Pasted image 20260910001306.png]]
-	- 
+	- #### 1. El encabezado y las columnas
+	- En la primera línea **`total 88`**, indica el bloque de espacio en disco (en kilobytes aproximados) que ocupan las entradas del directorio.
+	- Vemos elementos organizados en **7 columnas principales**.Por ej; la línea `mi_ip.txt`:-rw-rw-r-- 1 usuario1 usuario1 881 Sep 9 08:11 mi_ip.txt
+		- 1. **Permisos y Tipo (`-rw-rw-r--`):**
+			- **El primer carácter** indica qué es:
+				- `d` = **Directorio** (una carpeta en windows).
+				- `-` = **Archivo normal**.
+			- **Los siguientes 9 caracteres** indican los permisos divididos en 3 grupos de 3 (Lectura `r`, Escritura `w`, Ejecución `x`):
+				- Primeros 3 (`rw-`): Lo que tú (**Propietario**) puedes hacer.
+				- Segundos 3 (`rw-`): Lo que tu **Grupo** puede hacer.
+				- Últimos 3 (`r--`): Lo que **Otros usuarios** pueden hacer.
+		- 2.**Número de enlaces (`1` o `2`, etc.):** Para archivos indica cuántos enlaces tiene. Para carpetas indica cuántas subcarpetas contiene (incluyendo las ocultas `.` y `..`).
+		- **Propietario (`usuario1`):** El nombre del usuario dueño de la carpeta/archivo.
+		- **Grupo (`usuario1`):** El grupo de usuarios al que pertenece.
+		- **Tamaño (`881`):** El tamaño exacto en **bytes**.
+		- **Fecha y Hora (`Sep 9 08:11`):** La última vez que se modificó ese elemento.
+		- **Nombre del archivo o carpeta (`mi_ip.txt`):** El nombre real del elemento.
