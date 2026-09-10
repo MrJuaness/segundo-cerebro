@@ -21,8 +21,28 @@ Interactuaremos con la linea de comandos , la CLI (Interfaz de Línea de comando
 				- Segundos 3 (`rw-`): Lo que tu **Grupo** puede hacer.
 				- Últimos 3 (`r--`): Lo que **Otros usuarios** pueden hacer.
 		- 2.**Número de enlaces (`1` o `2`, etc.):** Para archivos indica cuántos enlaces tiene. Para carpetas indica cuántas subcarpetas contiene (incluyendo las ocultas `.` y `..`).
-		- **Propietario (`usuario1`):** El nombre del usuario dueño de la carpeta/archivo.
-		- **Grupo (`usuario1`):** El grupo de usuarios al que pertenece.
-		- **Tamaño (`881`):** El tamaño exacto en **bytes**.
-		- **Fecha y Hora (`Sep 9 08:11`):** La última vez que se modificó ese elemento.
-		- **Nombre del archivo o carpeta (`mi_ip.txt`):** El nombre real del elemento.
+		- **3.Propietario (`usuario1`):** El nombre del usuario dueño de la carpeta/archivo.
+		- **4.Grupo (`usuario1`):** El grupo de usuarios al que pertenece.
+		- **6.Tamaño (`881`):** El tamaño exacto en **bytes**.
+		- **7.Fecha y Hora (`Sep 9 08:11`):** La última vez que se modificó ese elemento.
+		- **8.Nombre del archivo o carpeta (`mi_ip.txt`):** El nombre real del elemento.
+	- #### 2.Qué significa cada elemento de tu lista?
+		- - **`.` (Un solo punto):** Representa la carpeta actual en la que estás (`/home/usuario1`).
+		- **`..` (Dos puntos):** Representa la carpeta superior/padre (`/home`). Si haces `cd ..`, subirás a esa carpeta. _(Nota cómo su dueño es `root`, el administrador del sistema)_.
+	- #### Los archivos y carpetas ocultas (empiezan con un `.`)
+	- En Linux, cualquier archivo que empiece con un punto está oculto a la vista normal para no molestar la navegación diaria. Guardan configuraciones de tu usuario:
+		- - **`.bash_history`:** Guarda el historial de todos los comandos que has escrito en la terminal.
+	- **`.bash_logout`:** Contiene instrucciones que se ejecutan cuando cierras sesión en la terminal.
+	- **`.bashrc`:** Guarda configuraciones personalizadas de tu terminal (como colores, accesos directos, etc.).
+	    
+	- **`.cache`:** Guarda datos temporales de aplicaciones para que carguen más rápido.
+	    
+	- **`.config`:** Guarda las configuraciones personales de tus aplicaciones de escritorio.
+	    
+	- **`.gnupg`:** Carpeta donde se guardan llaves de seguridad y firmas digitales (GPG).
+	    
+	- **`.local`:** Contiene datos y configuraciones específicas del usuario (como aplicaciones instaladas solo para ti o carpetas de estado).
+	    
+	- **`.profile`:** Se ejecuta al iniciar sesión para configurar tus variables de entorno globales.
+	    
+	- **`.ssh`:** Guarda las claves de seguridad para conectarte por SSH a otros servidores.
