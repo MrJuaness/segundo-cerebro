@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "VM-Ubuntu-Desktop/01LINUX.md",
+                "file": "VM-Ubuntu-Desktop/02Comandos - terminal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01LINUX"
+              "title": "02Comandos - terminal"
             }
           }
         ]
@@ -191,16 +191,16 @@
   },
   "active": "ba5dd5a9121f9450",
   "lastOpenFiles": [
-    "VM-Ubuntu-Desktop/02Comandos - terminal.md",
-    "VM-Ubuntu-Desktop/ls -al.png",
     "VM-Ubuntu-Desktop/explorador de archivos.png",
+    "VM-Ubuntu-Desktop/02Comandos - terminal.md",
+    "VM-Ubuntu-Desktop/01LINUX.md",
+    "VM-Ubuntu-Desktop/ls -al.png",
     "VM-Ubuntu-Desktop/ls.png",
     "Pasted image 20260910000419.png",
     "Pasted image 20260910000409.png",
     "Pasted image 20260910000403.png",
     "VM-Ubuntu-Desktop/pwd.png",
     "VM-Ubuntu-Desktop/Pasted image 20260910000227.png",
-    "VM-Ubuntu-Desktop/01LINUX.md",
     "Bienvenido.md",
     "hola mundo.md",
     "VM-Ubuntu-Desktop",
