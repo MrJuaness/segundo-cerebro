@@ -26,8 +26,8 @@ Interactuaremos con la linea de comandos , la CLI (Interfaz de Línea de comando
 		- **6.Tamaño (`881`):** El tamaño exacto en **bytes**.
 		- **7.Fecha y Hora (`Sep 9 08:11`):** La última vez que se modificó ese elemento.
 		- **8.Nombre del archivo o carpeta (`mi_ip.txt`):** El nombre real del elemento.
-	- #### 2.Qué significa cada elemento de tu lista?
-		- - **`.` (Un solo punto):** Representa la carpeta actual en la que estás (`/home/usuario1`).
+	- #### 2.Qué es cada elemento de tu lista?
+		- **`.` (Un punto):** Representa la carpeta actual en la que estás (`/home/usuario1`).
 		- **`..` (Dos puntos):** Representa la carpeta superior/padre (`/home`). Si haces `cd ..`, subirás a esa carpeta. _(Nota cómo su dueño es `root`, el administrador del sistema)_.
 	- #### 3.Los archivos y carpetas ocultas (empiezan con un `.`)
 	- En Linux, cualquier archivo que empiece con un punto está oculto a la vista normal para no molestar la navegación diaria. Guardan configuraciones de tu usuario:
