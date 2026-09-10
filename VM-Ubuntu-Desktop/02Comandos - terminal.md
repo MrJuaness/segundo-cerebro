@@ -45,6 +45,6 @@ Interactuaremos con la linea de comandos , la CLI (Interfaz de Línea de comando
 		- **`escargas`**, **`Documentos`**, **`Escritorio`**, **`Imágenes`**, **`Música`**, **`Plantillas`**, **`Público`**, **`Vídeos`**.
 		- **`snap`:** Carpeta donde la tienda de Ubuntu guarda configuraciones de las aplicaciones instaladas mediante paquetes Snap.
 	- #### 5.Tus archivos propios (creados por ti o por un proceso)
-		- - **`mi_ip.txt`:** Un archivo de texto plano de 881 bytes (probablemente donde guardaste la dirección IP de tu máquina).
+		- **`mi_ip.txt`:** Un archivo de texto plano de 881 bytes (probablemente donde guardaste la dirección IP de tu máquina).
 		- **`registro.log`:** Un archivo de registro (log) de 32 bytes con eventos o texto guardado.
 		- Para confirmar si el contenido de algún archivo es el correcto, puedes revisarlo directamente usando la terminal. ¿Te gustaría saber cómo ver o editar el contenido de estos archivos desde la terminal?
