@@ -8,7 +8,7 @@ Interactuaremos con la linea de comandos , la CLI (Interfaz de Línea de comando
 	- Esto  tmabién lo podemos ver en el explorador de archivos 
 		- ![[explorador de archivos.png]]
 - ls -al (listar todos los directorios y archivos q se encuentran dentro del odirectorio usuario1, pero quiero ver un listado con más información )
-	- El comando `ls -al` le pide al sistema: **"Muestra la lista (`ls`) de todos los archivos (`a` de ALL, incluidos los ocultos) en formato detallado (`l` de LONG)"**![[Pasted image 20260910001306.png]]
+	- El comando `ls -al` le pide al sistema: **"Muestra la lista (`ls`) de todos los archivos (`a` de ALL, incluidos los ocultos) en formato detallado (`l` de LONG)"**![[ls -al.png]]
 	- #### 1.El encabezado y las columnas
 	- En la primera línea **`total 88`**, indica el bloque de espacio en disco (en kilobytes aproximados) que ocupan las entradas del directorio.
 	- Vemos elementos organizados en **7 columnas principales**.Por ej; la línea `mi_ip.txt`:-rw-rw-r-- 1 usuario1 usuario1 881 Sep 9 08:11 mi_ip.txt
@@ -29,7 +29,7 @@ Interactuaremos con la linea de comandos , la CLI (Interfaz de Línea de comando
 	- #### 2.Qué significa cada elemento de tu lista?
 		- - **`.` (Un solo punto):** Representa la carpeta actual en la que estás (`/home/usuario1`).
 		- **`..` (Dos puntos):** Representa la carpeta superior/padre (`/home`). Si haces `cd ..`, subirás a esa carpeta. _(Nota cómo su dueño es `root`, el administrador del sistema)_.
-	- #### Los archivos y carpetas ocultas (empiezan con un `.`)
+	- #### 3.Los archivos y carpetas ocultas (empiezan con un `.`)
 	- En Linux, cualquier archivo que empiece con un punto está oculto a la vista normal para no molestar la navegación diaria. Guardan configuraciones de tu usuario:
 		- - **`.bash_history`:** Guarda el historial de todos los comandos que has escrito en la terminal.
 		- **`.bash_logout`:** Contiene instrucciones que se ejecutan cuando cierras sesión en la terminal.
@@ -40,3 +40,11 @@ Interactuaremos con la linea de comandos , la CLI (Interfaz de Línea de comando
 		- **`.local`:** Contiene datos y configuraciones específicas del usuario (como aplicaciones instaladas solo para ti o carpetas de estado).
 		- **`.profile`:** Se ejecuta al iniciar sesión para configurar tus variables de entorno globales.
 		- **`.ssh`:** Guarda las claves de seguridad para conectarte por SSH a otros servidores.
+	- #### 4. Las carpetas visibles (en azul)
+		- son tus directorios estándar de escritorio para guardar tu contenido:
+		- **`escargas`**, **`Documentos`**, **`Escritorio`**, **`Imágenes`**, **`Música`**, **`Plantillas`**, **`Público`**, **`Vídeos`**.
+		- **`snap`:** Carpeta donde la tienda de Ubuntu guarda configuraciones de las aplicaciones instaladas mediante paquetes Snap.
+	- #### 5.Tus archivos propios (creados por ti o por un proceso)
+		- - **`mi_ip.txt`:** Un archivo de texto plano de 881 bytes (probablemente donde guardaste la dirección IP de tu máquina).
+		- **`registro.log`:** Un archivo de registro (log) de 32 bytes con eventos o texto guardado.
+		- Para confirmar si el contenido de algún archivo es el correcto, puedes revisarlo directamente usando la terminal. ¿Te gustaría saber cómo ver o editar el contenido de estos archivos desde la terminal?
