@@ -11,10 +11,12 @@
             "id": "ba5dd5a9121f9450",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista gráfica"
+              "type": "pdf",
+              "state": {
+                "file": "cosas para reordenar/practicandoterminal/manual_cli_ubuntu.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "manual_cli_ubuntu"
             }
           }
         ]
