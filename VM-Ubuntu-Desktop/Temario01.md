@@ -6,3 +6,7 @@
 	ls -al combina las 2 anteriores
 ##### ==USAR SIEMPRE TAB para MENOS ERRORES==
 ### Anatomía de "ls -al"
+==**explicación**==
+	
+
+
