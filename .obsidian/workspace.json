@@ -11,12 +11,10 @@
             "id": "ba5dd5a9121f9450",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "cosas para reordenar/practicandoterminal/manual_cli_ubuntu.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "manual_cli_ubuntu"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Vista gráfica"
             }
           }
         ]
@@ -189,14 +187,14 @@
   },
   "active": "ba5dd5a9121f9450",
   "lastOpenFiles": [
+    "cosas para reordenar/practicandoterminal/manual_cli_ubuntu.pdf",
+    "Nueva Carpeta/nota nueva en la carpeta nueva.md",
     "VM-Ubuntu-Desktop/02Comandos - terminal.md",
-    "Sin título.md",
     "Nueva Carpeta",
     "VM-Ubuntu-Desktop/01LINUX.md",
     "VM-Ubuntu-Desktop/VM-fotos/ls -al.png",
     "VM-Ubuntu-Desktop/VM-fotos/ls.png",
     "VM-Ubuntu-Desktop/VM-fotos/explorador de archivos.png",
-    "cosas para reordenar/practicandoterminal/manual_cli_ubuntu.pdf",
     "VM-Ubuntu-Desktop/VM-fotos",
     "cosas para reordenar/practicandoterminal/manual_cli_ubuntu_tema2.pdf",
     "Pasted image 20260910000419.png",
