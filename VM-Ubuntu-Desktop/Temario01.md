@@ -32,7 +32,7 @@
 	**Grupo (`r-x`):** Los miembros del grupo pueden entrar (`x`) y ver lo que hay (`r`), pero **no pueden modificar** ni crear nada (`-` en la posición de escritura)
 	**Otros (`r-x`):** Cualquier otra persona tiene los mismos permisos que el grupo (solo ver y entrar).
 	**Número de enlaces (`2`):** Si aplicamos la regla mágica ($2 - 2 = 0$), nos dice que la carpeta `Desktop` **está totalmente vacía** de subcarpetas en este momento.
-archivo de configuración: `.bashrc` -rw-r--r-- 1 usuario1 usuario1 3771 Feb 13 2026 .bashrc
+**archivo de configuración: `.bashrc`** -rw-r--r-- 1 usuario1 usuario1 3771 Feb 13 2026 .bashrc
 	**Tipo (`-`):** Es un archivo normal (oculto por empezar con punto, encargado de la configuración de la terminal).
 	**Propietario (`rw-`):** Tú puedes leerlo y modificarlo si necesitas cambiar algo de la terminal.
 	**Grupo (`r--`):** Los demás miembros del grupo solo pueden **leerlo** (`r`), pero no pueden alterarlo.
