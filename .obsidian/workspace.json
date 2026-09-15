@@ -83,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "af690bc8942d8fa7",
@@ -191,14 +191,14 @@
   },
   "active": "ba5dd5a9121f9450",
   "lastOpenFiles": [
-    "VM-Ubuntu-Desktop/Temario01.md",
     "VM-Ubuntu-Desktop/Práctica01-CLI-VM-Ubuntu-Desktop.md",
-    "Captura desde 2026-09-09 08-14-09.png",
+    "VM-Ubuntu-Desktop/02Comandos - terminal.md",
     "VM-Ubuntu-Desktop/VM-fotos/permisos.png",
+    "VM-Ubuntu-Desktop/Temario01.md",
+    "Captura desde 2026-09-09 08-14-09.png",
     "VM-Ubuntu-Desktop/Prácticas-terminal",
     "cosas para reordenar/PDFs-terminal/manual_cli_ubuntu.pdf",
     "Nueva Carpeta/nota nueva en la carpeta nueva.md",
-    "VM-Ubuntu-Desktop/02Comandos - terminal.md",
     "Nueva Carpeta",
     "VM-Ubuntu-Desktop/01LINUX.md",
     "VM-Ubuntu-Desktop/VM-fotos/ls -al.png",
