@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Nueva Carpeta/nota nueva en la carpeta nueva.md",
+                "file": "python/CLAUDE-Aprender Python desde cero para ASIR.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nota nueva en la carpeta nueva"
+              "title": "CLAUDE-Aprender Python desde cero para ASIR"
             }
           }
         ]
@@ -189,8 +189,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ba5dd5a9121f9450",
+  "active": "4bb0a85ba2e6e516",
   "lastOpenFiles": [
+    "python/CLAUDE-Aprender Python desde cero para ASIR.md",
+    "python/mouredev.odt",
+    "python/plantillaoficial.odt",
+    "Nueva Carpeta/nota nueva en la carpeta nueva.md",
     "cosas para reordenar/PDFs-terminal/manual_cli_ubuntu_tema2.pdf",
     "cosas para reordenar/PDFs-terminal/manual_cli_ubuntu.pdf",
     "cosas para reordenar/PDFs-terminal/chuleta_terminal_linux_nivel3.pdf",
@@ -202,7 +206,6 @@
     "VM-Ubuntu-Desktop/VM-fotos/permisos.png",
     "Captura desde 2026-09-09 08-14-09.png",
     "VM-Ubuntu-Desktop/Prácticas-terminal",
-    "Nueva Carpeta/nota nueva en la carpeta nueva.md",
     "Nueva Carpeta",
     "VM-Ubuntu-Desktop/01LINUX.md",
     "VM-Ubuntu-Desktop/VM-fotos/ls -al.png",
@@ -216,7 +219,6 @@
     "VM-Ubuntu-Desktop/Pasted image 20260910000227.png",
     "Bienvenido.md",
     "hola mundo.md",
-    "VM-Ubuntu-Desktop",
     "cree un enlace.md",
     "README.md"
   ]
