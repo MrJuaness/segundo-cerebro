@@ -9,14 +9,17 @@ _Verificación:_ Abre la carpeta `Descargas` en tu explorador de archivos y conf
 **2.Instalar el paquete:**Terminal.
 
 Abre la terminal presionando `Ctrl` + `Alt` + `T` e introduce el siguiente comando:
-
 Bash
-
 ```
-sudo apt install ./Descargas/code_*.deb
+sudo apt install ./code_1.138.0-1789458761_amd64.deb
 ```
-
 Ingresa tu contraseña cuando el sistema la solicite y presiona `Enter` para confirmar.
+![[Captura desde 2026-09-18 22-50-30.png]]
+Selecciona **`<Sí>`** y presiona la tecla **Enter**.
+
+Esto agregará el repositorio oficial de Microsoft a tu sistema, lo que permitirá que Visual Studio Code se actualice automáticamente cada vez que actualices Zorin OS.
+
+Verificación:_ Al presionar **Enter**, la ventana morada desaparecerá y la terminal terminará el proceso de instalación mostrando nuevamente la línea de comandos `admin-net@lab-sec:~/Descargas$`
 
 _Verificación:_ La instalación habrá finalizado correctamente cuando la terminal vuelva a mostrar la línea de comandos sin devolver mensajes de error.
 
