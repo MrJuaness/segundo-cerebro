@@ -11,14 +11,12 @@
             "id": "ba5dd5a9121f9450",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "python/CLAUDE-Aprender Python desde cero para ASIR.md",
-                "mode": "source",
-                "source": false
+                "file": "sistemasOperativos/manualesSOs/ASO_UD5.pdf"
               },
-              "icon": "lucide-file",
-              "title": "CLAUDE-Aprender Python desde cero para ASIR"
+              "icon": "lucide-file-text",
+              "title": "ASO_UD5"
             }
           }
         ]
@@ -189,13 +187,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4bb0a85ba2e6e516",
+  "active": "ba5dd5a9121f9450",
   "lastOpenFiles": [
+    "sistemasOperativos/manualesSOs/ASO_UD4.pdf",
+    "sistemasOperativos/manualesSOs/ASO_UD3.pdf",
+    "sistemasOperativos/manualesSOs/ASO_UD2.pdf",
+    "sistemasOperativos/manualesSOs/ASO_UD1.pdf",
+    "python/CLAUDE-Aprender Python desde cero para ASIR.md",
     "sistemasOperativos/manualesSOs",
     "sistemasOperativos",
     "python/Material2ASIR",
     "python/mouredev.pdf",
-    "python/CLAUDE-Aprender Python desde cero para ASIR.md",
     "instalando visual studio/Instalando Visual Studio Code en Zorin OS.md",
     "instalando visual studio/Captura desde 2026-09-18 22-50-30.png",
     "instalando visual studio/Pasted image 20260918225129.png",
@@ -204,11 +206,7 @@
     "instalando visual studio",
     "cosas",
     "python/mouredev.odt",
-    "python/plantillaoficial.odt",
     "Nueva Carpeta/nota nueva en la carpeta nueva.md",
-    "cosas para reordenar/PDFs-terminal/manual_cli_ubuntu_tema2.pdf",
-    "cosas para reordenar/PDFs-terminal/manual_cli_ubuntu.pdf",
-    "cosas para reordenar/PDFs-terminal/chuleta_terminal_linux_nivel3.pdf",
     "VM-Ubuntu-Desktop/Temario01.md",
     "VM-Ubuntu-Desktop/Práctica01-CLI-VM-Ubuntu-Desktop.md",
     "VM-Ubuntu-Desktop/02Comandos - terminal.md",
