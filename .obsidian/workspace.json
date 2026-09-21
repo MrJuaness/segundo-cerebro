@@ -189,8 +189,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ba5dd5a9121f9450",
+  "active": "4bb0a85ba2e6e516",
   "lastOpenFiles": [
+    "sistemasOperativos/manualesSOs",
+    "sistemasOperativos",
+    "python/Material2ASIR",
     "python/mouredev.pdf",
     "python/CLAUDE-Aprender Python desde cero para ASIR.md",
     "instalando visual studio/Instalando Visual Studio Code en Zorin OS.md",
@@ -207,12 +210,10 @@
     "cosas para reordenar/PDFs-terminal/manual_cli_ubuntu.pdf",
     "cosas para reordenar/PDFs-terminal/chuleta_terminal_linux_nivel3.pdf",
     "VM-Ubuntu-Desktop/Temario01.md",
-    "python",
     "VM-Ubuntu-Desktop/Práctica01-CLI-VM-Ubuntu-Desktop.md",
     "VM-Ubuntu-Desktop/02Comandos - terminal.md",
     "VM-Ubuntu-Desktop/VM-fotos/permisos.png",
     "Captura desde 2026-09-09 08-14-09.png",
-    "VM-Ubuntu-Desktop/Prácticas-terminal",
     "VM-Ubuntu-Desktop/01LINUX.md",
     "VM-Ubuntu-Desktop/VM-fotos/ls -al.png",
     "VM-Ubuntu-Desktop/VM-fotos/ls.png",
