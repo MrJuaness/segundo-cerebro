@@ -1,3 +1,6 @@
+## Archivo original
+EL ARCHIVO ORIGINAL TENIA 45 PÁGINAS USAMOS claude sonnet 5 con
+ESFUERZO EXTRA + CAPACIDAD DE PENSAMIENTO
 ## Lo que le pedimos a Gemini: 
 - soy estudiante de 2º de ASIR, cómo le puedo pedir a claude que explique de forma fácil de entender y aprender este tema 1 , sin olvidarse de nada, el objetivo es dominar de forma super fácil lo que tengo que saber hacer y aprender , necesito una explicación de todo el tema sin olvidarse de nada haciendo que lo difícil sea fácil, un resumen del cual le vamos a pedir preguntas de ese resumen en formato .PDF o que me lo cree en .DOCX el que mejor sea para las IAs, el objetivo es conseguir que lo importante de ese PDF que te he pasado lo explique todo en menos páginas sin olvidarse ni dejarse nada, todo en formato super estrecho, letra como mucho tamaño 10.5, estilo chuleta examen, pero que tenga sentido , QUE NO SEAN FRASES O PÁRRAFOS SUELTOS, usando las palabras técnicas que piden para aprender de la forma correcta y traducido para que sea todo entendible , saber qué es cada cosa
 - ### lo que responde:
