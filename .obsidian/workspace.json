@@ -37,14 +37,12 @@
             "id": "4e90acad077cf912",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "2ASIR/IAW-0376 2ºASIR/IAW --> IMPLANTACIÓN DE APLICACIONES WEB - 0376 2º ASIR MONCLOA ONLINE.md",
-                "mode": "source",
-                "source": false
+                "file": "2ASIR/IAW-0376 2ºASIR/Chuleta_IAW_UD1.pdf"
               },
-              "icon": "lucide-file",
-              "title": "IAW --> IMPLANTACIÓN DE APLICACIONES WEB - 0376 2º ASIR MONCLOA ONLINE"
+              "icon": "lucide-file-text",
+              "title": "Chuleta_IAW_UD1"
             }
           }
         ],
@@ -218,9 +216,9 @@
   },
   "active": "4e90acad077cf912",
   "lastOpenFiles": [
+    "2ASIR/IAW-0376 2ºASIR/IAW --> IMPLANTACIÓN DE APLICACIONES WEB - 0376 2º ASIR MONCLOA ONLINE.md",
     "cosas/instalando visual studio/Instalando Visual Studio Code en Zorin OS.md",
     "cosas/instalando visual studio/Captura desde 2026-09-18 22-50-30.png",
-    "2ASIR/IAW-0376 2ºASIR/IAW --> IMPLANTACIÓN DE APLICACIONES WEB - 0376 2º ASIR MONCLOA ONLINE.md",
     "2ASIR",
     "2ASIR/sistemasOperativos/manualesSOs/El prompt de SOS.md",
     "2ASIR/IAW-0376 2ºASIR",
