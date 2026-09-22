@@ -1,6 +1,6 @@
 
 ## T1SRI_EUROFORMAC
-- [[SRI_UD1.pdf]]
+- ![[SRI_UD1.pdf]]
 ## T1SRI MI RESUMEN
 - ![[SRI_T1.odt]]
 ## T1SRI CLAUDE

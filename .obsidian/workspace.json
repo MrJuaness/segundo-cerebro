@@ -11,17 +11,28 @@
             "id": "8f5a8e9e45ec1b96",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "2ASIR/03_SRI-0375 2ºASIR/Res03_SRI/Enlace.md",
-                "mode": "source",
-                "source": false
+                "file": "2ASIR/03_SRI-0375 2ºASIR/DNS_de_cero_a_experto_Unidad1.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Enlace"
+              "icon": "lucide-file-text",
+              "title": "DNS_de_cero_a_experto_Unidad1"
+            }
+          },
+          {
+            "id": "ad9f7b00fc96b2c0",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "SRI_UD1"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -83,7 +94,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "af690bc8942d8fa7",
@@ -189,51 +201,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "floating": {
-    "id": "51aef8f96bd3b1fb",
-    "type": "floating",
-    "children": [
-      {
-        "id": "a00897e3e728611e",
-        "type": "window",
-        "children": [
-          {
-            "id": "a7a31bcb8dc39a0e",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "173ebe07c8d8ed1d",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "SRI_UD1"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 962,
-        "y": 4,
-        "width": 954,
-        "height": 1020,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "8f5a8e9e45ec1b96",
+  "active": "ad9f7b00fc96b2c0",
   "lastOpenFiles": [
+    "2ASIR/03_SRI-0375 2ºASIR/DNS_de_cero_a_experto_Unidad1.pdf",
     "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf",
-    "2ASIR/03_SRI-0375 2ºASIR/Res03_SRI/Enlace.md",
+    "2ASIR/03_SRI-0375 2ºASIR/01links_SRI.md",
     "2ASIR/lu151478p9iy.tmp",
     "2ASIR/SRI_T1.odt",
     "2ASIR/plantillaoficial.odt",
-    "2ASIR/03_SRI-0375 2ºASIR/Res03_SRI/DNS_de_cero_a_experto_Unidad1.pdf",
     "2ASIR/03_SRI-0375 2ºASIR/Res03_SRI",
     "2ASIR/sistemasOperativos/manualesSOs/El prompt de SOS.md",
     "2ASIR/sistemasOperativos/manualesSOs/ASO_UD5.pdf",
