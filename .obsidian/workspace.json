@@ -8,15 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4e90acad077cf912",
+            "id": "89d428f3a7589269",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf"
+                "file": "2ASIR/03_SRI-0375 2ºASIR/Res03_SRI/Enlace.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "SRI_UD1"
+              "icon": "lucide-file",
+              "title": "Enlace"
             }
           }
         ]
@@ -187,12 +189,53 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4bb0a85ba2e6e516",
+  "floating": {
+    "id": "51aef8f96bd3b1fb",
+    "type": "floating",
+    "children": [
+      {
+        "id": "a00897e3e728611e",
+        "type": "window",
+        "children": [
+          {
+            "id": "a7a31bcb8dc39a0e",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "173ebe07c8d8ed1d",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "SRI_UD1"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 962,
+        "y": 4,
+        "width": 954,
+        "height": 1020,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "89d428f3a7589269",
   "lastOpenFiles": [
+    "2ASIR/SRI_T1.odt",
+    "2ASIR/plantillaoficial.odt",
+    "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf",
+    "2ASIR/03_SRI-0375 2ºASIR/Res03_SRI/Enlace.md",
+    "2ASIR/03_SRI-0375 2ºASIR/Res03_SRI/DNS_de_cero_a_experto_Unidad1.pdf",
     "2ASIR/03_SRI-0375 2ºASIR/Res03_SRI",
     "2ASIR/sistemasOperativos/manualesSOs/El prompt de SOS.md",
     "2ASIR/sistemasOperativos/manualesSOs/ASO_UD5.pdf",
-    "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf",
     "cosas/VM-Ubuntu-Desktop/Temario01.md",
     "cosas/VM-Ubuntu-Desktop/Práctica01-CLI-VM-Ubuntu-Desktop.md",
     "cosas/VM-Ubuntu-Desktop/02Comandos - terminal.md",
@@ -205,9 +248,6 @@
     "2ASIR/04_IAW-0376 2ºASIR/IAW --> IMPLANTACIÓN DE APLICACIONES WEB - 0376 2º ASIR MONCLOA ONLINE.md",
     "cosas/instalando visual studio/Instalando Visual Studio Code en Zorin OS.md",
     "cosas/instalando visual studio/Captura desde 2026-09-18 22-50-30.png",
-    "2ASIR",
-    "2ASIR/04_IAW-0376 2ºASIR",
-    "2ASIR/sistemasOperativos/ASO_UD1_Chuleta_Servidores_Directorio.pdf",
     "cosas/python/CLAUDE-Aprender Python desde cero para ASIR.md",
     "cosas/instalando visual studio/Pasted image 20260918225129.png",
     "cosas/instalando visual studio/Pasted image 20260918224236.png",
