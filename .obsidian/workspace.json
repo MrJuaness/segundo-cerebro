@@ -37,14 +37,12 @@
             "id": "4e90acad077cf912",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "cosas/VM-Ubuntu-Desktop/Temario01.md",
-                "mode": "source",
-                "source": false
+                "file": "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Temario01"
+              "icon": "lucide-file-text",
+              "title": "SRI_UD1"
             }
           }
         ],
@@ -218,6 +216,7 @@
   },
   "active": "4e90acad077cf912",
   "lastOpenFiles": [
+    "cosas/VM-Ubuntu-Desktop/Temario01.md",
     "cosas/VM-Ubuntu-Desktop/Práctica01-CLI-VM-Ubuntu-Desktop.md",
     "cosas/VM-Ubuntu-Desktop/02Comandos - terminal.md",
     "cosas/VM-Ubuntu-Desktop/01LINUX.md",
@@ -240,7 +239,6 @@
     "cosas/instalando visual studio/Pasted image 20260918224236.png",
     "Pasted image 20260918224159.png",
     "Nueva Carpeta/nota nueva en la carpeta nueva.md",
-    "cosas/VM-Ubuntu-Desktop/Temario01.md",
     "cosas/VM-Ubuntu-Desktop/VM-fotos/permisos.png",
     "Captura desde 2026-09-09 08-14-09.png",
     "cosas/VM-Ubuntu-Desktop/VM-fotos/ls -al.png",
