@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "89d428f3a7589269",
+            "id": "8f5a8e9e45ec1b96",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -226,12 +226,13 @@
       }
     ]
   },
-  "active": "89d428f3a7589269",
+  "active": "8f5a8e9e45ec1b96",
   "lastOpenFiles": [
-    "2ASIR/SRI_T1.odt",
-    "2ASIR/plantillaoficial.odt",
     "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf",
     "2ASIR/03_SRI-0375 2ºASIR/Res03_SRI/Enlace.md",
+    "2ASIR/lu151478p9iy.tmp",
+    "2ASIR/SRI_T1.odt",
+    "2ASIR/plantillaoficial.odt",
     "2ASIR/03_SRI-0375 2ºASIR/Res03_SRI/DNS_de_cero_a_experto_Unidad1.pdf",
     "2ASIR/03_SRI-0375 2ºASIR/Res03_SRI",
     "2ASIR/sistemasOperativos/manualesSOs/El prompt de SOS.md",
@@ -243,8 +244,6 @@
     "cosas/cosas para reordenar/PDFs-terminal/manual_cli_ubuntu_tema2.pdf",
     "cosas/cosas para reordenar/PDFs-terminal/manual_cli_ubuntu.pdf",
     "cosas/cosas para reordenar/PDFs-terminal/chuleta_terminal_linux_nivel3.pdf",
-    "2ASIR/04_IAW-0376 2ºASIR/Chuleta_IAW_UD1.pdf",
-    "2ASIR/03_SRI-0375 2ºASIR",
     "2ASIR/04_IAW-0376 2ºASIR/IAW --> IMPLANTACIÓN DE APLICACIONES WEB - 0376 2º ASIR MONCLOA ONLINE.md",
     "cosas/instalando visual studio/Instalando Visual Studio Code en Zorin OS.md",
     "cosas/instalando visual studio/Captura desde 2026-09-18 22-50-30.png",
