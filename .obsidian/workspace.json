@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "2ASIR/03_SRI-0375 2ºASIR/DNS_de_cero_a_experto_Unidad1.pdf"
+                "file": "cosas/python/mouredev.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "DNS_de_cero_a_experto_Unidad1"
+              "title": "mouredev"
             }
           },
           {
@@ -31,8 +31,7 @@
               "title": "SRI_UD1"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -94,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "af690bc8942d8fa7",
@@ -201,13 +199,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ad9f7b00fc96b2c0",
+  "active": "8f5a8e9e45ec1b96",
   "lastOpenFiles": [
+    "cosas/python/CLAUDE-Aprender Python desde cero para ASIR.md",
+    "2ASIR/03_SRI-0375 2ºASIR/DNS_de_cero_a_experto_Unidad1.pdf",
+    "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf",
     "2ASIR/lu155858uub3.tmp",
     "2ASIR/lu155858uub0.tmp",
     "2ASIR/lu155858uuab.tmp",
-    "2ASIR/03_SRI-0375 2ºASIR/DNS_de_cero_a_experto_Unidad1.pdf",
-    "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf",
     "2ASIR/03_SRI-0375 2ºASIR/01links_SRI.md",
     "2ASIR/lu151478p9iy.tmp",
     "2ASIR/SRI_T1.odt",
@@ -219,11 +218,9 @@
     "cosas/VM-Ubuntu-Desktop/Práctica01-CLI-VM-Ubuntu-Desktop.md",
     "cosas/VM-Ubuntu-Desktop/02Comandos - terminal.md",
     "cosas/VM-Ubuntu-Desktop/01LINUX.md",
-    "cosas/cosas para reordenar/PDFs-terminal/manual_cli_ubuntu_tema2.pdf",
     "2ASIR/04_IAW-0376 2ºASIR/IAW --> IMPLANTACIÓN DE APLICACIONES WEB - 0376 2º ASIR MONCLOA ONLINE.md",
     "cosas/instalando visual studio/Instalando Visual Studio Code en Zorin OS.md",
     "cosas/instalando visual studio/Captura desde 2026-09-18 22-50-30.png",
-    "cosas/python/CLAUDE-Aprender Python desde cero para ASIR.md",
     "cosas/instalando visual studio/Pasted image 20260918225129.png",
     "cosas/instalando visual studio/Pasted image 20260918224236.png",
     "Pasted image 20260918224159.png",
