@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "cosas/python/mouredev.pdf"
+                "file": "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "mouredev"
+              "title": "SRI_UD1"
             }
           },
           {
@@ -201,19 +201,19 @@
   },
   "active": "8f5a8e9e45ec1b96",
   "lastOpenFiles": [
-    "cosas/python/CLAUDE-Aprender Python desde cero para ASIR.md",
+    "2ASIR/03_SRI-0375 2ºASIR/01links_SRI.md",
     "2ASIR/03_SRI-0375 2ºASIR/DNS_de_cero_a_experto_Unidad1.pdf",
     "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf",
+    "cosas/python/mouredev.pdf",
+    "cosas/python/CLAUDE-Aprender Python desde cero para ASIR.md",
     "2ASIR/lu155858uub3.tmp",
     "2ASIR/lu155858uub0.tmp",
     "2ASIR/lu155858uuab.tmp",
-    "2ASIR/03_SRI-0375 2ºASIR/01links_SRI.md",
     "2ASIR/lu151478p9iy.tmp",
     "2ASIR/SRI_T1.odt",
     "2ASIR/plantillaoficial.odt",
     "2ASIR/03_SRI-0375 2ºASIR/Res03_SRI",
     "2ASIR/sistemasOperativos/manualesSOs/El prompt de SOS.md",
-    "2ASIR/sistemasOperativos/manualesSOs/ASO_UD5.pdf",
     "cosas/VM-Ubuntu-Desktop/Temario01.md",
     "cosas/VM-Ubuntu-Desktop/Práctica01-CLI-VM-Ubuntu-Desktop.md",
     "cosas/VM-Ubuntu-Desktop/02Comandos - terminal.md",
