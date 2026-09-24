@@ -4,31 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "2c86995ba5cb2494",
+        "id": "cccf4c48b3756721",
         "type": "tabs",
         "children": [
           {
-            "id": "8f5a8e9e45ec1b96",
+            "id": "7d5f37cbabbde9f7",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "SRI_UD1"
-            }
-          },
-          {
-            "id": "ad9f7b00fc96b2c0",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "SRI_UD1"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -199,11 +185,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8f5a8e9e45ec1b96",
+  "active": "7d5f37cbabbde9f7",
   "lastOpenFiles": [
-    "2ASIR/03_SRI-0375 2ºASIR/01links_SRI.md",
-    "2ASIR/03_SRI-0375 2ºASIR/DNS_de_cero_a_experto_Unidad1.pdf",
     "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf",
+    "2ASIR/03_SRI-0375 2ºASIR/DNS_de_cero_a_experto_Unidad1.pdf",
+    "2ASIR/03_SRI-0375 2ºASIR/01links_SRI.md",
     "cosas/python/mouredev.pdf",
     "cosas/python/CLAUDE-Aprender Python desde cero para ASIR.md",
     "2ASIR/lu155858uub3.tmp",
