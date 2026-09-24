@@ -11,12 +11,14 @@
             "id": "7d5f37cbabbde9f7",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf"
+                "file": "2ASIR/02_ASGBD-0377 2ºASIR/01links_ASGBD.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "ASGBD_UD1"
+              "icon": "lucide-file",
+              "title": "01links_ASGBD"
             }
           }
         ]
@@ -187,14 +189,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7d5f37cbabbde9f7",
+  "active": "4bb0a85ba2e6e516",
   "lastOpenFiles": [
+    "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf",
     "2ASIR/02_ASGBD-0377 2ºASIR/01links_ASGBD.md",
     "2ASIR/02_ASGBD-0377 2ºASIR/lu796720zr5.tmp",
     "2ASIR/02_ASGBD-0377 2ºASIR/lu796720zr2.tmp",
     "2ASIR/02_ASGBD-0377 2ºASIR/mi_resumen_deT1_ASGBD_EUROFORMAC.odt",
     "2ASIR/02_ASGBD-0377 2ºASIR/pythonw3schools.odt",
-    "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf",
     "2ASIR/03_SRI-0375 2ºASIR/01links_SRI.md",
     "2ASIR/02_ASGBD-0377 2ºASIR",
     "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf",
