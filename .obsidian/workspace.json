@@ -11,14 +11,12 @@
             "id": "7d5f37cbabbde9f7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "2ASIR/02_ASGBD-0377 2ºASIR/01links_ASGBD.md",
-                "mode": "source",
-                "source": false
+                "file": "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf"
               },
-              "icon": "lucide-file",
-              "title": "01links_ASGBD"
+              "icon": "lucide-file-text",
+              "title": "ASGBD_UD1"
             }
           }
         ]
@@ -189,10 +187,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4bb0a85ba2e6e516",
+  "active": "7d5f37cbabbde9f7",
   "lastOpenFiles": [
-    "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf",
     "2ASIR/02_ASGBD-0377 2ºASIR/01links_ASGBD.md",
+    "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf",
     "2ASIR/02_ASGBD-0377 2ºASIR/lu796720zr5.tmp",
     "2ASIR/02_ASGBD-0377 2ºASIR/lu796720zr2.tmp",
     "2ASIR/02_ASGBD-0377 2ºASIR/mi_resumen_deT1_ASGBD_EUROFORMAC.odt",
