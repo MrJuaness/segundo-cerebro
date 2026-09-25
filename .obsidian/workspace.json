@@ -11,12 +11,14 @@
             "id": "7d5f37cbabbde9f7",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf"
+                "file": "2ASIR/02_ASGBD-0377 2ºASIR/T1 CLAUDE ASGB, esta explicación la dió claude apartir de mi documento resumen del PDFT1 de ASGBD.Hasta el punto ...1.3. usuarios...md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "ASGBD_UD1"
+              "icon": "lucide-file",
+              "title": "T1 CLAUDE ASGB, esta explicación la dió claude apartir de mi documento resumen del PDFT1 de ASGBD.Hasta el punto ...1.3. usuarios.."
             }
           }
         ]
@@ -189,8 +191,9 @@
   },
   "active": "7d5f37cbabbde9f7",
   "lastOpenFiles": [
-    "2ASIR/02_ASGBD-0377 2ºASIR/01links_ASGBD.md",
     "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf",
+    "2ASIR/02_ASGBD-0377 2ºASIR/T1 CLAUDE ASGB, esta explicación la dió claude apartir de mi documento resumen del PDFT1 de ASGBD.Hasta el punto ...1.3. usuarios...md",
+    "2ASIR/02_ASGBD-0377 2ºASIR/01links_ASGBD.md",
     "2ASIR/02_ASGBD-0377 2ºASIR/lu796720zr5.tmp",
     "2ASIR/02_ASGBD-0377 2ºASIR/lu796720zr2.tmp",
     "2ASIR/02_ASGBD-0377 2ºASIR/mi_resumen_deT1_ASGBD_EUROFORMAC.odt",
