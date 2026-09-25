@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2ASIR/05_SOST-1708 2ºASIR/01links_SOST-1708.md",
+                "file": "2ASIR/06_Emple2-1710 2ºASIR/01links_Empleabilidad2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01links_SOST-1708"
+              "title": "01links_Empleabilidad2"
             }
           }
         ]
@@ -189,11 +189,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4bb0a85ba2e6e516",
+  "active": "7d5f37cbabbde9f7",
   "lastOpenFiles": [
-    "06_",
-    "2ASIR/03_SRI-0375 2ºASIR/01links_SRI.md",
     "2ASIR/05_SOST-1708 2ºASIR/01links_SOST-1708.md",
+    "2ASIR/06_Emple2-1710 2ºASIR/01links_Empleabilidad2.md",
+    "2ASIR/03_SRI-0375 2ºASIR/01links_SRI.md",
+    "2ASIR/06_Emple2-1710 2ºASIR",
     "2ASIR/05_SOST-1708 2ºASIR/SOST_UD1.pdf",
     "2ASIR/03_SRI-0375 2ºASIR/DNS_de_cero_a_experto_Unidad1.pdf",
     "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf",
@@ -205,7 +206,6 @@
     "2ASIR/02_ASGBD-0377 2ºASIR/01links_ASGBD.md",
     "2ASIR/02_ASGBD-0377 2ºASIR/lu796720zr5.tmp",
     "2ASIR/02_ASGBD-0377 2ºASIR/lu796720zr2.tmp",
-    "2ASIR/02_ASGBD-0377 2ºASIR/mi_resumen_deT1_ASGBD_EUROFORMAC.odt",
     "cosas/python/CLAUDE-Aprender Python desde cero para ASIR.md",
     "2ASIR/sistemasOperativos/manualesSOs/El prompt de SOS.md",
     "cosas/VM-Ubuntu-Desktop/Temario01.md",
