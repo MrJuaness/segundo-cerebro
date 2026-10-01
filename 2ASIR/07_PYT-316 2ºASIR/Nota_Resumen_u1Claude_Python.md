@@ -431,7 +431,6 @@ Comparan dos valores y devuelven un **booleano**. Son esenciales en `if`, `while
 edad = 18
 mayor = edad >= 18   # True
 ```
-
 ### Operadores lógicos
 Combinan varias condiciones:
 - **`and`** (Y): `True` si **ambas** son verdaderas.
@@ -475,18 +474,13 @@ print(x is y)  # True
 print(x is z)  # False
 ```
 ### Operadores de pertenencia
-
 `in` (existe en) y `not in` (no existe en). Sirven para saber si un valor está dentro de una lista, tupla, diccionario o cualquier colección.
-
 ```python
 frutas = ['manzana', 'pera', 'naranja']
 print('pera' in frutas)   # True
 ```
-
 ### Expresiones
-
 Una **expresión** es una combinación de **valores, variables, operadores y llamadas a funciones** que, al evaluarse, **devuelve un resultado**. Es la unidad mínima de ejecución de un programa. Pueden ser tan simples como una suma o tan complejas como condicionales anidadas con funciones.
-
 ```python
 def es_adulto(edad):
     return edad >= 18
@@ -496,89 +490,61 @@ edad = 20
 mensaje = f"{nombre} es adulto" if es_adulto(edad) else f"{nombre} es menor"
 print(mensaje)
 ```
-
 Paso a paso: `es_adulto(20)` devuelve `True`; como la condición es verdadera, `mensaje` toma el primer texto. (La `f` delante de las comillas permite meter variables dentro del texto con `{}`.) Se imprime: **`Luis es adulto`**.
 
 ---
-
 ## 8. Conversiones de tipo
-
 Aunque Python es dinámicamente tipado, muchas veces hay que **convertir un tipo en otro** para que el programa funcione bien o para evitar errores. Se llama **conversión de tipo** o **type casting**. Pueden ser:
-
 - **Explícitas:** tú indicas el cambio usando funciones como `int()`, `float()`, `str()`...
 - **Implícitas:** Python las hace solo, normalmente cuando puede hacerlo **sin perder datos** (Programar, s.f.).
-
 ### Funciones de conversión
-
 - **`int()`**: convierte un número o una cadena numérica en entero.
-
   ```python
   int('10')     # 10
   int(10.99)    # 10  (se queda con la parte entera; no redondea)
   ```
-
 - **`float()`**: convierte a decimal.
-
   ```python
   float(5)         # 5.0
   float('3.1416')  # 3.1416
   ```
-
 - **`str()`**: convierte **cualquier** dato a texto.
-
   ```python
   str(100)    # '100'
   str(True)   # 'True'
   ```
-
 - **`bool()`**: los valores **vacíos, el cero y `None`** dan `False`; el resto, `True`.
-
   ```python
   bool(0)       # False
   bool('Hola')  # True
   ```
-
 - **`list()`**: convierte cualquier iterable en lista.
-
   ```python
   list('python')   # ['p', 'y', 't', 'h', 'o', 'n']
   ```
-
 - **`tuple()`**: convierte un iterable en tupla.
-
   ```python
   tuple([1, 2, 3])   # (1, 2, 3)
   ```
-
 - **`set()`**: convierte un iterable en conjunto, **eliminando duplicados**.
-
   ```python
   set([1, 2, 2, 3])   # {1, 2, 3}
   ```
-
 ### Conversión implícita
-
 ```python
 a = 5
 b = 2.0
 resultado = a + b   # 7.0 (float)
 ```
-
 Python convierte `a` a `float` antes de sumar, para **preservar la precisión**.
-
 ### El error típico: `ValueError`
-
 Si intentas convertir algo que no se puede, hay error:
-
 ```python
 int('abc')     # Error: ValueError
 float('uno')   # Error: ValueError
 ```
-
 Por eso conviene **validar o limpiar los datos antes** de convertirlos.
-
 ### Conversiones entre estructuras
-
 ```python
 # De lista a cadena
 lista = ['a', 'b', 'c']
@@ -592,51 +558,34 @@ lista = list(cadena)       # ['1', '2', '3', '4']
 dic = {'a': 1, 'b': 2}
 claves = list(dic)         # el PDF indica ['a']
 ```
-
 > **Nota del profe:** el comentario del PDF en la última línea tiene una errata. Como `list(dic)` recoge **todas** las claves, el resultado real es `['a', 'b']`.
-
 ### Verificar el tipo antes de convertir
-
 ```python
 valor = '25'
 if type(valor) == str:
     valor_entero = int(valor)
 ```
-
 Evita errores inesperados, sobre todo con entradas de usuarios o datos externos.
-
 ### Ejemplo práctico: números de un formulario web
-
 ```python
 num1 = '15'
 num2 = '30'
 
 suma = int(num1) + int(num2)   # 45
 ```
-
-**Sin** la conversión, `'15' + '30'` daría `'1530'`: una **concatenación de textos**, no una suma matemática.
-
 ---
-
 ## 9. Comentarios
-
 Los **comentarios** son texto que el **intérprete ignora**. No cambian el comportamiento del código: explican **qué hace, por qué lo hace así o cómo usarlo**. Son cruciales cuando varios desarrolladores trabajan en el mismo proyecto o cuando revisas código después de semanas o meses. Hay dos tipos: **de una sola línea** y **multilínea o de bloque**.
 
 > **Sabías que:** el símbolo `#` viene heredado de lenguajes mucho más antiguos, como el shell script de Unix. Guido van Rossum, creador de Python, lo mantuvo por su simplicidad y familiaridad. Algunos desarrolladores han dejado mensajes graciosos, advertencias misteriosas o hasta poemas en comentarios, "como pequeñas cápsulas del tiempo".
-
 ### Una línea
-
 Empieza con `#`; todo lo que sigue se ignora. Puede ir solo en una línea o al final de una línea de código. Deben ser **claros, concisos y relacionados directamente con el código**.
-
 ```python
 # Este es un comentario de una sola línea
 print("Hola Mundo")  # También se puede comentar al final de una línea de código
 ```
-
 ### Multilínea
-
 Python no tiene sintaxis especial (como `/* */` en C), así que se pone `#` al inicio de **cada línea**:
-
 ```python
 # Este es un comentario
 # que se extiende por
@@ -644,7 +593,6 @@ Python no tiene sintaxis especial (como `/* */` en C), así que se pone `#` al i
 ```
 
 Otra alternativa: **cadenas de varias líneas entre comillas triples** que no se asignan a ninguna variable. Técnicamente **no son comentarios**, y **no es la forma recomendada** de comentar:
-
 ```python
 """
 Este texto no se almacena en ninguna variable.
@@ -652,19 +600,14 @@ Es común usar este tipo de cadenas como comentarios multilínea.
 Sin embargo, no es la forma recomendada para comentar código.
 """
 ```
-
 ### Buenas prácticas
-
 - **Evitar comentar lo obvio.**
 - **Actualizar los comentarios** si cambias el código: uno desactualizado puede ser peor que ninguno.
 - Comentar **el "porqué"** más que el "qué": el código ya muestra lo que hace; el comentario explica la razón de una decisión.
 - Ser **concisos y específicos**.
 - Mantener un **estilo consistente**.
-
 ### En funciones y clases: docstrings + comentarios internos
-
 Lo ideal es usar **docstrings**, complementados con comentarios internos:
-
 ```python
 def calcular_area(base, altura):
     """
@@ -678,34 +621,22 @@ def calcular_area(base, altura):
     """
     return (base * altura) / 2  # Fórmula del área de un triángulo
 ```
-
 El docstring da la **visión general**; el comentario en línea detalla la **lógica matemática**.
-
 ### Cuidado con el exceso
-
 Demasiados comentarios saturan el código y lo hacen difícil de leer. Idealmente el código es tan claro que solo hace falta comentar para: **justificar una solución compleja**, **advertir de un comportamiento inesperado** o **dar contexto adicional**.
-
 ### Deshabilitar líneas temporalmente
-
 Durante el desarrollo puedes "comentar" una línea para desactivarla y probar variantes sin borrarla:
-
 ```python
 # print("Esta línea está deshabilitada temporalmente")
 ```
-
 Antes de la versión final, esas líneas deben **eliminarse o documentarse bien**.
-
 ### Trabajo en equipo
-
 Los comentarios son vitales para **compartir decisiones de diseño**, **advertir sobre dependencias** y **explicar fragmentos que interactúan con otros módulos**:
-
 ```python
 # Esta función se conecta al servicio externo de pagos.
 # No modificar sin consultar con el equipo de backend.
 ```
-
 ### Normas de la PEP 8 para comentarios (van Rossum, 2001)
-
 - Empezar con **mayúscula**.
 - Evitar errores gramaticales u ortográficos.
 - **Un espacio después del `#`**.
