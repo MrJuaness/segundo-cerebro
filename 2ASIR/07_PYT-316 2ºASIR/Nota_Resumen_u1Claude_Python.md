@@ -57,8 +57,7 @@ if __name__ == "__main__":
 ```
 Metes tu código principal dentro de una función `main()`, y solo se llama si el archivo se ejecuta directamente. Así **evitas que el código se ejecute al importar** ese archivo como módulo desde otro proyecto. (Los `...` significan "aquí iría tu código".)
 ### La sangría (indentación)
-En Python **no es opcional: marca los límites de cada bloque**. Según la **PEP 8** (la guía oficial de estilo), se usan **cuatro espacios por nivel**. Y **nunca mezcles espacios y tabulaciones**, porque genera errores difíciles de depurar.
-
+En Python **no es opcional: marca los límites de cada bloque**. Según la **PEP 8** (la guía oficial de estilo), se usan **4 espacios por nivel**.**Nunca mezcles espacios y tabulaciones**, porque crea errores difíciles de depurar.
 ```python
 temperatura = 18
 if temperatura < 20:
@@ -66,32 +65,22 @@ if temperatura < 20:
     print("Pon tu chaqueta")
 print("Programa finalizado")
 ```
-
-Las dos líneas dentro del `if` tienen la misma sangría, así que forman **un único bloque** y solo se ejecutan si la condición se cumple (18 < 20, sí). La tercera línea está pegada al margen, "sale" del bloque y **se ejecuta siempre**.
-
+Las 2 líneas dentro del `if` tienen la misma sangría, así que forman **un único bloque** y solo se ejecutan si la condición se cumple (18 < 20, sí). La tercera línea está pegada al margen, "sale" del bloque y **se ejecuta siempre**.
 ### Funciones
-
-Son bloques etiquetados con **`def`**. Sirven para organizar el flujo y **evitar repetir código**.
-
+Bloques etiquetados con **`def`**, son para organizar el flujo y **evitar repetir código**.
 ```python
 def calcular_area_rectangulo(base, altura):
     """Devuelve el área de un rectángulo."""
     return base * altura
 ```
-
 Buenas prácticas:
-
 - **Nombre descriptivo**, en minúsculas y con guiones bajos.
 - **Parámetros claros** (`base`, `altura`: los datos que recibe).
 - **Docstring** entre triples comillas que explica para qué sirve y cómo se usa.
 - `return` devuelve el resultado.
-
 Las funciones favorecen el principio **DRY (Don't Repeat Yourself, "no te repitas")** y permiten delegar tareas y probarlas de forma aislada.
-
 ### Clases y POO
-
 En proyectos que crecen rápido, la **POO (Programación Orientada a Objetos)** añade estructura:
-
 ```python
 class Vehiculo:
     def __init__(self, marca, modelo):
@@ -101,15 +90,11 @@ class Vehiculo:
     def describir(self):
         return f"{self.marca} {self.modelo}"
 ```
-
 - `__init__` es el **constructor**: recibe parámetros y los guarda como **atributos**.
 - Los **métodos** (como `describir`) usan **`self`** para acceder a los datos de ese objeto concreto (la "instancia").
 - Las clases **encapsulan estado y comportamiento** en entidades coherentes que se pueden combinar, **heredar** y ampliar.
-
 ### Módulos y paquetes
-
 Cuando un archivo no basta, dividimos el proyecto en **módulos** (archivos `.py`) y **paquetes** (carpetas con un `__init__.py`). Esto ayuda a agrupar funcionalidades relacionadas, reducir dependencias cruzadas y acelerar tiempos de compilación e importación.
-
 ```
 mi_aplicacion/
 │
@@ -122,26 +107,18 @@ mi_aplicacion/
     ├── __init__.py
     └── autenticacion.py
 ```
-
 Para usar la clase `Usuario` desde otro sitio:
-
 ```python
 from mi_aplicacion.modelos.usuario import Usuario
 ```
-
 Este esquema refleja la arquitectura y permite a cualquiera localizar rápido cada pieza.
-
 ### Alcance de variables: LEGB
-
-Python maneja **cuatro niveles de alcance**, de dentro hacia fuera:
-
+Python maneja **4 niveles de alcance**, de dentro hacia fuera:
 - **L**ocal: dentro de la función actual.
 - **E**nclosing: funciones que contienen a otra función (niveles intermedios).
 - **G**lobal: el nivel del archivo.
 - **B**uilt-in: lo que Python trae incorporado.
-
 Conocerlos evita errores de "sombra de variables" (que un nombre tape a otro) y el uso indebido de globales.
-
 ```python
 PI = 3.14159  # Global
 
@@ -149,11 +126,8 @@ def calcular_circunferencia(radio):
     # Local (dentro de la función)
     return 2 * PI * radio
 ```
-
 La función puede **leer** `PI` (global). Si necesitas **escribir** en una global desde dentro de una función, usas **`global`**; para niveles intermedios, **`nonlocal`**. Aun así, conviene **limitar las globales** para que el código sea predecible y testeable.
-
 ### Manejo de errores: try / except / else / finally
-
 ```python
 try:
     archivo = open("datos.txt")
@@ -165,12 +139,10 @@ else:
 finally:
     archivo.close()
 ```
-
 - **`try`**: delimita el bloque "de riesgo", donde algo puede fallar.
 - **`except`**: captura errores **específicos** (aquí, que el archivo no exista).
 - **`else`**: se ejecuta **solo si no hubo excepciones**.
 - **`finally`**: se ejecuta **siempre**; ideal para liberar recursos (cerrar archivos, etc.).
-
 (`logger` es una herramienta para registrar mensajes; el PDF la usa sin entrar en detalle.) Usar excepciones en lugar de "códigos de error" mantiene el flujo limpio y declara de forma explícita qué puede fallar.
 
 > **Sabías que:** `else` es poco conocido pero útil: separa la lógica normal del manejo de errores. Y `finally` se ejecuta pase lo que pase, **incluso si hay un `return` antes**, por eso es el lugar ideal para cerrar archivos o conexiones.
@@ -178,21 +150,16 @@ finally:
 > **Nota del profe:** en este ejemplo concreto, si el archivo no existe, la variable `archivo` nunca llega a crearse y el `finally` daría otro error. Justo por eso el PDF presenta a continuación `with`, que lo resuelve mejor.
 
 ### El protocolo de contexto: `with`
-
 Garantiza el **cierre automático** de recursos (archivos, conexiones, locks):
-
 ```python
 with open("datos.txt") as archivo:
     datos = archivo.read()
 # Aquí el archivo ya está cerrado
 ```
-
 Por detrás, Python llama a los métodos **`__enter__`** (al entrar) y **`__exit__`** (al salir), y libera el recurso incluso si hay excepciones. Tú también puedes crear tus propios *context managers* con `@contextmanager` o implementando esos dos métodos "mágicos".
 
 ### Decoradores
-
 Un **decorador** recibe una función y devuelve otra **con comportamiento ampliado**:
-
 ```python
 def loggeable(funcion):
     def wrapper(*args, **kwargs):
@@ -204,27 +171,19 @@ def loggeable(funcion):
 def saludar(nombre):
     print(f"Hola, {nombre}")
 ```
-
 `wrapper` registra un mensaje ("Ejecutando saludar") y luego llama a la función original con los mismos argumentos. `@loggeable` es **azúcar sintáctica** (un atajo) de `saludar = loggeable(saludar)`. Permite añadir capas transversales (logging, caché, validación) **sin tocar la lógica central**.
-
 ### Type hints
-
 Con los *type hints* (PEP 484) se **anotan** los tipos de parámetros y retornos:
-
 ```python
 def area_circulo(radio: float) -> float:
     return PI * radio ** 2
 ```
-
 Significa: `radio` debe ser `float` y la función devuelve un `float`. Herramientas como **mypy** o **Pyright** analizan estos "contratos" y detectan incompatibilidades **antes de ejecutar**, aumentando la seguridad y la claridad.
 
 ### Pruebas unitarias
-
 Viven en carpetas como `tests/` y usan **unittest** o **pytest**. Cada caso de prueba verifica un comportamiento:
-
 ```python
 def test_area_rectangulo():
     assert calcular_area_rectangulo(3, 4) == 12
 ```
-
 `assert` comprueba que algo es cierto (3 × 4 = 12). Con **CI/CD**, las pruebas se ejecutan automáticamente **tras cada `push`** (cada vez que subes cambios), garantizando que ninguna función nueva rompa las existentes.
