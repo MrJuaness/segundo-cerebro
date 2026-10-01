@@ -8,15 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "40283a14da94952d",
+            "id": "478fc15ccc25581e",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "2ASIR/04_IAW-0376 2ºASIR/Chuleta_IAW_UD1.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Chuleta_IAW_UD1"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -81,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "af690bc8942d8fa7",
@@ -188,8 +185,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "40283a14da94952d",
+  "active": "478fc15ccc25581e",
   "lastOpenFiles": [
+    "2ASIR/04_IAW-0376 2ºASIR/Chuleta_IAW_UD1.pdf",
     "2ASIR/04_IAW-0376 2ºASIR/01LINKS_IAW_Implantación de Aplicaciones Web.md",
     "cosas/VM-Ubuntu-Desktop/01LINUX.md",
     "cosas/VM-Ubuntu-Desktop/02Comandos - terminal.md",
@@ -198,7 +196,6 @@
     "2ASIR/04_IAW-0376 2ºASIR/IAW_UD1.pdf",
     "2ASIR/04_IAW-0376 2ºASIR/lu148867as6p.tmp",
     "2ASIR/04_IAW-0376 2ºASIR/lu148867arza.tmp",
-    "2ASIR/04_IAW-0376 2ºASIR/Chuleta_IAW_UD1.pdf",
     "2ASIR/04_IAW-0376 2ºASIR/mi_resumen_deT1_IAW_EUROFORMAC.odt",
     "2ASIR/04_IAW-0376 2ºASIR/mi_resumen_deT1_ASGBD_EUROFORMAC.odt",
     "2ASIR/04_IAW-0376 2ºASIR/EMPII_UD1.pdf",
