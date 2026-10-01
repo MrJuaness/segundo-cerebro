@@ -11,10 +11,10 @@
             "id": "478fc15ccc25581e",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "icon": "lucide-git-fork",
+              "title": "Vista gráfica"
             }
           }
         ]
@@ -187,8 +187,15 @@
   },
   "active": "478fc15ccc25581e",
   "lastOpenFiles": [
-    "2ASIR/04_IAW-0376 2ºASIR/Chuleta_IAW_UD1.pdf",
+    "2ASIR/03_SRI-0375 2ºASIR/01links_SRI.md",
+    "2ASIR/06_Emple2-1710 2ºASIR/01links_Empleabilidad2.md",
+    "2ASIR/05_SOST-1708 2ºASIR/01links_SOST-1708.md",
     "2ASIR/04_IAW-0376 2ºASIR/01LINKS_IAW_Implantación de Aplicaciones Web.md",
+    "2ASIR/02_ASGBD-0377 2ºASIR/T1 CLAUDE ASGB, esta explicación la dió claude apartir de mi documento resumen del PDFT1 de ASGBD.Hasta el punto ...1.3. usuarios...md",
+    "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf",
+    "2ASIR/02_ASGBD-0377 2ºASIR/01links_ASGBD.md",
+    "Unidad1_Python_Explicacion_completa.md",
+    "2ASIR/04_IAW-0376 2ºASIR/Chuleta_IAW_UD1.pdf",
     "cosas/VM-Ubuntu-Desktop/01LINUX.md",
     "cosas/VM-Ubuntu-Desktop/02Comandos - terminal.md",
     "cosas/VM-Ubuntu-Desktop/Temario01.md",
@@ -199,14 +206,8 @@
     "2ASIR/04_IAW-0376 2ºASIR/mi_resumen_deT1_IAW_EUROFORMAC.odt",
     "2ASIR/04_IAW-0376 2ºASIR/mi_resumen_deT1_ASGBD_EUROFORMAC.odt",
     "2ASIR/04_IAW-0376 2ºASIR/EMPII_UD1.pdf",
-    "2ASIR/06_Emple2-1710 2ºASIR/01links_Empleabilidad2.md",
     "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf",
     "2ASIR/03_SRI-0375 2ºASIR/DNS_de_cero_a_experto_Unidad1.pdf",
-    "2ASIR/03_SRI-0375 2ºASIR/01links_SRI.md",
-    "2ASIR/05_SOST-1708 2ºASIR/01links_SOST-1708.md",
-    "2ASIR/02_ASGBD-0377 2ºASIR/01links_ASGBD.md",
-    "2ASIR/06_Emple2-1710 2ºASIR/EMPII_UD1.pdf",
-    "2ASIR/02_ASGBD-0377 2ºASIR/T1 CLAUDE ASGB, esta explicación la dió claude apartir de mi documento resumen del PDFT1 de ASGBD.Hasta el punto ...1.3. usuarios...md",
     "cosas/python/CLAUDE-Aprender Python desde cero para ASIR.md",
     "2ASIR/sistemasOperativos/manualesSOs/El prompt de SOS.md",
     "cosas/instalando visual studio/Instalando Visual Studio Code en Zorin OS.md",
