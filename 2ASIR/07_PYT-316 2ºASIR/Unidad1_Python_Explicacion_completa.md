@@ -1,11 +1,8 @@
 # Unidad 1: Identificación de los elementos de un programa informático
 
 Explicación paso a paso para principiantes.
-
 Vamos a recorrer la unidad entera, apartado por apartado y en el mismo orden que el PDF. Si algo suena raro, no te agobies: todo viene con ejemplos. Te recomiendo copiar el código y probarlo tú mismo.
-
 ## Índice
-
 - Objetivos de la unidad
 - Introducción
 - 1. Identificación de los elementos de un programa informático
@@ -20,11 +17,8 @@ Vamos a recorrer la unidad entera, apartado por apartado y en el mismo orden que
 - 10. Resumen
 - 11. Glosario
 - 12. Bibliografía
-
 ---
-
 ## Objetivos de la unidad
-
 1. Reconocer elementos de un programa (su estructura y sus bloques básicos).
 2. Entender qué es una variable, cómo se crea (declaración) y cómo se le da valor (asignación).
 3. Distinguir los tipos de datos de Python (números, cadenas, booleanos, etc.).
@@ -34,9 +28,7 @@ Vamos a recorrer la unidad entera, apartado por apartado y en el mismo orden que
 7. Usar comentarios para documentar el código, como buena práctica.
 
 ## Introducción
-
 Programar: herramienta crucial para el desarrollo tecnológico y para resolver problemas. En esta unidad veremos, por orden:
-
 - Estructura básica de un programa y sus bloques,
 - variables y constantes (para guardar información),
 - Tipos de datos (que determinan cómo se maneja esa información),
@@ -46,28 +38,19 @@ Programar: herramienta crucial para el desarrollo tecnológico y para resolver p
 - y los comentarios (para que el código se entienda y se pueda mantener).
 
 ---
-
 ## 1. Identificación de los elementos de un programa informático
-
-Antes de escribir código conviene saber **de qué piezas está hecho un programa**. Conocerlas es esencial para diseñar, mantener y mejorar software. Este análisis sirve a desarrolladores y a cualquiera que quiera entender cómo funcionan las aplicaciones que usa a diario.
-
+Antes de escribir código conviene saber **de qué piezas está hecho un programa**. Conocerlas es crucial para diseñar, mantener y mejorar software. Este análisis sirve a desarrolladores y a cualquiera que quiera entender cómo funcionan las aplicaciones que usa a diario.
 ### Código fuente
-
-Es el **conjunto de instrucciones escritas en un lenguaje de programación** que le dicen a la computadora qué tarea ejecutar. El PDF lo llama "el alma de cualquier software": cada línea define una acción, una condición o una lógica que el sistema debe seguir.
-
-Dentro del código fuente encontramos:
-
+**Conjunto de instrucciones escritas en un lenguaje de programación** que le dicen a la computadora qué tarea ejecutar. El PDF lo llama "el alma de cualquier software": cada línea define una acción, una condición o una lógica que el sistema debe seguir. Dentro del código fuente encontramos:
 - **funciones** y **clases**,
 - **variables**,
 - **estructuras de control** (bucles y condicionales),
 - **bibliotecas externas**,
 
 todo organizado en una **arquitectura coherente** para que el programa fluya correctamente. Puede estar escrito en distintos lenguajes: Python, Java, C++, etc.
-
 Además, debe ser **limpio, legible y estar bien documentado**. Así es más fácil mantenerlo, hacerlo crecer (escalabilidad) y adaptarlo a funcionalidades futuras.
 
 ### Datos y estructuras de datos
-
 Todo programa maneja información: desde simples enteros y cadenas de texto hasta bases de datos relacionales complejas. Los programas **gestionan, transforman y almacenan datos** constantemente.
 
 Para organizar esa información de forma eficiente se usan **estructuras de datos**: listas, pilas, colas, árboles y grafos. Facilitan operaciones como **búsqueda, inserción, eliminación y ordenamiento**. Elegir bien la estructura influye directamente en el rendimiento del software.
