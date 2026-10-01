@@ -157,7 +157,6 @@ with open("datos.txt") as archivo:
 # Aquí el archivo ya está cerrado
 ```
 Por detrás, Python llama a los métodos **`__enter__`** (al entrar) y **`__exit__`** (al salir), y libera el recurso incluso si hay excepciones. Tú también puedes crear tus propios *context managers* con `@contextmanager` o implementando esos dos métodos "mágicos".
-
 ### Decoradores
 Un **decorador** recibe una función y devuelve otra **con comportamiento ampliado**:
 ```python
@@ -187,3 +186,225 @@ def test_area_rectangulo():
     assert calcular_area_rectangulo(3, 4) == 12
 ```
 `assert` comprueba que algo es cierto (3 × 4 = 12). Con **CI/CD**, las pruebas se ejecutan automáticamente **tras cada `push`** (cada vez que subes cambios), garantizando que ninguna función nueva rompa las existentes.
+## 3. Variables
+**Variable.** Espacio de almacenamiento para guardar datos que usaremos en distintas partes del programa. Más exactamente (Ramos, 2025): *un nombre simbólico que se refiere a objetos o valores almacenados en la memoria del PC*. Puede guardar números, cadenas de texto, listas, booleanos, diccionarios, etc.
+### Tipado dinámico
+En Python **no hay que declarar el tipo** antes de usar la variable. El tipo se determina **automáticamente al asignar un valor**.
+```python
+nombre = "Carlos"   # cadena (str)
+edad = 30           # entero (int)
+activo = True       # booleano (bool)
+```
+### Reglas para los nombres
+- Debe empezar por **letra o guion bajo (`_`)**, nunca por número.
+- Solo puede contener **letras, números y guiones bajos**.
+- **Sin espacios** ni caracteres especiales como `@`, `#`, `$`.
+- **No usar palabras reservadas** (`for`, `if`, `def`, `class`...).
+- Se recomiendan **nombres descriptivos**.
+```python
+nombre_usuario = "Ana"     # Correcto
+1nombre = "Ana"            # Incorrecto: da error (empieza por número)
+```
+### Asignación
+Se usa el signo **`=`**: lo de la derecha se guarda en el nombre de la izquierda.
+
+**Intercambio de valores** (muy cómodo en Python):
+```python
+x = 5
+y = 10
+x, y = y, x   # Ahora x vale 10 e y vale 5
+```
+
+**Mismo valor a varias variables a la vez:**
+```python
+a = b = c = 100
+```
+### Tipos principales que puede guardar una variable
+`int` (enteros), `float` (decimales), `str` (texto), `bool` (booleanos), `list` (listas), `tuple` (tuplas), `dict` (diccionarios) y `set` (conjuntos).
+```python
+entero = 20
+decimal = 20.5
+texto = "Hola mundo"
+booleano = False
+lista = [1, 2, 3]
+tupla = (1, 2, 3)
+diccionario = {"nombre": "Carlos", "edad": 30}
+conjunto = {1, 2, 3}
+```
+### Ámbito (scope)
+Determina **dónde se puede usar** una variable. Dos tipos principales:
+- **Locales:** definidas dentro de una función; solo existen ahí.
+- **Globales:** definidas fuera de cualquier función; accesibles en todo el archivo.
+```python
+def saludar():
+    mensaje = "Hola"
+    print(mensaje)
+
+saludar()
+# print(mensaje)  # Daría error: 'mensaje' es local
+```
+
+```python
+mensaje = "Hola mundo"   # global
+
+def saludar():
+    print(mensaje)       # puede leerla
+
+saludar()
+```
+
+Para **modificar** una global dentro de una función hay que usar la palabra clave **`global`**:
+```python
+contador = 0
+
+def incrementar():
+    global contador
+    contador += 1
+```
+### Buenas prácticas con variables
+- Nombres **descriptivos**, evitando abreviaciones innecesarias.
+- **Evitar sobrescribir** variables, sobre todo si ya se usan en otro ámbito.
+- Estilo **consistente** (por ejemplo `snake_case`: palabras en minúscula unidas por `_`).
+- **Inicializar** las variables antes de usarlas.
+- **Comentar** cuando el significado no sea evidente.
+```python
+precio_producto = 150.75
+cantidad_comprada = 3
+total_pagar = precio_producto * cantidad_comprada
+```
+### Type hints en variables
+Aunque no es obligatorio, puedes anotar el tipo para mejorar la legibilidad y ayudar a las herramientas de análisis estático. Son útiles sobre todo en proyectos grandes:
+```python
+nombre: str = "Lucía"
+edad: int = 28
+activo: bool = True
+```
+### Constantes (adelanto)
+Python **no tiene constantes reales**, pero existe una convención: escribir el nombre **en mayúsculas** para indicar que no debe cambiar. Aunque técnicamente se pueden modificar, por convención no deberían.
+```python
+PI = 3.14159
+URL_API = "https://api.ejemplo.com"
+```
+---
+## 4. Tipos de datos
+Cada valor en Python tiene un **tipo**, que determina cómo se maneja y qué se puede hacer con él. Python, al ser de alto nivel y dinámico, trae muchos tipos integrados: números, texto, listas, colecciones complejas...
+> **Sabías que:** puedes escribir `x = 5` y luego `x = "ahora soy un texto"` y Python lo acepta sin quejarse. Esa flexibilidad hace a Python accesible para principiantes, pero puede llevar a **errores difíciles de detectar** si no prestas atención al tipo con el que trabajas.
+
+### Tipos numéricos
+
+- **`int`**: enteros, positivos o negativos, **sin parte decimal**. Sirven para contar, iterar en bucles, hacer divisiones enteras... Admiten números **tan grandes como permita la memoria** de la máquina.
+
+  ```python
+  numero = 10
+  ```
+
+- **`float`**: números reales **con parte decimal**; ideal cuando necesitas precisión decimal.
+
+  ```python
+  precio = 19.99
+  ```
+
+- **`complex`**: números complejos con formato `a + bj` (`a` parte real, `b` parte imaginaria). Poco comunes, pero muy útiles en aplicaciones científicas y de ingeniería.
+
+  ```python
+  numero_complejo = 2 + 3j
+  ```
+
+### Cadenas de texto (`str`)
+
+Son **secuencias inmutables de caracteres** ("inmutable" = una vez creada, no se puede cambiar por dentro). Se escriben entre comillas **simples, dobles o triples** (las triples sirven para texto de varias líneas).
+
+```python
+nombre = "Python es poderoso"
+```
+
+Permiten muchas operaciones: concatenación (unir), búsqueda, reemplazo, formateo...
+
+### Booleanos (`bool`)
+
+Solo dos valores: **`True`** o **`False`**. Son cruciales en condicionales y bucles.
+
+```python
+es_mayor = True
+```
+
+Dato curioso: el booleano es una **subclase del entero**, así que **`True` equivale a 1 y `False` a 0**.
+
+### `None`
+
+Indica la **ausencia de valor**. Se usa como valor de retorno por defecto o para inicializar variables que aún no tienen contenido.
+
+```python
+resultado = None
+```
+
+### Secuencias (colecciones ordenadas)
+
+- **Listas (`list`)**: ordenadas y **mutables** (se pueden modificar después de crearlas). Puedes agregar, eliminar, modificar o acceder a elementos con **índices**.
+
+  ```python
+  frutas = ["manzana", "banana", "naranja"]
+  ```
+
+- **Tuplas (`tuple`)**: como las listas pero **inmutables**. Se usan para proteger datos de modificaciones accidentales.
+
+  ```python
+  coordenadas = (10.0, 20.5)
+  ```
+
+- **Rangos (`range`)**: secuencias de números enteros, muy usadas en bucles `for`.
+
+  ```python
+  for i in range(5):
+      print(i)    # imprime 0, 1, 2, 3, 4
+  ```
+
+### Conjuntos
+
+- **`set`**: colecciones **sin orden y sin duplicados**, mutables. Ideales para eliminar duplicados y para operaciones de teoría de conjuntos (**unión, intersección, diferencia**).
+
+  ```python
+  colores = {"rojo", "verde", "azul"}
+  ```
+
+- **`frozenset`**: versión **inmutable** del conjunto; útil cuando necesitas usar conjuntos como claves de un diccionario.
+
+  ```python
+  dias = frozenset(["lunes", "martes", "miércoles"])
+  ```
+
+### Diccionarios (`dict`)
+
+Colecciones de **pares clave-valor**: mutables, desordenados, y permiten acceder rápido al dato mediante su clave. Son de los tipos más usados por su flexibilidad y eficiencia.
+
+```python
+persona = {
+    "nombre": "Juan",
+    "edad": 30,
+    "ciudad": "Madrid"
+}
+```
+
+### Convertir, comprobar tipos
+
+- Conversión: `int()`, `float()`, `str()`, `list()`, `set()`... (lo vemos a fondo en el apartado 8).
+
+  ```python
+  numero = int("100")
+  decimal = float("10.5")
+  texto = str(25)
+  ```
+
+  Útil cuando los datos vienen de formularios, archivos o bases de datos.
+
+- **`type()`** te dice el tipo:
+
+  ```python
+  print(type("Hola"))   # <class 'str'>
+  ```
+
+- **`isinstance()`** comprueba si un valor es de un tipo concreto:
+
+  ```python
+  isinstance(10, int)   # True
+  ```

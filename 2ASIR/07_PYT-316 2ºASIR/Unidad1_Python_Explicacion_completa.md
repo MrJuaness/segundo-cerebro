@@ -176,7 +176,6 @@ else:
 finally:
     archivo.close()
 ```
-
 - **`try`**: delimita el bloque "de riesgo", donde algo puede fallar.
 - **`except`**: captura errores **específicos** (aquí, que el archivo no exista).
 - **`else`**: se ejecuta **solo si no hubo excepciones**.
@@ -185,7 +184,6 @@ finally:
 > **Sabías que:** `else` es poco conocido pero útil: separa la lógica normal del manejo de errores. Y `finally` se ejecuta pase lo que pase, **incluso si hay un `return` antes**, por eso es el lugar ideal para cerrar archivos o conexiones.
 
 > **Nota del profe:** en este ejemplo concreto, si el archivo no existe, la variable `archivo` nunca llega a crearse y el `finally` daría otro error. Justo por eso el PDF presenta a continuación `with`, que lo resuelve mejor.
-
 ### El protocolo de contexto: `with`
 Garantiza el **cierre automático** de recursos (archivos, conexiones, locks):
 ```python
@@ -194,7 +192,6 @@ with open("datos.txt") as archivo:
 # Aquí el archivo ya está cerrado
 ```
 Por detrás, Python llama a los métodos **`__enter__`** (al entrar) y **`__exit__`** (al salir), y libera el recurso incluso si hay excepciones. Tú también puedes crear tus propios *context managers* con `@contextmanager` o implementando esos dos métodos "mágicos".
-
 ### Decoradores
 Un **decorador** recibe una función y devuelve otra **con comportamiento ampliado**:
 ```python
@@ -209,62 +206,45 @@ def saludar(nombre):
     print(f"Hola, {nombre}")
 ```
 `wrapper` registra un mensaje ("Ejecutando saludar") y luego llama a la función original con los mismos argumentos. `@loggeable` es **azúcar sintáctica** (un atajo) de `saludar = loggeable(saludar)`. Permite añadir capas transversales (logging, caché, validación) **sin tocar la lógica central**.
-
 ### Type hints
 Con los *type hints* (PEP 484) se **anotan** los tipos de parámetros y retornos:
 ```python
 def area_circulo(radio: float) -> float:
     return PI * radio ** 2
 ```
-
 Significa: `radio` debe ser `float` y la función devuelve un `float`. Herramientas como **mypy** o **Pyright** analizan estos "contratos" y detectan incompatibilidades **antes de ejecutar**, aumentando la seguridad y la claridad.
-
 ### Pruebas unitarias
-
 Viven en carpetas como `tests/` y usan **unittest** o **pytest**. Cada caso de prueba verifica un comportamiento:
-
 ```python
 def test_area_rectangulo():
     assert calcular_area_rectangulo(3, 4) == 12
 ```
-
 `assert` comprueba que algo es cierto (3 × 4 = 12). Con **CI/CD**, las pruebas se ejecutan automáticamente **tras cada `push`** (cada vez que subes cambios), garantizando que ninguna función nueva rompa las existentes.
 
 ---
-
 ## 3. Variables
-
 Una **variable** es un espacio de almacenamiento para guardar datos que usaremos en distintas partes del programa. Más exactamente (Ramos, 2025): *un nombre simbólico que se refiere a objetos o valores almacenados en la memoria del ordenador*. Puede guardar números, cadenas de texto, listas, booleanos, diccionarios, etc.
-
 ### Tipado dinámico
-
 En Python **no hay que declarar el tipo** antes de usar la variable. El tipo se determina **automáticamente al asignar un valor**.
-
 ```python
 nombre = "Carlos"   # cadena (str)
 edad = 30           # entero (int)
 activo = True       # booleano (bool)
 ```
-
 ### Reglas para los nombres
-
 - Debe empezar por **letra o guion bajo (`_`)**, nunca por número.
 - Solo puede contener **letras, números y guiones bajos**.
 - **Sin espacios** ni caracteres especiales como `@`, `#`, `$`.
 - **No usar palabras reservadas** (`for`, `if`, `def`, `class`...).
 - Se recomiendan **nombres descriptivos**.
-
 ```python
 nombre_usuario = "Ana"     # Correcto
 1nombre = "Ana"            # Incorrecto: da error (empieza por número)
 ```
-
 ### Asignación
-
 Se usa el signo **`=`**: lo de la derecha se guarda en el nombre de la izquierda.
 
 **Intercambio de valores** (muy cómodo en Python):
-
 ```python
 x = 5
 y = 10
@@ -272,13 +252,10 @@ x, y = y, x   # Ahora x vale 10 e y vale 5
 ```
 
 **Mismo valor a varias variables a la vez:**
-
 ```python
 a = b = c = 100
 ```
-
 ### Tipos principales que puede guardar una variable
-
 `int` (enteros), `float` (decimales), `str` (texto), `bool` (booleanos), `list` (listas), `tuple` (tuplas), `dict` (diccionarios) y `set` (conjuntos).
 
 ```python
@@ -291,11 +268,8 @@ tupla = (1, 2, 3)
 diccionario = {"nombre": "Carlos", "edad": 30}
 conjunto = {1, 2, 3}
 ```
-
 ### Ámbito (scope)
-
 Determina **dónde se puede usar** una variable. Dos tipos principales:
-
 - **Locales:** definidas dentro de una función; solo existen ahí.
 - **Globales:** definidas fuera de cualquier función; accesibles en todo el archivo.
 
@@ -316,9 +290,7 @@ def saludar():
 
 saludar()
 ```
-
 Para **modificar** una global dentro de una función hay que usar la palabra clave **`global`**:
-
 ```python
 contador = 0
 
@@ -326,40 +298,30 @@ def incrementar():
     global contador
     contador += 1
 ```
-
 ### Buenas prácticas con variables
-
 - Nombres **descriptivos**, evitando abreviaciones innecesarias.
 - **Evitar sobrescribir** variables, sobre todo si ya se usan en otro ámbito.
 - Estilo **consistente** (por ejemplo `snake_case`: palabras en minúscula unidas por `_`).
 - **Inicializar** las variables antes de usarlas.
 - **Comentar** cuando el significado no sea evidente.
-
 ```python
 precio_producto = 150.75
 cantidad_comprada = 3
 total_pagar = precio_producto * cantidad_comprada
 ```
-
 ### Type hints en variables
-
 Aunque no es obligatorio, puedes anotar el tipo para mejorar la legibilidad y ayudar a las herramientas de análisis estático. Son útiles sobre todo en proyectos grandes:
-
 ```python
 nombre: str = "Lucía"
 edad: int = 28
 activo: bool = True
 ```
-
 ### Constantes (adelanto)
-
 Python **no tiene constantes reales**, pero existe una convención: escribir el nombre **en mayúsculas** para indicar que no debe cambiar. Aunque técnicamente se pueden modificar, por convención no deberían.
-
 ```python
 PI = 3.14159
 URL_API = "https://api.ejemplo.com"
 ```
-
 ---
 
 ## 4. Tipos de datos
