@@ -65,41 +65,27 @@ Los datos que **no deben perderse al cerrar la aplicación** (configuraciones, r
 Es lo que le da al programa los recursos para funcionar. Puede ser un **sistema operativo**, una **máquina virtual** (como la JVM de Java) o un **entorno de contenedores** (como Docker).
 ### Dependencias y gestores de paquetes
 Un programa puede necesitar **componentes externos**:las **dependencias**, que deben estar instalados y actualizados. Los **gestores de paquetes** (npm, pip, Maven) facilitan instalarlos y gestionarlos.
-
 ### Documentación
-
 Son los textos que explican **cómo funciona, se usa y se instala** el programa: desde manuales de usuario hasta guías técnicas para desarrolladores. Una buena documentación mejora la accesibilidad, reduce errores de uso y facilita el trabajo en equipo. En proyectos grandes se usan herramientas como **Javadoc, Sphinx o Doxygen**, que generan documentación automáticamente a partir del código fuente.
-
 ### Pruebas y validación
-
 Los programas deben probarse para garantizar que funcionan. Las pruebas pueden ser **manuales o automatizadas** y evalúan usabilidad, seguridad, compatibilidad y rendimiento. Las más comunes:
-
 - **Unitarias:** comprueban que cada función funciona de forma independiente.
 - **De integración:** evalúan cómo interactúan distintos módulos entre sí.
 - **De sistema:** comprueban el comportamiento del programa como un todo.
 - **De aceptación:** validan que el software cumple los requisitos del usuario final.
-
 ### Control de versiones
-
 Herramientas como **Git** permiten **registrar los cambios** del código, **colaborar en equipo** y mantener un **historial completo** del desarrollo. Es vital sobre todo cuando varios desarrolladores trabajan a la vez sobre el mismo código base.
 
 ---
-
 ## 2. Estructura y bloques fundamentales
-
 Aquí empieza lo propio de Python. Muchos lenguajes usan llaves `{}` o palabras como `BEGIN/END` para marcar dónde empieza y termina un bloque de código. **Python usa la sangría** (espacios al principio de la línea). Entender esto y cómo se conectan las piezas (módulos, funciones, clases y paquetes) nos permite escribir código más legible, mantenible y robusto.
-
 ### El script
-
 Un **script** es un archivo con extensión **`.py`** cuyas instrucciones **se ejecutan de arriba abajo**. Dentro puedes encontrar:
-
 - **Importaciones (`import`):** traen funcionalidades de la biblioteca estándar o de paquetes externos.
 - **Constantes y variables globales:** valores accesibles desde cualquier punto del archivo.
 - **Definiciones de funciones (`def`) y clases (`class`):** guardan lógica reutilizable.
 - **Código ejecutable:** instrucciones que se lanzan al ejecutar el script directamente.
-
 ### Patrón profesional: el bloque de protección
-
 ```python
 def main():
     # Punto de entrada real
@@ -108,13 +94,9 @@ def main():
 if __name__ == "__main__":
     main()
 ```
-
 Metes tu código principal dentro de una función `main()`, y solo se llama si el archivo se ejecuta directamente. Así **evitas que el código se ejecute al importar** ese archivo como módulo desde otro proyecto. (Los `...` significan "aquí iría tu código".)
-
 ### La sangría (indentación)
-
 En Python **no es opcional: marca los límites de cada bloque**. Según la **PEP 8** (la guía oficial de estilo), se usan **cuatro espacios por nivel**. Y **nunca mezcles espacios y tabulaciones**, porque genera errores difíciles de depurar.
-
 ```python
 temperatura = 18
 if temperatura < 20:
@@ -953,14 +935,9 @@ Los comentarios son vitales para **compartir decisiones de diseño**, **advertir
 ---
 
 ## 12. Bibliografía
-
-El PDF se apoya en cuatro fuentes:
-
+cuatro fuentes:
 - **Programar, C. P. (s.f.)**: *Conversión entre tipos de datos en Python* (apartado 8).
 - **Ramos, L. P. (2025)**: *Variables in Python: Usage and Best Practices*, Real Python (apartado 3).
 - **van Rossum, G. W. (2001)**: *Guía de estilo para el código Python, PEP 8* (apartado 9).
 - **W3Schools (s.f.)**: *Python Tutorial, Python Operators* (apartado 7).
-
 ---
-
-*Fin de la Unidad 1.*
