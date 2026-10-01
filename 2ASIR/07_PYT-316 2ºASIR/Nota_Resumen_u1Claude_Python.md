@@ -576,7 +576,6 @@ suma = int(num1) + int(num2)   # 45
 ---
 ## 9. Comentarios
 Los **comentarios** son texto que el **intérprete ignora**. No cambian el comportamiento del código: explican **qué hace, por qué lo hace así o cómo usarlo**. Son cruciales cuando varios desarrolladores trabajan en el mismo proyecto o cuando revisas código después de semanas o meses. Hay dos tipos: **de una sola línea** y **multilínea o de bloque**.
-
 > **Sabías que:** el símbolo `#` viene heredado de lenguajes mucho más antiguos, como el shell script de Unix. Guido van Rossum, creador de Python, lo mantuvo por su simplicidad y familiaridad. Algunos desarrolladores han dejado mensajes graciosos, advertencias misteriosas o hasta poemas en comentarios, "como pequeñas cápsulas del tiempo".
 ### Una línea
 Empieza con `#`; todo lo que sigue se ignora. Puede ir solo en una línea o al final de una línea de código. Deben ser **claros, concisos y relacionados directamente con el código**.
@@ -641,3 +640,14 @@ Los comentarios son vitales para **compartir decisiones de diseño**, **advertir
 - Evitar errores gramaticales u ortográficos.
 - **Un espacio después del `#`**.
 - Usar **oraciones completas** cuando sea necesario.
+---
+## 10. Resumen (repaso rápido)
+- Un programa en Python se organiza en **bloques** marcados por la **indentación** (no por llaves).
+- Las **variables** guardan datos; no se declara el tipo (**tipado dinámico**); se crean con `=`.
+- Tipos básicos: **numéricos** (`int`, `float`, `complex`), **booleanos** (`True`, `False`), **texto** (`str`) y **colecciones** (`list`, `tuple`, `set`, `dict`).
+- Los **literales** son valores fijos escritos en el código; sirven para inicializar variables o definir condiciones.
+- Las **constantes** se simulan por convención (mayúsculas), lo que mejora legibilidad y mantenimiento.
+- Los **operadores** se dividen en aritméticos (`+ - * / // % **`), de comparación (`== != < > <= >=`), lógicos (`and or not`), de asignación (`= += -=`...) y de pertenencia (`in`, `not in`).
+- Las **expresiones** combinan operadores y operandos para obtener un resultado.
+- Las **conversiones** (`int()`, `float()`, `str()`, `list()`...) adaptan los datos; por ejemplo `int("23")`.
+- Los **comentarios** (`#`) explican código sin afectar a la ejecución: documentan, aclaran intenciones o desactivan líneas temporalmente, y mejoran el trabajo en equipo.
