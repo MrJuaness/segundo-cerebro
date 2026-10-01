@@ -232,7 +232,7 @@ diccionario = {"nombre": "Carlos", "edad": 30}
 conjunto = {1, 2, 3}
 ```
 ### Ámbito (scope)
-Determina **dónde se puede usar** una variable. Dos tipos principales:
+Determina **dónde se puede usar** una variable. 2 tipos principales:
 - **Locales:** definidas dentro de una función; solo existen ahí.
 - **Globales:** definidas fuera de cualquier función; accesibles en todo el archivo.
 ```python
@@ -252,7 +252,6 @@ def saludar():
 
 saludar()
 ```
-
 Para **modificar** una global dentro de una función hay que usar la palabra clave **`global`**:
 ```python
 contador = 0
@@ -289,94 +288,65 @@ URL_API = "https://api.ejemplo.com"
 ## 4. Tipos de datos
 Cada valor en Python tiene un **tipo**, que determina cómo se maneja y qué se puede hacer con él. Python, al ser de alto nivel y dinámico, trae muchos tipos integrados: números, texto, listas, colecciones complejas...
 > **Sabías que:** puedes escribir `x = 5` y luego `x = "ahora soy un texto"` y Python lo acepta sin quejarse. Esa flexibilidad hace a Python accesible para principiantes, pero puede llevar a **errores difíciles de detectar** si no prestas atención al tipo con el que trabajas.
-
 ### Tipos numéricos
-
 - **`int`**: enteros, positivos o negativos, **sin parte decimal**. Sirven para contar, iterar en bucles, hacer divisiones enteras... Admiten números **tan grandes como permita la memoria** de la máquina.
-
   ```python
   numero = 10
   ```
-
 - **`float`**: números reales **con parte decimal**; ideal cuando necesitas precisión decimal.
-
   ```python
   precio = 19.99
   ```
-
 - **`complex`**: números complejos con formato `a + bj` (`a` parte real, `b` parte imaginaria). Poco comunes, pero muy útiles en aplicaciones científicas y de ingeniería.
-
   ```python
   numero_complejo = 2 + 3j
   ```
-
 ### Cadenas de texto (`str`)
-
 Son **secuencias inmutables de caracteres** ("inmutable" = una vez creada, no se puede cambiar por dentro). Se escriben entre comillas **simples, dobles o triples** (las triples sirven para texto de varias líneas).
-
 ```python
 nombre = "Python es poderoso"
 ```
-
 Permiten muchas operaciones: concatenación (unir), búsqueda, reemplazo, formateo...
-
 ### Booleanos (`bool`)
-
-Solo dos valores: **`True`** o **`False`**. Son cruciales en condicionales y bucles.
-
+Solo 2 valores: **`True`** o **`False`**. Son cruciales en condicionales y bucles.
 ```python
 es_mayor = True
 ```
-
 Dato curioso: el booleano es una **subclase del entero**, así que **`True` equivale a 1 y `False` a 0**.
 
 ### `None`
-
 Indica la **ausencia de valor**. Se usa como valor de retorno por defecto o para inicializar variables que aún no tienen contenido.
-
 ```python
 resultado = None
 ```
-
 ### Secuencias (colecciones ordenadas)
-
 - **Listas (`list`)**: ordenadas y **mutables** (se pueden modificar después de crearlas). Puedes agregar, eliminar, modificar o acceder a elementos con **índices**.
-
   ```python
   frutas = ["manzana", "banana", "naranja"]
   ```
 
 - **Tuplas (`tuple`)**: como las listas pero **inmutables**. Se usan para proteger datos de modificaciones accidentales.
-
   ```python
   coordenadas = (10.0, 20.5)
   ```
 
 - **Rangos (`range`)**: secuencias de números enteros, muy usadas en bucles `for`.
-
   ```python
   for i in range(5):
       print(i)    # imprime 0, 1, 2, 3, 4
   ```
-
 ### Conjuntos
-
 - **`set`**: colecciones **sin orden y sin duplicados**, mutables. Ideales para eliminar duplicados y para operaciones de teoría de conjuntos (**unión, intersección, diferencia**).
-
   ```python
   colores = {"rojo", "verde", "azul"}
   ```
 
 - **`frozenset`**: versión **inmutable** del conjunto; útil cuando necesitas usar conjuntos como claves de un diccionario.
-
   ```python
   dias = frozenset(["lunes", "martes", "miércoles"])
   ```
-
 ### Diccionarios (`dict`)
-
 Colecciones de **pares clave-valor**: mutables, desordenados, y permiten acceder rápido al dato mediante su clave. Son de los tipos más usados por su flexibilidad y eficiencia.
-
 ```python
 persona = {
     "nombre": "Juan",
@@ -384,27 +354,21 @@ persona = {
     "ciudad": "Madrid"
 }
 ```
-
 ### Convertir, comprobar tipos
-
 - Conversión: `int()`, `float()`, `str()`, `list()`, `set()`... (lo vemos a fondo en el apartado 8).
-
   ```python
   numero = int("100")
   decimal = float("10.5")
   texto = str(25)
   ```
-
   Útil cuando los datos vienen de formularios, archivos o bases de datos.
 
 - **`type()`** te dice el tipo:
-
   ```python
   print(type("Hola"))   # <class 'str'>
   ```
 
 - **`isinstance()`** comprueba si un valor es de un tipo concreto:
-
   ```python
   isinstance(10, int)   # True
   ```
