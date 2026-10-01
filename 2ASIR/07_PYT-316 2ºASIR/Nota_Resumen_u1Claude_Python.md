@@ -368,9 +368,7 @@ persona = {
   ```
 ---
 ## 5. Literales
-
 Un **literal** es un **valor fijo escrito directamente en el código**, que el intérprete reconoce tal cual, sin evaluación adicional. Son la base de la sintaxis. Los tipos de literales:
-
 - **Numéricos:** enteros (para contar o enumerar), flotantes (decimales) y complejos (cálculo científico). Se escriben normalmente en sistema decimal, aunque Python también admite otras bases numéricas para casos específicos.
 - **Cadenas de texto:** secuencias de caracteres para datos alfanuméricos. Son esenciales cuando hay interacción con usuarios, lectura de archivos o comunicaciones en red. Tienen longitud variable, se pueden manipular y admiten múltiples codificaciones (útil para idiomas y símbolos diversos).
 - **Booleanos:** `True`/`False`. Permiten establecer condiciones; son cruciales para tomar decisiones, validar resultados y crear bucles que se repiten según un criterio.
@@ -380,7 +378,6 @@ Un **literal** es un **valor fijo escrito directamente en el código**, que el i
 Los literales pueden formar parte de **expresiones compuestas**: se combinan entre sí o con variables y operadores para producir nuevos resultados.
 
 **Buenas prácticas:**
-
 - Evitar los **valores mágicos** (números o textos sueltos cuyo significado no se entiende).
 - Definir una **constante** cuando un literal se repite mucho.
 - Mantener **coherencia en los tipos** para evitar errores sutiles.
@@ -388,11 +385,8 @@ Los literales pueden formar parte de **expresiones compuestas**: se combinan ent
 **Diferencia literal vs. variable:** el literal **es el valor en sí mismo**; la variable es una **referencia que apunta a un valor** (que puede o no ser un literal). Ejemplo: en `nombre = "Ana"`, `nombre` es la variable y `"Ana"` es el literal. Esta distinción importa para la memoria, el flujo lógico y la depuración.
 
 ---
-
 ## 6. Constantes
-
 Las **constantes** son valores que, **por convención**, no deberían cambiar durante la ejecución. Python **no tiene sintaxis específica** para declararlas (como sí pasa en Java o C++), pero hay una convención muy arraigada:
-
 - Se escriben en **MAYÚSCULAS con guiones bajos** (`URL_API`, `PI`). Así cualquier desarrollador ve al instante que no debe modificarse, y se evitan sobrescrituras accidentales.
 - Se declaran **al principio del archivo**: das una visión clara de los valores fundamentales y, si hay que cambiar alguno, están todos agrupados en un solo sitio.
 - **No hay protección técnica** que impida cambiarlas: respetar la convención es **disciplina del programador**. En proyectos colaborativos mejora la legibilidad y reduce errores.
@@ -400,11 +394,8 @@ Las **constantes** son valores que, **por convención**, no deberían cambiar du
 - Si agrupan varios valores (**diccionarios o listas**), también van en mayúsculas, pero ojo: si son **mutables**, su contenido **sí puede cambiar** aunque el nombre no. Para inmutabilidad real, usa **tuplas** (u otras bibliotecas que permiten objetos inmutables).
 
 ---
-
 ## 7. Operaciones y expresiones
-
-Python ofrece una amplia gama de operadores (W3Schools, s.f.), desde los aritméticos hasta los lógicos y los bit a bit. Usarlos bien da código más limpio, eficiente y fácil de mantener.
-
+Python ofrece una amplia gama de operadores, desde los aritméticos hasta los lógicos y los bit a bit. Usarlos bien da código más limpio, eficiente y fácil de mantener.
 ### Operadores aritméticos
 
 | Operador | Nombre | Qué hace | Ejemplo |
@@ -442,21 +433,16 @@ mayor = edad >= 18   # True
 ```
 
 ### Operadores lógicos
-
 Combinan varias condiciones:
-
 - **`and`** (Y): `True` si **ambas** son verdaderas.
 - **`or`** (O): `True` si **al menos una** es verdadera.
 - **`not`** (negación): **invierte** el valor booleano.
-
 ```python
 edad = 25
 tiene_dni = True
 puede_votar = edad >= 18 and tiene_dni   # True
 ```
-
 ### Operadores de asignación
-
 Guardan valores en variables. Además del `=`, hay formas abreviadas que **combinan asignación con una operación**:
 
 `=` (simple), `+=` (suma y asigna), `-=` (resta y asigna), `*=` (multiplica y asigna), `/=` (divide y asigna), `//=` (división entera y asigna), `%=` (módulo y asigna), `**=` (exponenciación y asigna).
@@ -465,30 +451,22 @@ Guardan valores en variables. Además del `=`, hay formas abreviadas que **combi
 x = 5
 x += 3   # equivale a x = x + 3 → x ahora es 8
 ```
-
 ### Operadores bit a bit
-
 Trabajan directamente con los **bits** (los 0 y 1) de los números. Se usan menos en aplicaciones comunes, pero son fundamentales en programación de bajo nivel, criptografía y sistemas embebidos.
-
 - `&` → AND bit a bit
 - `|` → OR bit a bit
 - `^` → XOR bit a bit
 - `~` → NOT bit a bit
 - `<<` → desplazamiento a la izquierda
 - `>>` → desplazamiento a la derecha
-
 ```python
 a = 60     # 0011 1100
 b = 13     # 0000 1101
 c = a & b  # 0000 1100 = 12
 ```
-
 El AND pone un 1 solo en las posiciones donde **ambos** números tienen 1; por eso sale `0000 1100`, que en decimal es 12.
-
 ### Operadores de identidad
-
 En Python las variables son **referencias a objetos**. `is` e `is not` te dicen si dos variables apuntan **al mismo objeto en memoria**.
-
 ```python
 x = [1, 2, 3]
 y = x          # y apunta al MISMO objeto que x
@@ -496,7 +474,6 @@ z = list(x)    # z es una copia: un objeto distinto
 print(x is y)  # True
 print(x is z)  # False
 ```
-
 ### Operadores de pertenencia
 
 `in` (existe en) y `not in` (no existe en). Sirven para saber si un valor está dentro de una lista, tupla, diccionario o cualquier colección.
