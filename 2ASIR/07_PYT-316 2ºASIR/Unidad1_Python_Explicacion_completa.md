@@ -1,6 +1,6 @@
 # Unidad 1: Identificación de los elementos de un programa informático
 
-*Explicación paso a paso para principiantes, basada únicamente en el PDF "PYT_UD1" (Tech Hub FP Euroformac).*
+Explicación paso a paso para principiantes.
 
 Vamos a recorrer la unidad entera, apartado por apartado y en el mismo orden que el PDF. Si algo suena raro, no te agobies: todo viene con ejemplos. Te recomiendo copiar el código y probarlo tú mismo.
 
