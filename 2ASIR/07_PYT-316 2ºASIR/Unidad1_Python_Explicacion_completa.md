@@ -25,9 +25,7 @@ Vamos a recorrer la unidad entera, apartado por apartado y en el mismo orden que
 
 ## Objetivos de la unidad
 
-Al terminar este tema deberías ser capaz de:
-
-1. Reconocer los elementos de un programa (su estructura y sus bloques básicos).
+1. Reconocer elementos de un programa (su estructura y sus bloques básicos).
 2. Entender qué es una variable, cómo se crea (declaración) y cómo se le da valor (asignación).
 3. Distinguir los tipos de datos de Python (números, cadenas, booleanos, etc.).
 4. Identificar y usar los literales.
@@ -37,11 +35,11 @@ Al terminar este tema deberías ser capaz de:
 
 ## Introducción
 
-Programar es una herramienta esencial para el desarrollo tecnológico y para resolver problemas. En esta unidad vamos a ver, por orden:
+Programar: herramienta crucial para el desarrollo tecnológico y para resolver problemas. En esta unidad veremos, por orden:
 
-- la estructura básica de un programa y sus bloques,
-- las variables y constantes (para guardar información),
-- los tipos de datos (que determinan cómo se maneja esa información),
+- Estructura básica de un programa y sus bloques,
+- variables y constantes (para guardar información),
+- Tipos de datos (que determinan cómo se maneja esa información),
 - los literales (valores concretos escritos en el código),
 - los operadores y expresiones (para calcular y tomar decisiones),
 - las conversiones de tipo,
@@ -76,7 +74,7 @@ Para organizar esa información de forma eficiente se usan **estructuras de dato
 
 ### Interfaz de usuario
 
-Es el **punto de contacto entre el usuario y el sistema**. Hay dos tipos:
+Es el **Punto de contacto entre el usuario y el sistema**. Hay 2 tipos:
 
 - **GUI (interfaz gráfica):** botones, menús, formularios, iconos y ventanas, diseñados pensando en la **usabilidad** y la **experiencia de usuario (UX)**. Una buena interfaz mejora la satisfacción del usuario y puede influir en la eficacia del software.
 - **CLI (línea de comandos):** se escriben órdenes en texto. Siguen siendo esenciales en aplicaciones técnicas y sistemas donde la eficiencia y la precisión son primordiales.
