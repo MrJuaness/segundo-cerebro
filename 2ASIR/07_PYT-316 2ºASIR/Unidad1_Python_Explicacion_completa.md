@@ -350,37 +350,30 @@ Solo dos valores: **`True`** o **`False`**. Son cruciales en condicionales y buc
 es_mayor = True
 ```
 Dato curioso: el booleano es una **subclase del entero**, así que **`True` equivale a 1 y `False` a 0**.
-
 ### `None`
-
 Indica la **ausencia de valor**. Se usa como valor de retorno por defecto o para inicializar variables que aún no tienen contenido.
 ```python
 resultado = None
 ```
-
 ### Secuencias (colecciones ordenadas)
 - **Listas (`list`)**: ordenadas y **mutables** (se pueden modificar después de crearlas). Puedes agregar, eliminar, modificar o acceder a elementos con **índices**.
   ```python
   frutas = ["manzana", "banana", "naranja"]
   ```
-
 - **Tuplas (`tuple`)**: como las listas pero **inmutables**. Se usan para proteger datos de modificaciones accidentales.
   ```python
   coordenadas = (10.0, 20.5)
   ```
-
 - **Rangos (`range`)**: secuencias de números enteros, muy usadas en bucles `for`.
   ```python
   for i in range(5):
       print(i)    # imprime 0, 1, 2, 3, 4
   ```
-
 ### Conjuntos
 - **`set`**: colecciones **sin orden y sin duplicados**, mutables. Ideales para eliminar duplicados y para operaciones de teoría de conjuntos (**unión, intersección, diferencia**).
   ```python
   colores = {"rojo", "verde", "azul"}
   ```
-
 - **`frozenset`**: versión **inmutable** del conjunto; útil cuando necesitas usar conjuntos como claves de un diccionario.
   ```python
   dias = frozenset(["lunes", "martes", "miércoles"])
@@ -402,33 +395,25 @@ persona = {
   texto = str(25)
   ```
   Útil cuando los datos vienen de formularios, archivos o bases de datos.
-
 - **`type()`** te dice el tipo:
   ```python
   print(type("Hola"))   # <class 'str'>
   ```
-
 - **`isinstance()`** comprueba si un valor es de un tipo concreto:
   ```python
   isinstance(10, int)   # True
   ```
-
 ---
-
 ## 5. Literales
-
 Un **literal** es un **valor fijo escrito directamente en el código**, que el intérprete reconoce tal cual, sin evaluación adicional. Son la base de la sintaxis. Los tipos de literales:
-
 - **Numéricos:** enteros (para contar o enumerar), flotantes (decimales) y complejos (cálculo científico). Se escriben normalmente en sistema decimal, aunque Python también admite otras bases numéricas para casos específicos.
 - **Cadenas de texto:** secuencias de caracteres para datos alfanuméricos. Son esenciales cuando hay interacción con usuarios, lectura de archivos o comunicaciones en red. Tienen longitud variable, se pueden manipular y admiten múltiples codificaciones (útil para idiomas y símbolos diversos).
 - **Booleanos:** `True`/`False`. Permiten establecer condiciones; son cruciales para tomar decisiones, validar resultados y crear bucles que se repiten según un criterio.
 - **`None`:** ausencia de valor o estado indefinido. Se usa para inicializar variables que se asignarán después, para indicar que una función no produjo resultado concreto o para señalar la falta de un objeto válido.
 - **Colecciones:** listas, tuplas, diccionarios y conjuntos, cada uno con características distintas en mutabilidad, orden y forma de acceso. Se pueden **anidar y combinar** para representar datos complejos.
-
 Los literales pueden formar parte de **expresiones compuestas**: se combinan entre sí o con variables y operadores para producir nuevos resultados.
 
 **Buenas prácticas:**
-
 - Evitar los **valores mágicos** (números o textos sueltos cuyo significado no se entiende).
 - Definir una **constante** cuando un literal se repite mucho.
 - Mantener **coherencia en los tipos** para evitar errores sutiles.
@@ -436,11 +421,8 @@ Los literales pueden formar parte de **expresiones compuestas**: se combinan ent
 **Diferencia literal vs. variable:** el literal **es el valor en sí mismo**; la variable es una **referencia que apunta a un valor** (que puede o no ser un literal). Ejemplo: en `nombre = "Ana"`, `nombre` es la variable y `"Ana"` es el literal. Esta distinción importa para la memoria, el flujo lógico y la depuración.
 
 ---
-
 ## 6. Constantes
-
 Las **constantes** son valores que, **por convención**, no deberían cambiar durante la ejecución. Python **no tiene sintaxis específica** para declararlas (como sí pasa en Java o C++), pero hay una convención muy arraigada:
-
 - Se escriben en **MAYÚSCULAS con guiones bajos** (`URL_API`, `PI`). Así cualquier desarrollador ve al instante que no debe modificarse, y se evitan sobrescrituras accidentales.
 - Se declaran **al principio del archivo**: das una visión clara de los valores fundamentales y, si hay que cambiar alguno, están todos agrupados en un solo sitio.
 - **No hay protección técnica** que impida cambiarlas: respetar la convención es **disciplina del programador**. En proyectos colaborativos mejora la legibilidad y reduce errores.
@@ -448,11 +430,8 @@ Las **constantes** son valores que, **por convención**, no deberían cambiar du
 - Si agrupan varios valores (**diccionarios o listas**), también van en mayúsculas, pero ojo: si son **mutables**, su contenido **sí puede cambiar** aunque el nombre no. Para inmutabilidad real, usa **tuplas** (u otras bibliotecas que permiten objetos inmutables).
 
 ---
-
 ## 7. Operaciones y expresiones
-
 Python ofrece una amplia gama de operadores (W3Schools, s.f.), desde los aritméticos hasta los lógicos y los bit a bit. Usarlos bien da código más limpio, eficiente y fácil de mantener.
-
 ### Operadores aritméticos
 
 | Operador | Nombre | Qué hace | Ejemplo |
@@ -472,7 +451,6 @@ resultado = a ** b   # 1000
 ```
 
 ### Operadores de comparación
-
 Comparan dos valores y devuelven un **booleano**. Son esenciales en `if`, `while` y expresiones lógicas.
 
 | Operador | Significado |
@@ -490,21 +468,16 @@ mayor = edad >= 18   # True
 ```
 
 ### Operadores lógicos
-
 Combinan varias condiciones:
-
 - **`and`** (Y): `True` si **ambas** son verdaderas.
 - **`or`** (O): `True` si **al menos una** es verdadera.
 - **`not`** (negación): **invierte** el valor booleano.
-
 ```python
 edad = 25
 tiene_dni = True
 puede_votar = edad >= 18 and tiene_dni   # True
 ```
-
 ### Operadores de asignación
-
 Guardan valores en variables. Además del `=`, hay formas abreviadas que **combinan asignación con una operación**:
 
 `=` (simple), `+=` (suma y asigna), `-=` (resta y asigna), `*=` (multiplica y asigna), `/=` (divide y asigna), `//=` (división entera y asigna), `%=` (módulo y asigna), `**=` (exponenciación y asigna).
@@ -513,9 +486,7 @@ Guardan valores en variables. Además del `=`, hay formas abreviadas que **combi
 x = 5
 x += 3   # equivale a x = x + 3 → x ahora es 8
 ```
-
 ### Operadores bit a bit
-
 Trabajan directamente con los **bits** (los 0 y 1) de los números. Se usan menos en aplicaciones comunes, pero son fundamentales en programación de bajo nivel, criptografía y sistemas embebidos.
 
 - `&` → AND bit a bit
@@ -534,9 +505,7 @@ c = a & b  # 0000 1100 = 12
 El AND pone un 1 solo en las posiciones donde **ambos** números tienen 1; por eso sale `0000 1100`, que en decimal es 12.
 
 ### Operadores de identidad
-
 En Python las variables son **referencias a objetos**. `is` e `is not` te dicen si dos variables apuntan **al mismo objeto en memoria**.
-
 ```python
 x = [1, 2, 3]
 y = x          # y apunta al MISMO objeto que x
@@ -546,18 +515,14 @@ print(x is z)  # False
 ```
 
 ### Operadores de pertenencia
-
 `in` (existe en) y `not in` (no existe en). Sirven para saber si un valor está dentro de una lista, tupla, diccionario o cualquier colección.
-
 ```python
 frutas = ['manzana', 'pera', 'naranja']
 print('pera' in frutas)   # True
 ```
 
 ### Expresiones
-
 Una **expresión** es una combinación de **valores, variables, operadores y llamadas a funciones** que, al evaluarse, **devuelve un resultado**. Es la unidad mínima de ejecución de un programa. Pueden ser tan simples como una suma o tan complejas como condicionales anidadas con funciones.
-
 ```python
 def es_adulto(edad):
     return edad >= 18
@@ -567,36 +532,26 @@ edad = 20
 mensaje = f"{nombre} es adulto" if es_adulto(edad) else f"{nombre} es menor"
 print(mensaje)
 ```
-
 Paso a paso: `es_adulto(20)` devuelve `True`; como la condición es verdadera, `mensaje` toma el primer texto. (La `f` delante de las comillas permite meter variables dentro del texto con `{}`.) Se imprime: **`Luis es adulto`**.
 
 ---
 
 ## 8. Conversiones de tipo
-
 Aunque Python es dinámicamente tipado, muchas veces hay que **convertir un tipo en otro** para que el programa funcione bien o para evitar errores. Se llama **conversión de tipo** o **type casting**. Pueden ser:
-
 - **Explícitas:** tú indicas el cambio usando funciones como `int()`, `float()`, `str()`...
 - **Implícitas:** Python las hace solo, normalmente cuando puede hacerlo **sin perder datos** (Programar, s.f.).
-
 ### Funciones de conversión
-
 - **`int()`**: convierte un número o una cadena numérica en entero.
-
   ```python
   int('10')     # 10
   int(10.99)    # 10  (se queda con la parte entera; no redondea)
   ```
-
 - **`float()`**: convierte a decimal.
-
   ```python
   float(5)         # 5.0
   float('3.1416')  # 3.1416
   ```
-
 - **`str()`**: convierte **cualquier** dato a texto.
-
   ```python
   str(100)    # '100'
   str(True)   # 'True'

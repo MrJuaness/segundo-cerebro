@@ -313,23 +313,20 @@ Solo 2 valores: **`True`** o **`False`**. Son cruciales en condicionales y bucle
 es_mayor = True
 ```
 Dato curioso: el booleano es una **subclase del entero**, así que **`True` equivale a 1 y `False` a 0**.
-
 ### `None`
 Indica la **ausencia de valor**. Se usa como valor de retorno por defecto o para inicializar variables que aún no tienen contenido.
 ```python
 resultado = None
 ```
 ### Secuencias (colecciones ordenadas)
-- **Listas (`list`)**: ordenadas y **mutables** (se pueden modificar después de crearlas). Puedes agregar, eliminar, modificar o acceder a elementos con **índices**.
+- **Listas (`list`)**: ordenadas y **mutables**(se pueden modificar después de crearlas). Puedes agregar, eliminar, modificar o acceder a elementos con **índices**.
   ```python
   frutas = ["manzana", "banana", "naranja"]
   ```
-
 - **Tuplas (`tuple`)**: como las listas pero **inmutables**. Se usan para proteger datos de modificaciones accidentales.
   ```python
   coordenadas = (10.0, 20.5)
   ```
-
 - **Rangos (`range`)**: secuencias de números enteros, muy usadas en bucles `for`.
   ```python
   for i in range(5):
@@ -340,7 +337,6 @@ resultado = None
   ```python
   colores = {"rojo", "verde", "azul"}
   ```
-
 - **`frozenset`**: versión **inmutable** del conjunto; útil cuando necesitas usar conjuntos como claves de un diccionario.
   ```python
   dias = frozenset(["lunes", "martes", "miércoles"])
@@ -362,13 +358,378 @@ persona = {
   texto = str(25)
   ```
   Útil cuando los datos vienen de formularios, archivos o bases de datos.
-
 - **`type()`** te dice el tipo:
   ```python
   print(type("Hola"))   # <class 'str'>
   ```
-
 - **`isinstance()`** comprueba si un valor es de un tipo concreto:
   ```python
   isinstance(10, int)   # True
   ```
+---
+## 5. Literales
+
+Un **literal** es un **valor fijo escrito directamente en el código**, que el intérprete reconoce tal cual, sin evaluación adicional. Son la base de la sintaxis. Los tipos de literales:
+
+- **Numéricos:** enteros (para contar o enumerar), flotantes (decimales) y complejos (cálculo científico). Se escriben normalmente en sistema decimal, aunque Python también admite otras bases numéricas para casos específicos.
+- **Cadenas de texto:** secuencias de caracteres para datos alfanuméricos. Son esenciales cuando hay interacción con usuarios, lectura de archivos o comunicaciones en red. Tienen longitud variable, se pueden manipular y admiten múltiples codificaciones (útil para idiomas y símbolos diversos).
+- **Booleanos:** `True`/`False`. Permiten establecer condiciones; son cruciales para tomar decisiones, validar resultados y crear bucles que se repiten según un criterio.
+- **`None`:** ausencia de valor o estado indefinido. Se usa para inicializar variables que se asignarán después, para indicar que una función no produjo resultado concreto o para señalar la falta de un objeto válido.
+- **Colecciones:** listas, tuplas, diccionarios y conjuntos, cada uno con características distintas en mutabilidad, orden y forma de acceso. Se pueden **anidar y combinar** para representar datos complejos.
+
+Los literales pueden formar parte de **expresiones compuestas**: se combinan entre sí o con variables y operadores para producir nuevos resultados.
+
+**Buenas prácticas:**
+
+- Evitar los **valores mágicos** (números o textos sueltos cuyo significado no se entiende).
+- Definir una **constante** cuando un literal se repite mucho.
+- Mantener **coherencia en los tipos** para evitar errores sutiles.
+
+**Diferencia literal vs. variable:** el literal **es el valor en sí mismo**; la variable es una **referencia que apunta a un valor** (que puede o no ser un literal). Ejemplo: en `nombre = "Ana"`, `nombre` es la variable y `"Ana"` es el literal. Esta distinción importa para la memoria, el flujo lógico y la depuración.
+
+---
+
+## 6. Constantes
+
+Las **constantes** son valores que, **por convención**, no deberían cambiar durante la ejecución. Python **no tiene sintaxis específica** para declararlas (como sí pasa en Java o C++), pero hay una convención muy arraigada:
+
+- Se escriben en **MAYÚSCULAS con guiones bajos** (`URL_API`, `PI`). Así cualquier desarrollador ve al instante que no debe modificarse, y se evitan sobrescrituras accidentales.
+- Se declaran **al principio del archivo**: das una visión clara de los valores fundamentales y, si hay que cambiar alguno, están todos agrupados en un solo sitio.
+- **No hay protección técnica** que impida cambiarlas: respetar la convención es **disciplina del programador**. En proyectos colaborativos mejora la legibilidad y reduce errores.
+- En aplicaciones grandes es común tener **un archivo exclusivo de constantes** que se importa donde haga falta, sin redefinirlas.
+- Si agrupan varios valores (**diccionarios o listas**), también van en mayúsculas, pero ojo: si son **mutables**, su contenido **sí puede cambiar** aunque el nombre no. Para inmutabilidad real, usa **tuplas** (u otras bibliotecas que permiten objetos inmutables).
+
+---
+
+## 7. Operaciones y expresiones
+
+Python ofrece una amplia gama de operadores (W3Schools, s.f.), desde los aritméticos hasta los lógicos y los bit a bit. Usarlos bien da código más limpio, eficiente y fácil de mantener.
+
+### Operadores aritméticos
+
+| Operador | Nombre | Qué hace | Ejemplo |
+|---|---|---|---|
+| `+` | Suma | Une dos valores | `5 + 2` → 7 |
+| `-` | Resta | Sustrae un valor de otro | `5 - 2` → 3 |
+| `*` | Multiplicación | Multiplica dos valores | `5 * 2` → 10 |
+| `/` | División | Divide, **devolviendo un float** | `10 / 4` → 2.5 |
+| `//` | División entera | Divide y devuelve **solo la parte entera** | `10 // 4` → 2 |
+| `%` | Módulo | Devuelve el **residuo** de la división | `10 % 4` → 2 |
+| `**` | Exponenciación | Eleva un número a la potencia de otro | `10 ** 3` → 1000 |
+
+```python
+a = 10
+b = 3
+resultado = a ** b   # 1000
+```
+
+### Operadores de comparación
+
+Comparan dos valores y devuelven un **booleano**. Son esenciales en `if`, `while` y expresiones lógicas.
+
+| Operador | Significado |
+|---|---|
+| `==` | Igual a |
+| `!=` | Diferente de |
+| `>` | Mayor que |
+| `<` | Menor que |
+| `>=` | Mayor o igual que |
+| `<=` | Menor o igual que |
+
+```python
+edad = 18
+mayor = edad >= 18   # True
+```
+
+### Operadores lógicos
+
+Combinan varias condiciones:
+
+- **`and`** (Y): `True` si **ambas** son verdaderas.
+- **`or`** (O): `True` si **al menos una** es verdadera.
+- **`not`** (negación): **invierte** el valor booleano.
+
+```python
+edad = 25
+tiene_dni = True
+puede_votar = edad >= 18 and tiene_dni   # True
+```
+
+### Operadores de asignación
+
+Guardan valores en variables. Además del `=`, hay formas abreviadas que **combinan asignación con una operación**:
+
+`=` (simple), `+=` (suma y asigna), `-=` (resta y asigna), `*=` (multiplica y asigna), `/=` (divide y asigna), `//=` (división entera y asigna), `%=` (módulo y asigna), `**=` (exponenciación y asigna).
+
+```python
+x = 5
+x += 3   # equivale a x = x + 3 → x ahora es 8
+```
+
+### Operadores bit a bit
+
+Trabajan directamente con los **bits** (los 0 y 1) de los números. Se usan menos en aplicaciones comunes, pero son fundamentales en programación de bajo nivel, criptografía y sistemas embebidos.
+
+- `&` → AND bit a bit
+- `|` → OR bit a bit
+- `^` → XOR bit a bit
+- `~` → NOT bit a bit
+- `<<` → desplazamiento a la izquierda
+- `>>` → desplazamiento a la derecha
+
+```python
+a = 60     # 0011 1100
+b = 13     # 0000 1101
+c = a & b  # 0000 1100 = 12
+```
+
+El AND pone un 1 solo en las posiciones donde **ambos** números tienen 1; por eso sale `0000 1100`, que en decimal es 12.
+
+### Operadores de identidad
+
+En Python las variables son **referencias a objetos**. `is` e `is not` te dicen si dos variables apuntan **al mismo objeto en memoria**.
+
+```python
+x = [1, 2, 3]
+y = x          # y apunta al MISMO objeto que x
+z = list(x)    # z es una copia: un objeto distinto
+print(x is y)  # True
+print(x is z)  # False
+```
+
+### Operadores de pertenencia
+
+`in` (existe en) y `not in` (no existe en). Sirven para saber si un valor está dentro de una lista, tupla, diccionario o cualquier colección.
+
+```python
+frutas = ['manzana', 'pera', 'naranja']
+print('pera' in frutas)   # True
+```
+
+### Expresiones
+
+Una **expresión** es una combinación de **valores, variables, operadores y llamadas a funciones** que, al evaluarse, **devuelve un resultado**. Es la unidad mínima de ejecución de un programa. Pueden ser tan simples como una suma o tan complejas como condicionales anidadas con funciones.
+
+```python
+def es_adulto(edad):
+    return edad >= 18
+
+nombre = "Luis"
+edad = 20
+mensaje = f"{nombre} es adulto" if es_adulto(edad) else f"{nombre} es menor"
+print(mensaje)
+```
+
+Paso a paso: `es_adulto(20)` devuelve `True`; como la condición es verdadera, `mensaje` toma el primer texto. (La `f` delante de las comillas permite meter variables dentro del texto con `{}`.) Se imprime: **`Luis es adulto`**.
+
+---
+
+## 8. Conversiones de tipo
+
+Aunque Python es dinámicamente tipado, muchas veces hay que **convertir un tipo en otro** para que el programa funcione bien o para evitar errores. Se llama **conversión de tipo** o **type casting**. Pueden ser:
+
+- **Explícitas:** tú indicas el cambio usando funciones como `int()`, `float()`, `str()`...
+- **Implícitas:** Python las hace solo, normalmente cuando puede hacerlo **sin perder datos** (Programar, s.f.).
+
+### Funciones de conversión
+
+- **`int()`**: convierte un número o una cadena numérica en entero.
+
+  ```python
+  int('10')     # 10
+  int(10.99)    # 10  (se queda con la parte entera; no redondea)
+  ```
+
+- **`float()`**: convierte a decimal.
+
+  ```python
+  float(5)         # 5.0
+  float('3.1416')  # 3.1416
+  ```
+
+- **`str()`**: convierte **cualquier** dato a texto.
+
+  ```python
+  str(100)    # '100'
+  str(True)   # 'True'
+  ```
+
+- **`bool()`**: los valores **vacíos, el cero y `None`** dan `False`; el resto, `True`.
+
+  ```python
+  bool(0)       # False
+  bool('Hola')  # True
+  ```
+
+- **`list()`**: convierte cualquier iterable en lista.
+
+  ```python
+  list('python')   # ['p', 'y', 't', 'h', 'o', 'n']
+  ```
+
+- **`tuple()`**: convierte un iterable en tupla.
+
+  ```python
+  tuple([1, 2, 3])   # (1, 2, 3)
+  ```
+
+- **`set()`**: convierte un iterable en conjunto, **eliminando duplicados**.
+
+  ```python
+  set([1, 2, 2, 3])   # {1, 2, 3}
+  ```
+
+### Conversión implícita
+
+```python
+a = 5
+b = 2.0
+resultado = a + b   # 7.0 (float)
+```
+
+Python convierte `a` a `float` antes de sumar, para **preservar la precisión**.
+
+### El error típico: `ValueError`
+
+Si intentas convertir algo que no se puede, hay error:
+
+```python
+int('abc')     # Error: ValueError
+float('uno')   # Error: ValueError
+```
+
+Por eso conviene **validar o limpiar los datos antes** de convertirlos.
+
+### Conversiones entre estructuras
+
+```python
+# De lista a cadena
+lista = ['a', 'b', 'c']
+cadena = ''.join(lista)    # 'abc'
+
+# De cadena a lista
+cadena = '1234'
+lista = list(cadena)       # ['1', '2', '3', '4']
+
+# De diccionario a lista de claves
+dic = {'a': 1, 'b': 2}
+claves = list(dic)         # el PDF indica ['a']
+```
+
+> **Nota del profe:** el comentario del PDF en la última línea tiene una errata. Como `list(dic)` recoge **todas** las claves, el resultado real es `['a', 'b']`.
+
+### Verificar el tipo antes de convertir
+
+```python
+valor = '25'
+if type(valor) == str:
+    valor_entero = int(valor)
+```
+
+Evita errores inesperados, sobre todo con entradas de usuarios o datos externos.
+
+### Ejemplo práctico: números de un formulario web
+
+```python
+num1 = '15'
+num2 = '30'
+
+suma = int(num1) + int(num2)   # 45
+```
+
+**Sin** la conversión, `'15' + '30'` daría `'1530'`: una **concatenación de textos**, no una suma matemática.
+
+---
+
+## 9. Comentarios
+
+Los **comentarios** son texto que el **intérprete ignora**. No cambian el comportamiento del código: explican **qué hace, por qué lo hace así o cómo usarlo**. Son cruciales cuando varios desarrolladores trabajan en el mismo proyecto o cuando revisas código después de semanas o meses. Hay dos tipos: **de una sola línea** y **multilínea o de bloque**.
+
+> **Sabías que:** el símbolo `#` viene heredado de lenguajes mucho más antiguos, como el shell script de Unix. Guido van Rossum, creador de Python, lo mantuvo por su simplicidad y familiaridad. Algunos desarrolladores han dejado mensajes graciosos, advertencias misteriosas o hasta poemas en comentarios, "como pequeñas cápsulas del tiempo".
+
+### Una línea
+
+Empieza con `#`; todo lo que sigue se ignora. Puede ir solo en una línea o al final de una línea de código. Deben ser **claros, concisos y relacionados directamente con el código**.
+
+```python
+# Este es un comentario de una sola línea
+print("Hola Mundo")  # También se puede comentar al final de una línea de código
+```
+
+### Multilínea
+
+Python no tiene sintaxis especial (como `/* */` en C), así que se pone `#` al inicio de **cada línea**:
+
+```python
+# Este es un comentario
+# que se extiende por
+# varias líneas
+```
+
+Otra alternativa: **cadenas de varias líneas entre comillas triples** que no se asignan a ninguna variable. Técnicamente **no son comentarios**, y **no es la forma recomendada** de comentar:
+
+```python
+"""
+Este texto no se almacena en ninguna variable.
+Es común usar este tipo de cadenas como comentarios multilínea.
+Sin embargo, no es la forma recomendada para comentar código.
+"""
+```
+
+### Buenas prácticas
+
+- **Evitar comentar lo obvio.**
+- **Actualizar los comentarios** si cambias el código: uno desactualizado puede ser peor que ninguno.
+- Comentar **el "porqué"** más que el "qué": el código ya muestra lo que hace; el comentario explica la razón de una decisión.
+- Ser **concisos y específicos**.
+- Mantener un **estilo consistente**.
+
+### En funciones y clases: docstrings + comentarios internos
+
+Lo ideal es usar **docstrings**, complementados con comentarios internos:
+
+```python
+def calcular_area(base, altura):
+    """
+    Calcula el área de un triángulo.
+
+    Parámetros:
+        base (float): La base del triángulo.
+        altura (float): La altura del triángulo.
+    Retorna:
+        float: El área calculada.
+    """
+    return (base * altura) / 2  # Fórmula del área de un triángulo
+```
+
+El docstring da la **visión general**; el comentario en línea detalla la **lógica matemática**.
+
+### Cuidado con el exceso
+
+Demasiados comentarios saturan el código y lo hacen difícil de leer. Idealmente el código es tan claro que solo hace falta comentar para: **justificar una solución compleja**, **advertir de un comportamiento inesperado** o **dar contexto adicional**.
+
+### Deshabilitar líneas temporalmente
+
+Durante el desarrollo puedes "comentar" una línea para desactivarla y probar variantes sin borrarla:
+
+```python
+# print("Esta línea está deshabilitada temporalmente")
+```
+
+Antes de la versión final, esas líneas deben **eliminarse o documentarse bien**.
+
+### Trabajo en equipo
+
+Los comentarios son vitales para **compartir decisiones de diseño**, **advertir sobre dependencias** y **explicar fragmentos que interactúan con otros módulos**:
+
+```python
+# Esta función se conecta al servicio externo de pagos.
+# No modificar sin consultar con el equipo de backend.
+```
+
+### Normas de la PEP 8 para comentarios (van Rossum, 2001)
+
+- Empezar con **mayúscula**.
+- Evitar errores gramaticales u ortográficos.
+- **Un espacio después del `#`**.
+- Usar **oraciones completas** cuando sea necesario.
