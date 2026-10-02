@@ -11,10 +11,14 @@
             "id": "fb13347ae5a6829e",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Vista gráfica"
+              "type": "markdown",
+              "state": {
+                "file": "2ASIR/02_ASGBD-0377 2ºASIR/T1 CLAUDE ASGB, esta explicación la dió claude apartir de mi documento resumen del PDFT1 de ASGBD.Hasta el punto ...1.3. usuarios...md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "T1 CLAUDE ASGB, esta explicación la dió claude apartir de mi documento resumen del PDFT1 de ASGBD.Hasta el punto ...1.3. usuarios.."
             }
           }
         ]
