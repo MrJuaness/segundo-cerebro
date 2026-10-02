@@ -1,14 +1,9 @@
 # Unidad 1 · Instalación y configuración de un sistema gestor de base de datos
-
 **Módulo:** Administración de Sistemas Gestores de Bases de Datos (Tech Hub FP · Euroformac)  
 **Material de base:** `ASGBD_UD1.pdf` (52 páginas)
-
 > **Cómo usar esta guía.** Sigue el **mismo orden y la misma numeración que el PDF** (con las páginas entre paréntesis) para que puedas comparar mientras estudias. Todo está explicado con palabras sencillas y ejemplos. Cuando el PDF solo da un nombre sin explicarlo, te lo aviso y añado una explicación mía. Los ejemplos, analogías y explicaciones marcados como "mío" o "mía" **no están en el PDF**: son ayudas para entender.
-
 ---
-
 ## Índice
-
 - El mapa de la unidad
 - Mini-diccionario para empezar
 - Objetivos de la unidad (pág. 4)
@@ -33,13 +28,9 @@
 - **14.** Glosario (págs. 50-51)
 - **15.** Bibliografía (pág. 52)
 - Erratas y rarezas del PDF
-
 ---
-
 ## El mapa de la unidad
-
 La unidad responde a estas preguntas, en este orden:
-
 1. ¿Qué es un SGBD, qué hace, de qué piezas está hecho, quién lo usa y qué tipos hay? (apartado 1)
 2. ¿Cómo está organizado por dentro? Arquitectura de 3 niveles (apartado 2)
 3. ¿Cuáles son gratuitos y cuáles de pago? (apartado 3)
@@ -48,20 +39,15 @@ La unidad responde a estas preguntas, en este orden:
 6. ¿Cómo se instala? MySQL en Windows 10 (apartado 6)
 7. ¿Cómo encaja en el sistema operativo y qué hay por dentro (cliente-servidor, instancias, diccionario, logs, archivos, memoria y procesos)? (apartados 7 a 12)
 8. Resumen, glosario y bibliografía (apartados 13 a 15)
-
 ---
-
 ## Mini-diccionario para empezar
-
 Estas palabras aparecen todo el rato, así que mejor tenerlas claras desde ya:
-
 - **Tabla**: donde se guardan los datos, en filas y columnas (como una hoja de Excel).
 - **Campo (columna)**: cada tipo de dato que guarda una tabla (nombre, edad…).
 - **Registro (fila)**: cada elemento concreto guardado (un estudiante en particular).
 - **Clave primaria**: el campo que identifica a cada registro de forma única y no se repite (como el DNI de una persona).
 - **Clave foránea (también "extranjera" o "externa")**: un campo que apunta a la clave primaria de otra tabla. Así se relacionan las tablas.
 - **Vista**: una "ventana" que enseña solo una parte de los datos, adaptada a quien la va a mirar.
-
 Ejemplo de tabla `Estudiantes`:
 
 | ID_Estudiante | Nombre | Apellido | Edad |
@@ -72,38 +58,25 @@ Ejemplo de tabla `Estudiantes`:
 `ID_Estudiante` es la clave primaria, cada fila es un registro y cada columna es un campo.
 
 ---
-
 ## Objetivos de la unidad (pág. 4)
-
 1. Conocer lo básico de un SGBD (con MySQL como ejemplo).
 2. Entender qué función cumple un SGBD y conocer el lenguaje que lo maneja: SQL.
 3. Aprender cómo interactúa un SGBD con el sistema operativo y con las bases de datos, e instalar MySQL.
-
 ---
-
 ## Introducción (págs. 5-6)
-
 Hoy casi todo funciona con bases de datos: pagos por internet, tiendas online, la agenda del móvil, programas para gestionar clientes, contabilidad… Todos se apoyan en **estructuras de datos**.
 
 Por eso cada vez hace más falta el **Administrador de Sistemas de Bases de Datos**: quien mantiene esos sistemas funcionando y se asegura de que la información esté siempre disponible para quien la necesite. Sus responsabilidades son:
-
 - **Diseñar, instalar y configurar** SGBD.
 - Hacer **copias de seguridad**.
 - Administrar **usuarios y permisos** asociados a los datos.
 - **Monitorizar y optimizar** el rendimiento del SGBD.
-
 El manual quiere desgranar las tareas del administrador. Reconoce que es imposible detallar todas las situaciones posibles, pero busca dar las **líneas generales de actuación** para una administración eficiente. Deja además dos consejos:
-
 1. **Saber acudir a las fuentes oficiales** (por ejemplo, los manuales oficiales de MySQL en la web). Tan importante como un manual es saber dónde está la documentación oficial.
 2. Hay **dos formas de administrar** un SGBD: con **comandos** o con una **interfaz gráfica**. Veremos ambas, pero se recomienda familiarizarse con los comandos por su **agilidad y efectividad**.
-
 ---
-
-
 ## 1. Funciones, componentes, usuarios y tipos de SGBD (págs. 7-20)
-
 Empezamos con las dos piezas clave de toda la asignatura:
-
 > **Base de datos (BD):** conjunto de datos relacionados entre sí, estructurados y organizados según ciertos criterios. Según esa estructura hay varios modelos. Aquí el PDF cita tres: **relacional, jerárquico y en red**. En el apartado 1.4 añade un cuarto tipo, el orientado a objetos.
 >
 > **Sistema Gestor de Bases de Datos (SGBD):** software que ofrece un entorno para **crear, manipular y administrar** bases de datos. Sus funciones son esenciales para garantizar **integridad, seguridad y eficiencia**.
@@ -111,47 +84,30 @@ Empezamos con las dos piezas clave de toda la asignatura:
 **Imagina una biblioteca (mío).** La BD son los libros bien ordenados. El SGBD es el sistema (y el bibliotecario) que sabe dónde está todo, quién puede llevarse qué y que nada se pierda ni se estropee.
 
 ---
-
 ### 1.1 Funciones de un SGBD (págs. 7-11)
-
 Un SGBD debe permitir manejar y administrar tanto **los datos** guardados como **la estructura** de las bases de datos. El PDF enumera 10 funciones:
-
 #### Función 1. Creación de la base de datos
-
 Es construir los "cajones" antes de guardar nada. Permite definir la estructura: tipos de datos, relaciones entre tablas, restricciones y otros elementos.
-
 - **Crear la estructura:** diseñar las tablas, decidir qué campos tiene cada una y cómo se relacionan.
 - **Tipo de dato de cada campo:** entero, cadena de texto, fecha… (la edad será un número, el nombre un texto).
 - **Relaciones entre tablas:** vínculos mediante claves primarias y extranjeras, para mantener la coherencia de los datos.
-
 #### Función 2. Manipulación de datos
-
 Es trabajar con el contenido. Se hace con consultas **SQL** (*Structured Query Language*) u otras interfaces de programación.
-
 - **Insertar** datos nuevos (operación `INSERT`).
 - **Actualizar** datos existentes (`UPDATE`).
 - **Eliminar** datos no deseados (`DELETE`).
 - **Consultar** para recuperar información concreta, con lenguajes como SQL.
-
 #### Función 3. Integridad de datos
-
 Consiste en que los datos sean correctos y no se contradigan, aplicando restricciones.
-
 - **Claves primarias y externas (foráneas):** garantizan la **unicidad** de los registros (no hay dos iguales) y la **coherencia referencial** entre tablas. Por ejemplo, no puedes matricular a un alumno en un curso que no existe.
 - Garantía de **consistencia y exactitud** de los datos.
-
 #### Función 4. Seguridad
-
 Controla el acceso con **autenticación** y **autorización**, para que solo los usuarios autorizados accedan a ciertos datos o hagan ciertas operaciones.
-
 - **Autenticación:** comprobar la identidad del usuario (¿quién eres?). Es requisito para entrar.
 - **Autorización:** determinar qué privilegios y permisos tiene para acceder y modificar datos (¿qué puedes hacer?).
 - *Ejemplo (mío):* en un edificio enseñas el DNI en la puerta (autenticación) y tu tarjeta solo te deja subir a ciertas plantas (autorización).
-
 #### Función 5. Concurrencia y control de transacciones
-
 Gestiona que **varios usuarios** trabajen a la vez sin estropear los datos. También permite **confirmar (commit)** o **revertir (rollback)** cambios.
-
 - **Control de concurrencia:** qué hacer cuando varias transacciones intentan acceder o modificar los mismos datos a la vez, garantizando consistencia en entornos multiusuario.
 - **Transacciones:** conjunto de operaciones que se ejecutan como una **unidad atómica** ("o se hace todo o no se hace nada"). Se controlan para asegurar las propiedades **ACID**:
 
@@ -165,48 +121,29 @@ Gestiona que **varios usuarios** trabajen a la vez sin estropear los datos. Tamb
 *Ejemplo (mío):* transferir 100 € de la cuenta A a la B son dos pasos: restar a A y sumar a B. Si el sistema falla entre los dos, se perderían 100 €. Con una transacción, o se hacen los dos pasos (`COMMIT`) o se deshace todo (`ROLLBACK`).
 
 #### Función 6. Respaldo y recuperación
-
 Ofrece copias de seguridad periódicas y la capacidad de volver a un estado anterior si hay fallos o pérdida de datos.
-
 - **Copia de seguridad (backup):** guarda una copia de la BD en un estado concreto.
 - **Recuperación:** restaura la BD a un estado previamente respaldado.
-
 #### Función 7. Optimización del rendimiento
-
 Son técnicas para que las consultas, los índices y otras operaciones recuperen los datos de forma eficiente.
-
 - **Índices:** aceleran la velocidad de búsqueda y la recuperación de datos. Funcionan como el índice alfabético de un libro: no lees todas las páginas para encontrar algo.
 - **Optimización de consultas:** ajustar las consultas para recuperar datos con más eficiencia.
 - *Ojo (lo dice el Glosario del PDF):* los índices aceleran las lecturas, pero pueden **ralentizar** las inserciones, actualizaciones y borrados, porque hay que mantenerlos al día.
-
 #### Función 8. Diccionario de datos
-
 Es un registro exhaustivo que detalla la organización y estructura de la BD: tablas, interrelaciones, campos y normas de validación e integridad.
-
 - **Metadatos:** información sobre la BD (estructura de las tablas, restricciones, relaciones). Son "datos sobre los datos". Se amplía en el apartado 10.
-
 #### Función 9. Interfaz de usuario y herramientas de desarrollo
-
 Proporciona interfaces gráficas o de línea de comandos para interactuar con la BD, y herramientas para su diseño, desarrollo y mantenimiento.
-
 - **GUI** (interfaz gráfica de usuario): una interfaz visual.
 - **Herramientas de desarrollo:** facilitan crear y modificar esquemas de BD, consultas y otros elementos.
-
 #### Función 10. Escalabilidad y tolerancia a fallos
-
 El SGBD debe poder manejar que la BD crezca y tener estrategias de **redundancia de datos** (tener copias o duplicados) para garantizar su disponibilidad continua.
-
 - **Escalabilidad:** capacidad de manejar más tamaño de BD y más carga de usuarios.
 - **Tolerancia a fallos:** recuperarse de fallos sin pérdida significativa de datos ni interrupciones del servicio.
-
 **Las 10 de un vistazo:** crear · manipular · integridad · seguridad · concurrencia/transacciones · respaldo/recuperación · rendimiento · diccionario · interfaz · escalabilidad/tolerancia a fallos.
-
 ---
-
 ### 1.2 Componentes de un SGBD (págs. 12-13)
-
 Las *funciones* son **lo que hace** el SGBD. Los *componentes* son **las piezas de las que está hecho**. Son 8:
-
 1. **Motor de base de datos:** el **núcleo** (el "cerebro", en palabras mías). Interpreta consultas y comandos, los transforma a un formato que pueda entender y procesar, y gestiona los recursos del sistema para ejecutarlos de forma eficiente.
 2. **Diccionario de datos:** una BD que contiene **metadatos**: nombre de la BD, nombres de las tablas, nombre y tipo de los campos, restricciones e índices.
 3. **Lenguaje de Manipulación de Datos (DML):** operaciones para manipular los datos almacenados: `SELECT`, `INSERT`, `UPDATE`, `DELETE`.
@@ -215,80 +152,56 @@ Las *funciones* son **lo que hace** el SGBD. Los *componentes* son **las piezas 
 6. **Gestor de recuperación:** recupera la BD ante fallos o errores. La devuelve a un **estado consistente** tras un fallo del sistema o recupera datos perdidos o dañados.
 7. **Gestor de concurrencia:** gestiona el **acceso simultáneo** para garantizar la consistencia, previniendo conflictos de acceso y asegurando que las transacciones se ejecuten aisladas. (El PDF lo escribe "Concurrency" por error.)
 8. **Interfaz de usuario:** el medio de interacción entre el usuario y el SGBD, para hacer consultas y recibir resultados. Puede ser **GUI** (gráfica, con ventanas y botones) o **CLI** (línea de comandos, escribiendo órdenes).
-
 ---
-
 ### 1.3 Usuarios (págs. 14-15)
-
 Son los distintos perfiles de personas que usan una BD:
-
 1. **DBA (Administrador de la BD):** tiene el **nivel más alto de acceso** y es responsable del mantenimiento y la seguridad. Puede crear y eliminar BD, tablas y otros objetos, y **otorgar y revocar permisos**. También optimiza el rendimiento, planifica la capacidad e implementa políticas de seguridad.
 2. **Usuarios RESOURCE:** pueden **crear sus propios objetos** (tablas, vistas…), pero **no dar permisos** a otros, y solo acceden a lo que tienen permitido. Suelen ser **desarrolladores de aplicaciones**.
 3. **Usuarios CONNECT:** solo pueden **acceder** a objetos si se les ha concedido permiso. No crean objetos ni dan permisos. Suelen ser **usuarios finales** que consultan datos para su trabajo.
 4. **Usuarios especializados:** son capaces de **escribir aplicaciones** para interactuar con la BD, que usan ellos u otros. Pueden conocer a fondo su estructura y diseño.
 5. **Usuarios casuales:** interactúan mediante un **procesador de consultas**, con consultas creadas por ellos o por otras personas. Pueden no conocer a fondo la estructura de la BD.
 6. **Usuarios esporádicos:** hacen **consultas especializadas y más complejas**, que requieren más conocimiento de la estructura. El PDF dice que pueden ser analistas o científicos de datos con análisis complejos.
-
 **Truco (mío):** los tres primeros son una escalera de poder. DBA (puede todo) → RESOURCE (crea lo suyo) → CONNECT (solo usa lo que le dan).
-
 ---
-
-
 ### 1.4 Tipos de SGBD (págs. 15-19)
-
 Se clasifican según **cómo organizan los datos**. El PDF explica 4 tipos. En el apartado 13 (Resumen) añade otras formas de clasificarlos, que explico allí.
-
 #### Tipo 1. SGBD Relacionales
-
 Son **los más utilizados** y se basan en el modelo relacional. Los datos se guardan en **tablas**, y la relación entre ellos se establece con **claves primarias y foráneas**. Se manejan con consultas y manipulaciones de alto nivel usando **SQL**. Ejemplos: MySQL, Oracle y SQL Server.
 
 Características:
-
 - **Integridad:** datos precisos y consistentes mediante reglas de integridad.
 - **Seguridad:** control de acceso y **encriptación** (cifrado).
 - **Eficiencia:** usan **indexación** (índices) y **particionamiento** (dividir tablas enormes en trozos más manejables) para acelerar las consultas.
 
 Ejemplo del PDF (con datos inventados por mí): una tabla `Estudiantes` (ID_Estudiante, Nombre, Apellido, Edad), una tabla `Cursos` (ID_Curso, Nombre_Curso, Profesor) y una tabla `Registro` (ID_Estudiante, ID_Curso) que las relaciona.
-
 ```
 Estudiantes: (1, Ana, López, 20) · (2, Luis, Pérez, 22)
 Cursos:      (10, Bases de Datos, Marta) · (11, Redes, Pedro)
 Registro:    (1, 10) · (1, 11) · (2, 10)
 ```
-
 Ana (1) está en Bases de Datos (10) y en Redes (11). Luis (2) solo en Bases de Datos. En `Registro`, los dos campos son claves foráneas que apuntan a las otras tablas.
 
 > **Sabías que:** Edgar Frank "Ted" Codd, informático inglés (1923-2003), fue el creador del actual modelo relacional.
-
 #### Tipo 2. SGBD de Red
-
 Los datos se organizan en una **red** donde cada registro se conecta con otros mediante **enlaces**. Permiten representar relaciones muy flexibles, pero son más complejos de diseñar y gestionar.
-
 - **Flexibilidad:** permiten relaciones complejas entre datos.
 - **Eficiencia:** buenos para consultas que reflejan la estructura de red.
 - **Complejidad:** más difíciles de diseñar y gestionar.
 - *Ejemplo:* **IDS (Integrated Data Store)** de IBM. Un registro `Empleado` está enlazado con `Departamento` y `Proyecto`. Un empleado puede relacionarse con **varios** departamentos o proyectos, y un departamento o proyecto con **varios** empleados.
-
 #### Tipo 3. SGBD Jerárquicos
-
 Los datos se organizan como un **árbol**: cada **nodo** es un registro y cada **arista** es una relación entre registros. Son eficientes para operaciones que reflejan la jerarquía, pero poco flexibles para relaciones que no son jerárquicas.
-
 - **Eficiencia:** buenos para consultas que siguen la jerarquía.
 - **Simplicidad:** más simples de entender y gestionar.
 - **Limitaciones:** menos flexibles con relaciones no jerárquicas.
 - *Ejemplo:* **IMS (Information Management System)** de IBM. Un departamento puede tener varios empleados, pero **cada empleado pertenece a un solo departamento**. Compáralo con el tipo de red, donde un empleado podía estar en varios.
-
 #### Tipo 4. SGBD Orientados a Objetos
-
 Se basan en el **modelo de objetos**. Los datos se representan como **objetos** (instancias de clases) y se aplican conceptos de la programación orientada a objetos, como la **herencia** y el **polimorfismo**. Son útiles cuando hay que representar datos muy complejos y hacer operaciones de alto nivel.
 
 Un par de palabras para entender esto (explicación mía): una **clase** es un molde (p. ej. "Estudiante"), un **objeto** es una pieza concreta hecha con ese molde (p. ej. "Ana"), la **herencia** permite que una clase reutilice lo de otra, y el **polimorfismo** permite que un mismo método se comporte distinto según el objeto.
-
 - **Flexibilidad:** datos complejos y relaciones entre ellos.
 - **Reutilización y extensibilidad:** gracias a la herencia y el polimorfismo.
 - **Complejidad:** más difíciles de entender y gestionar.
 - *Ejemplo:* **MongoDB**. Una colección `Estudiantes` donde cada documento es un objeto que representa a un estudiante, con propiedades (`nombre`, `apellido`, `edad`) y también métodos (comportamientos, como matricularse en un curso).
-
 #### Comparativa rápida
 
 | Tipo | Cómo organiza | Punto fuerte | Punto débil | Ejemplo (PDF) |
