@@ -103,7 +103,7 @@ La industria **no ha evolucionado de forma lineal** (poco a poco). Ha avanzado a
 | Modelo productivo | Taller / fábrica manual | Cadena de montaje (producción en serie) |
 | Comunicación | Ferrocarril / telégrafo | Teléfono / radio |
 
-### 1.3 La Tercera Revolución Industrial (págs. 12–14)
+### ==1.3 La Tercera Revolución Industrial== (págs. 12–14)
 Comenzó **aproximadamente en la década de 1970**. El título del PDF dice "mediados del s. XX", pero el texto y la tabla la sitúan en torno a 1970, así que quédate con ese dato. Se caracteriza por el **paso de la tecnología analógica y mecánica a la digital**.
 **1) Elementos tecnológicos clave** (desarrollo de la **electrónica** y de las **tecnologías de la información, IT**):
 - **Microprocesador:** el componente que permitió **miniaturizar la potencia de cálculo** y llevar la computación a **fábricas y oficinas**.
