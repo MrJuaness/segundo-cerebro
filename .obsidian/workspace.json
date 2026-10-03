@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1_guia_de_estudio (1).md",
+                "file": "2ASIR/05_SOST-1708 2ºASIR/01links_SOST-1708.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ASGBD_UD1_guia_de_estudio (1)"
+              "title": "01links_SOST-1708"
             }
           }
         ]
@@ -83,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "af690bc8942d8fa7",
@@ -192,13 +191,15 @@
   },
   "active": "fb13347ae5a6829e",
   "lastOpenFiles": [
+    "2ASIR/05_SOST-1708 2ºASIR/SOST_UD1.pdf",
+    "2ASIR/05_SOST-1708 2ºASIR/01links_SOST-1708.md",
+    "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1_guia_de_estudio (1).md",
     "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf",
     "2ASIR/02_ASGBD-0377 2ºASIR/T1 CLAUDE ASGB, esta explicación la dió claude apartir de mi documento resumen del PDFT1 de ASGBD.Hasta el punto ...1.3. usuarios...md",
     "2ASIR/07_PYT-316 2ºASIR/Nota_Resumen_u1Claude_Python.md",
     "2ASIR/07_PYT-316 2ºASIR/Unidad1_Python_Explicacion_completa.md",
     "2ASIR/07_PYT-316 2ºASIR/01links_Python.md",
     "cosas/python/CLAUDE-Aprender Python desde cero para ASIR.md",
-    "2ASIR/05_SOST-1708 2ºASIR/01links_SOST-1708.md",
     "2ASIR/07_PYT-316 2ºASIR",
     "2ASIR/03_SRI-0375 2ºASIR/01links_SRI.md",
     "2ASIR/06_Emple2-1710 2ºASIR/01links_Empleabilidad2.md",
