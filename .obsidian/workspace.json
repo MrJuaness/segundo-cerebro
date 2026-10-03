@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2ASIR/05_SOST-1708 2ºASIR/01links_SOST-1708.md",
+                "file": "2ASIR/07_PYT-316 2ºASIR/01links_Python.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01links_SOST-1708"
+              "title": "01links_Python"
             }
           }
         ]
@@ -191,14 +191,17 @@
   },
   "active": "fb13347ae5a6829e",
   "lastOpenFiles": [
-    "2ASIR/05_SOST-1708 2ºASIR/SOST_UD1.pdf",
+    "2ASIR/08_DIG-1665 2ºASIR/01_links_Digitalización.md",
+    "2ASIR/07_PYT-316 2ºASIR/01links_Python.md",
     "2ASIR/05_SOST-1708 2ºASIR/01links_SOST-1708.md",
+    "Sin nombre",
+    "2ASIR/08_DIG-1665 2ºASIR",
+    "2ASIR/07_PYT-316 2ºASIR/Nota_Resumen_u1Claude_Python.md",
+    "2ASIR/07_PYT-316 2ºASIR/Unidad1_Python_Explicacion_completa.md",
+    "2ASIR/05_SOST-1708 2ºASIR/SOST_UD1.pdf",
     "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1_guia_de_estudio (1).md",
     "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf",
     "2ASIR/02_ASGBD-0377 2ºASIR/T1 CLAUDE ASGB, esta explicación la dió claude apartir de mi documento resumen del PDFT1 de ASGBD.Hasta el punto ...1.3. usuarios...md",
-    "2ASIR/07_PYT-316 2ºASIR/Nota_Resumen_u1Claude_Python.md",
-    "2ASIR/07_PYT-316 2ºASIR/Unidad1_Python_Explicacion_completa.md",
-    "2ASIR/07_PYT-316 2ºASIR/01links_Python.md",
     "cosas/python/CLAUDE-Aprender Python desde cero para ASIR.md",
     "2ASIR/07_PYT-316 2ºASIR",
     "2ASIR/03_SRI-0375 2ºASIR/01links_SRI.md",
@@ -214,9 +217,6 @@
     "2ASIR/04_IAW-0376 2ºASIR/lu148867as6p.tmp",
     "2ASIR/04_IAW-0376 2ºASIR/lu148867arza.tmp",
     "2ASIR/04_IAW-0376 2ºASIR/mi_resumen_deT1_IAW_EUROFORMAC.odt",
-    "2ASIR/04_IAW-0376 2ºASIR/mi_resumen_deT1_ASGBD_EUROFORMAC.odt",
-    "2ASIR/04_IAW-0376 2ºASIR/EMPII_UD1.pdf",
-    "2ASIR/03_SRI-0375 2ºASIR/SRI_UD1.pdf",
     "2ASIR/sistemasOperativos/manualesSOs/El prompt de SOS.md",
     "cosas/instalando visual studio/Instalando Visual Studio Code en Zorin OS.md",
     "cosas/instalando visual studio/Captura desde 2026-09-18 22-50-30.png",
