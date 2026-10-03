@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "cccf4c48b3756721",
+        "id": "02b4efbbd90027ae",
         "type": "tabs",
         "children": [
           {
-            "id": "109c22c2ce38f9fb",
+            "id": "ff1935444693c507",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf"
+                "file": "2ASIR/08_DIG-1665 2ºASIR/Resumen_expliación_Claude_T1DIG.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "ASGBD_UD1"
+              "icon": "lucide-file",
+              "title": "Resumen_expliación_Claude_T1DIG"
             }
           }
         ]
@@ -223,54 +225,25 @@
         "height": 1020,
         "maximize": false,
         "zoom": 0
-      },
-      {
-        "id": "cd0cd691ef8366bc",
-        "type": "window",
-        "children": [
-          {
-            "id": "ee1ff3e85a3b2b8c",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "dc47a85fd843d9fe",
-                "type": "leaf",
-                "state": {
-                  "type": "graph",
-                  "state": {},
-                  "icon": "lucide-git-fork",
-                  "title": "Vista gráfica"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 1038,
-        "y": 48,
-        "width": 710,
-        "height": 980,
-        "maximize": false,
-        "zoom": 0
       }
     ]
   },
-  "active": "109c22c2ce38f9fb",
+  "active": "ff1935444693c507",
   "lastOpenFiles": [
+    "2ASIR/08_DIG-1665 2ºASIR/DIG_UD1.pdf",
+    "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf",
     "2ASIR/03_SRI-0375 2ºASIR/DNS_de_cero_a_experto_Unidad1.pdf",
     "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1_guia_de_estudio (1).md",
     "2ASIR/05_SOST-1708 2ºASIR/01links_SOST-1708.md",
     "2ASIR/08_DIG-1665 2ºASIR/Resumen_expliación_Claude_T1DIG.md",
     "2ASIR/08_DIG-1665 2ºASIR/Unidad1_Digitalizacion_sectores_productivos.md",
     "2ASIR/08_DIG-1665 2ºASIR/01_links_Digitalización.md",
-    "2ASIR/08_DIG-1665 2ºASIR/DIG_UD1.pdf",
     "2ASIR/07_PYT-316 2ºASIR/01links_Python.md",
     "Sin nombre",
     "2ASIR/08_DIG-1665 2ºASIR",
     "2ASIR/07_PYT-316 2ºASIR/Nota_Resumen_u1Claude_Python.md",
     "2ASIR/07_PYT-316 2ºASIR/Unidad1_Python_Explicacion_completa.md",
     "2ASIR/05_SOST-1708 2ºASIR/SOST_UD1.pdf",
-    "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf",
     "2ASIR/02_ASGBD-0377 2ºASIR/T1 CLAUDE ASGB, esta explicación la dió claude apartir de mi documento resumen del PDFT1 de ASGBD.Hasta el punto ...1.3. usuarios...md",
     "cosas/python/CLAUDE-Aprender Python desde cero para ASIR.md",
     "2ASIR/07_PYT-316 2ºASIR",
