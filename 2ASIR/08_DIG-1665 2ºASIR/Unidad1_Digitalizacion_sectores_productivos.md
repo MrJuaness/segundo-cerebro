@@ -132,10 +132,9 @@ Comenzó **aproximadamente en la década de 1970**. El título del PDF dice "med
 | Gestión | Taller artesanal | Producción en masa | Automatización programable |
 | Comunicación | Ferrocarril | Teléfono | Internet / PC |
 
-**Ojo, esta idea te hará falta enseguida:** en la 3ª revolución las máquinas se automatizan, pero **cada una va por su lado (aisladas)**. La oficina (IT) y la planta funcionan como **departamentos separados**. La 4ª revolución cambia justo eso.
+**Ojo,:** en la 3ª revolución las máquinas se automatizan, pero **cada una va por su lado (aisladas)**. La oficina (IT) y la planta funcionan como **departamentos separados**. La 4ª revolución cambia justo eso.
 
 ---
-
 ## 2. Cuarta Revolución: Digitalización y sus elementos (págs. 15–17)
 
 Esta etapa se distingue de las anteriores por la **hiperconectividad** y por la **desaparición de las fronteras entre el mundo físico y el digital**.
