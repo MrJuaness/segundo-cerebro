@@ -42,8 +42,21 @@
               "icon": "lucide-file",
               "title": "Resumen_expliación_Claude_T1DIG"
             }
+          },
+          {
+            "id": "8a1dd331b32504a0",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "2ASIR/08_DIG-1665 2ºASIR/DIG_UD1.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "DIG_UD1"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -105,8 +118,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "af690bc8942d8fa7",
@@ -251,10 +263,10 @@
       }
     ]
   },
-  "active": "ff1935444693c507",
+  "active": "8a1dd331b32504a0",
   "lastOpenFiles": [
-    "2ASIR/08_DIG-1665 2ºASIR/Unidad1_Digitalizacion_sectores_productivos.md",
     "2ASIR/08_DIG-1665 2ºASIR/Resumen_expliación_Claude_T1DIG.md",
+    "2ASIR/08_DIG-1665 2ºASIR/Unidad1_Digitalizacion_sectores_productivos.md",
     "2ASIR/08_DIG-1665 2ºASIR/DIG_UD1.pdf",
     "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf",
     "2ASIR/03_SRI-0375 2ºASIR/DNS_de_cero_a_experto_Unidad1.pdf",

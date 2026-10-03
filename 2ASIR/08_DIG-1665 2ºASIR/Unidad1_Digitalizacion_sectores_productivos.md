@@ -109,20 +109,16 @@ Comenzó **aproximadamente en la década de 1970**. El título del PDF dice "med
 - **Microprocesador:** el componente que permitió **miniaturizar la potencia de cálculo** y llevar la computación a **fábricas y oficinas**.
 - **PLC (Controlador Lógico Programable):** el gran hito **en la planta**. Permitió programar las máquinas para hacer **tareas diferentes sin cambiar el hardware físico**, lo que facilitó una **automatización flexible**.
 - **Internet:** a finales del siglo XX permitió **interconectar ordenadores** y cambió para siempre la comunicación entre **empresas, proveedores y clientes**.
-
 **Para entenderlo:** antes, para que una máquina hiciera otra tarea había que cambiarla físicamente. Con un PLC basta con **reprogramarla**.
 
 **2) Impacto en la estructura de la empresa**
 - **Automatización de procesos:** la intervención humana pasa de **ejecutar directamente la tarea** a **programar y supervisar las máquinas**.
 - **Sistemas de gestión (IT):** aparecen los primeros **ERP** (sistemas de planificación de recursos empresariales) para gestionar **contabilidad, inventario y planificación de tareas**.
 - **Telecomunicaciones:** las operaciones se **globalizan** gracias al intercambio rápido de información.
-
 **3) Fuentes de energía.** Hay una **diversificación energética**:
 - **Energía nuclear:** se consolida como fuente de **alta capacidad** para la industria.
 - **Energías renovables:** empiezan a desarrollarse como respuesta a la búsqueda de una **economía más sostenible**.
-
 *(La imagen de la pág. 13 muestra un microchip, un brazo robótico, una central nuclear y un ordenador antiguo.)*
-
 **Evolución hasta la 3ª**
 
 | Elemento | 1ª | 2ª | 3ª |
