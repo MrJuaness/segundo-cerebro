@@ -40,3 +40,27 @@ La industria **no ha evolucionado de forma lineal** (poco a poco). Avanzó a **g
 - **Urbanización:** migración masiva de la población del campo a las ciudades industriales.
 - **Productividad:** aumento exponencial de la capacidad de producción y reducción de los tiempos de fabricación.
 *(La imagen de la pág. 8 es un dibujo antiguo de una máquina de vapor.)*
+
+### ==1.2 La Segunda Revolución Industrial (págs. 9–11)==
+**Aproximadamente(1870-1914,** inicio de la Primera Guerra Mundial). Fue una **maduración tecnológica** que permitió la **globalización de la economía industrial**.
+**1) Nuevas fuentes de energía y materiales.** Si la primera se basó en carbón y hierro, la segunda se basó en:
+- **Electricidad:** dio más flexibilidad para ubicar las fábricas y permitió la **iluminación nocturna**. Esto alargó las jornadas laborales y mejoró la seguridad.
+- **Petróleo:** dio origen al **motor de combustión interna**, que revolucionó el transporte (**automóviles y aviación**).
+- **Acero:** es **más resistente y elástico que el hierro**. Permitió construir infraestructuras masivas y maquinaria más precisa.
+**2) Cambio en la organización de la producción.** Es un punto clave para entender la evolución de la empresa clásica. Aparecen métodos de **gestión científica**:
+- **Taylorismo:** **división estricta de las tareas** para maximizar la eficiencia del trabajador.
+- **Fordismo (cadena de montaje):** **Henry Ford** aplicó la **producción en serie**. El producto se desplaza por la planta mientras cada operario realiza **una tarea única y repetitiva**.
+**3) Impacto en la estructura de la empresa** (relacionado con *Organización* y *Recursos* de este módulo):
+- **Producción en masa:** los costes bajaron drásticamente y productos como el **Ford T** se hicieron accesibles para el gran público.
+- **Especialización del trabajo:** surgieron **departamentos diferenciados** (administración, ventas, producción). Es una estructura que todavía reconoces en muchas empresas.
+- **Concentración empresarial:** aparecieron los grandes **"trusts" y monopolios**, porque montar las infraestructuras eléctricas y petroleras exigía enormes inversiones de capital.
+**Para entenderlo:** *trusts y monopolios* son grandes grupos que concentran el mercado.
+
+**Comparación 1ª vs 2ª**
+
+| Elemento | 1ª Revolución | 2ª Revolución |
+|---|---|---|
+| Fuente de energía | Vapor / carbón | Electricidad / petróleo |
+| Material base | Hierro | Acero |
+| Modelo productivo | Taller / fábrica manual | Cadena de montaje (producción en serie) |
+| Comunicación | Ferrocarril / telégrafo | Teléfono / radio |
