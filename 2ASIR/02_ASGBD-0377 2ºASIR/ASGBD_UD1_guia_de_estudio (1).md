@@ -242,7 +242,6 @@ Las reglas 8 y 9 se parecen a la arquitectura de 3 niveles del apartado 2, la 4 
 La **arquitectura** de un SGBD es la estructura fundamental que define **cómo se organizan y gestionan los datos** en el sistema.
 
 **ANSI/SPARC** es un modelo conceptual para diseñar y administrar BD. Su nombre viene de sus creadores: **ANSI** (*American National Standards Institute*) y **SPARC** (*Standards Planning And Requirements Committee*). Divide la BD en **tres niveles**:
-
 ```
  NIVEL EXTERNO      lo que ve cada usuario (vistas)
        ▲
@@ -252,7 +251,6 @@ La **arquitectura** de un SGBD es la estructura fundamental que define **cómo s
 ```
 
 El PDF los numera de abajo arriba:
-
 1. **Nivel interno (o físico):** es el más bajo. Se ocupa de **cómo se almacenan físicamente** los datos: organización de los archivos, almacenamiento de índices, de metadatos, etc. Por ejemplo, los datos pueden guardarse en discos duros con estructuras como **B-trees** o **hash maps** (formas de organizar datos para encontrarlos rápido; no hace falta profundizar ahora). También gestiona la **compresión** (ahorrar espacio) y la **encriptación** (proteger los datos).
 2. **Nivel conceptual (o lógico):** se ocupa de **cómo se organizan lógicamente** los datos. Define **qué datos** se guardan y **qué relaciones** hay entre ellos. **Oculta los detalles físicos** y da una visión unificada. En una BD relacional define las tablas, las columnas y las relaciones. Los usuarios interactúan a través de este nivel con un lenguaje como SQL.
 3. **Nivel externo (o de vista):** es el nivel superior y se encarga de **presentar los datos a los usuarios finales**. Puede haber **varias vistas externas** adaptadas a distintos usuarios. Por ejemplo, el departamento financiero ve una vista solo con datos financieros, y recursos humanos ve otra solo con información de los empleados.
@@ -260,11 +258,8 @@ El PDF los numera de abajo arriba:
 **Analogía de la biblioteca (mía):** el nivel interno es en qué estantería y planta está cada libro. El conceptual es el catálogo (qué libros existen y cómo se relacionan). El externo es lo que ve cada tipo de lector.
 
 ---
-
 ## 3. SGBD libres y comerciales o de mercado (págs. 23-24)
-
 **SGBD libres:** su licencia de código es libre, así que usarlos **no cuesta dinero**. El esquema del PDF muestra:
-
 - **MySQL:** el gestor de código abierto más popular en la web, usado sobre todo con el lenguaje PHP.
 - **PostgreSQL:** potente gestor de BD relacionales orientado a objetos que amplía las funciones de SQL.
 - **MariaDB:** sistema derivado de MySQL con licencia **GPL** (*General Public License*).
@@ -272,33 +267,22 @@ El PDF los numera de abajo arriba:
 - **MongoDB:** aparece en el esquema solo con su logo.
 
 **SGBD de mercado:** están programados con código protegido bajo **licencia propietaria**, así que usarlos **implica un coste económico**. El PDF muestra los dos más populares (los llama "Tabla 2"):
-
 - **Microsoft SQL Server:** gestor desarrollado por Microsoft, basado en el lenguaje SQL.
 - **Oracle Database:** sistema de gestión de BD **objeto-relacional** (mezcla tablas con ideas de objetos), producido y comercializado por Oracle Corporation.
-
 *Matiz:* en el apartado 6 el PDF dice que MySQL lo desarrolla Oracle y que tiene licencia pública general **y también comercial**.
-
 ---
-
 ## 4. El administrador de bases de datos (DBA) (págs. 25-26)
 
 El DBA (*DataBase Administrator*) es **el guardián de la base de datos**: se encarga de que todo funcione bien y de que la información esté segura y accesible para las personas adecuadas. Sus 5 funciones:
-
 1. **Entender las necesidades de los usuarios:** saber qué información necesita la empresa para organizar la BD de forma eficiente.
 2. **Gestionar la base de datos:** todas las tareas técnicas, como crear tablas, gestionar índices y modificar la estructura de la BD.
 3. **Mantenerla funcionando sin problemas:** monitorizar el rendimiento y hacer ajustes para mejorar la eficiencia.
 4. **Protegerla:** implementar medidas de seguridad para la información almacenada.
 5. **Facilitar el acceso a los datos:** definir políticas de acceso y garantizar que los datos se presenten de forma eficiente y en el formato adecuado.
-
 > **Importante (PDF):** el DBA es el usuario más importante de la BD. Se encarga de que todo funcione, de que la información esté segura y accesible para las personas adecuadas. **Gestiona, mantiene, protege y facilita el acceso.**
-
 ---
-
-
 ## 5. Lenguaje estándar de consulta SQL (págs. 27-28)
-
 **SQL** significa *Structured Query Language* (Lenguaje de Consulta Estructurada). Según el PDF es un lenguaje (lo llama "de programación") para **gestionar y manipular bases de datos**. Está **estandarizado** y lo usa la mayoría de SGBD. Es "el idioma" con el que le hablas al SGBD.
-
 Se divide en tres grupos, según para qué sirven:
 
 | Grupo | Para qué sirve | Comandos |
@@ -310,13 +294,11 @@ Se divide en tres grupos, según para qué sirven:
 **Truco (mío):** DDL = **D**efinir, DML = **M**anipular, DCL = **C**ontrolar.
 
 Ejemplos del PDF:
-
 - `CREATE` crea una tabla nueva, `ALTER` modifica la estructura de una tabla existente y `DROP` elimina una tabla.
 - `SELECT` extrae datos, `INSERT` introduce datos nuevos, `UPDATE` cambia datos ya guardados y `DELETE` borra datos.
 - `GRANT` da a un usuario permiso para acceder a una tabla y `REVOKE` se lo quita.
 
 **Para qué se usa SQL (5 tareas del PDF):**
-
 1. **Crear BD y tablas:** `CREATE DATABASE` y `CREATE TABLE`.
 2. **Insertar datos:** `INSERT INTO`.
 3. **Modificar datos:** `UPDATE`.
@@ -324,7 +306,6 @@ Ejemplos del PDF:
 5. **Controlar el acceso:** `GRANT`.
 
 El PDF solo nombra los comandos. Aquí tienes un mini ejemplo mío para que los veas escritos:
-
 ```sql
 -- DDL: estructura
 CREATE DATABASE academia;
@@ -349,61 +330,41 @@ CREATE USER 'ana'@'localhost' IDENTIFIED BY 'clave123';
 GRANT SELECT ON academia.estudiantes TO 'ana'@'localhost';
 REVOKE SELECT ON academia.estudiantes FROM 'ana'@'localhost';
 ```
-
 ---
-
 ## 6. Instalación y configuración de un SGBD: MySQL (págs. 29-36)
-
 **MySQL** es uno de los gestores más usados, tanto por usuarios individuales como por empresas que usan software libre. Lo desarrolla **Oracle**, funciona con una **licencia pública general y también comercial**, y sirve para manejar datos **relacionales**.
-
 Del paquete, los dos componentes principales son:
-
 - **MySQL Server:** el **núcleo**, un gestor relacional robusto y muy reconocido. Sirve para crear BD con tablas, vistas y relaciones, y para editarlas y consultarlas.
 - **MySQL Workbench:** un conjunto avanzado de herramientas para administrar BD relacionales. Permite ejecutar consultas SQL en un **entorno visual interactivo**, con interfaces gráficas intuitivas.
-
 *Imagina (mío):* el Server es el almacén donde viven los datos y Workbench es el mostrador desde el que le haces peticiones.
-
 ### 6.1 Instalar MySQL en Windows 10
-
 Se empieza por MySQL Server. Primero, dónde y cómo descargarlo.
-
 #### 6.1.1 Descargar MySQL (pág. 30)
-
 1. Entra en la **web oficial de MySQL** (el PDF trae el enlace "Ver enlace") y en la página principal pulsa **"MySQL Community Server"**.
 2. En la zona inferior de la nueva página, **selecciona la plataforma**, que será Windows. Pulsa la opción principal **"MySQL Installer for Windows"**. Este procedimiento es el mismo en cualquier sistema operativo.
 3. En la página siguiente vuelve a elegir el sistema operativo y haz clic en **"Windows (x86, 32-bit), MSI Installer"**. Hay dos versiones: una **descarga ficheros de Internet durante la instalación** y la otra es el **paquete completo**.
 4. La versión que se usa en el curso es la **8.0.28**.
 5. Antes de descargar aparece una página para suscribirse o iniciar sesión. **No es necesario**: pulsa el enlace de la zona inferior.
-
 #### 6.1.2 Proceso de instalación (págs. 31-32)
-
 Consejo previo: ten el **sistema operativo actualizado** para evitar errores de última hora.
 
 Ejecuta el paquete descargado y arranca el **asistente de instalación**. Para instalar Server y Workbench hay dos opciones:
-
 - **"Developer Default":** instala automáticamente todo lo necesario para crear y gestionar BD. Es la **recomendada para principiantes**, porque instala MySQL completo con información extra y todo el soporte disponible.
 - **"Custom":** ofrece muchas opciones para elegir. Está pensada para usuarios que ya tienen experiencia con otros gestores de BD.
 
 Opciones principales en Custom:
-
 - **MySQL Servers:** el recurso fundamental para usar tu equipo como servidor y administrador de BD. Despliega la lista y pulsa la **flecha** para moverlo a la columna de la derecha (lo que se va a instalar).
 - **MySQL Workbench:** está en el apartado **"Applications"** y será nuestro **cliente**. Se mueve igual.
 - **MySQL Connections:** depende de las conexiones que quieras hacer, según los clientes y lenguajes de programación que uses. Lo mejor es instalarlos todos por si los necesitas.
-
 > **Importante (PDF):** para instalar la conexión a **Python**, tienes que tener instalado en el sistema el paquete de ese lenguaje de programación.
 
 #### 6.1.3 Documentación (págs. 32-33)
-
 Es el último apartado de Custom. Permite añadir información sobre cómo usar MySQL y ejemplos de ayuda. Después:
-
 - Con los paquetes elegidos (en Developer Default o en Custom) pulsa **"Next"** y, en la pantalla siguiente, **"Execute"**. Casi todas las aplicaciones necesitan el paquete **Microsoft Visual C++ 2015**, que se instala automáticamente cuando empieza el proceso.
 - El PDF dice que la preparación de los paquetes no empieza hasta que aparece el mensaje **"INSTL DONE"**. En la captura se ve que Visual Studio no está instalado, porque es imprescindible tener antes el paquete de Microsoft en el sistema. Se pulsa **"Next"**.
 - En el siguiente paso ya se hace la **instalación real**. Aparece un mensaje emergente: pulsa **"Yes"**. Después sale la lista de programas que se van a instalar: pulsa de nuevo **"Execute"**.
-
 #### 6.1.4 Configuración de MySQL (págs. 33-35)
-
 Al terminar de instalar los módulos hay que hacer una **configuración inicial antes de arrancar los servicios**. Pulsa "Siguiente". La pantalla siguiente es una **fase crítica**: se configuran el **tipo de equipo**, los **protocolos** y los **puertos TCP** para las conexiones remotas. Esto es vital para el correcto funcionamiento y la seguridad.
-
 Tipos de equipo:
 
 | Opción | Para qué es |
@@ -413,18 +374,14 @@ Tipos de equipo:
 | **Dedicated Computer** | Un equipo solo y exclusivamente para bases de datos, por ejemplo una máquina virtual donde se guardan tus BD |
 
 Después, el resto de pasos:
-
 - **Puerto TCP:** el de las conexiones remotas. Por defecto es el **3306**. Es el puerto que tendrás que **abrir en el router** para conexiones remotas. (Un puerto es como una puerta numerada por la que el servidor atiende; explicación mía.)
 - **Resto de opciones:** déjalas **por defecto**.
 - **Contraseña:** eliges la contraseña para conectarte al servidor. Puedes cambiarla en cualquier momento desde el propio servidor. No hace falta definir un usuario concreto para administrar, porque por defecto es el usuario **root**.
 - **Nombre del servicio** de MySQL y preferencias generales sobre el **inicio del demonio** (el programa del servidor que queda funcionando en segundo plano, por ejemplo si arranca solo con el sistema) y el **uso de cuentas de usuario**.
 - **Pantalla final:** pulsa **"Execute"** para ejecutar las acciones y activar los servicios. Si algo falla, aparece una **"x" roja** junto al elemento afectado y hay que **consultar el registro de errores** (el log).
 - Si instalaste extras como los ejemplos, **también hay que configurarlos**. Después hay que conectar con el servidor usando **root y la contraseña** definida. Con esto termina la instalación.
-
 #### 6.1.5 Conectarnos a MySQL Server desde MySQL Workbench (págs. 35-36)
-
 Si instalaste Workbench, se abre solo tras la instalación. Por defecto aparece la conexión a tu propio equipo, donde está el server. El PDF supone que no hay ninguna conexión creada, para ver cómo se crea una:
-
 1. Pulsa el botón **"+"** de **"MySQL Connections"**.
 2. En la ventana que se abre, rellena:
     - **Nombre de la conexión:** el que quieras.
@@ -438,26 +395,19 @@ Si instalaste Workbench, se abre solo tras la instalación. Por defecto aparece 
 **Resumen rápido de la instalación:** descargar (8.0.28) → ejecutar → elegir Developer Default o Custom → Next/Execute (requisitos) → Yes/Execute (instalación) → configurar (tipo de equipo, puerto 3306, contraseña de root, servicio) → Execute → conectar con Workbench.
 
 ---
-
-
 ## 7. Integración del SGBD en el sistema operativo (págs. 37-39)
 
 La idea central es que el SGBD es una **capa de software entre los usuarios y el sistema de archivos**:
-
 ```
 Usuario → SGBD → Sistema de archivos (SO) → Disco duro
 ```
-
 1. **Sistema de archivos:** es la parte del sistema operativo que gestiona la **lectura y escritura** de datos en el almacenamiento físico (como un disco duro). El SGBD lo usa para guardar las BD físicas. Cada BD puede ser **un archivo o un conjunto de archivos**, y las lecturas y escrituras en la BD se traducen en lecturas y escrituras en esos archivos.
 2. **Control de usuarios:** es parte esencial de la seguridad. Cada usuario tiene unos **privilegios** que determinan qué operaciones puede hacer (leer o escribir en una BD), y se **verifican cada vez** que intenta una operación. En el ejemplo de código, esto ocurre en los métodos `crear_base_de_datos` y `leer_base_de_datos` del SGBD.
 3. **SGBD:** ofrece una interfaz para que los usuarios interactúen con las BD **sin preocuparse de cómo se guardan** los datos en el sistema de archivos. En el ejemplo, la interfaz son esos dos métodos.
-
 > **Importante (PDF):** el ejemplo está **muy simplificado**. Un SGBD real tiene muchas más funciones, y su gestión de usuarios y su interacción con el sistema de archivos son mucho más complejas y seguras. Además, debe lidiar con la **concurrencia** (varios usuarios accediendo a la BD a la vez), la **recuperación de errores** y la **optimización de consultas**.
 
 ### El código del PDF, explicado
-
 Está en Python (con la sangría reconstruida y comentarios míos). No necesitas dominar Python: lo importante es la idea.
-
 ```python
 class SistemaOperativo:                       # simula el SO
     def __init__(self):
@@ -506,14 +456,12 @@ class SGBD:                                   # nuestro gestor, "montado" sobre 
 ```
 
 Cada clase representa una pieza:
-
 - **`SistemaOperativo`** guarda los usuarios y tiene un sistema de archivos. Comprueba la identidad con `autenticar_usuario` (autenticación).
 - **`SistemaDeArchivos`** guarda "archivos" por nombre. Una BD será simplemente uno de esos archivos.
 - **`Usuario`** es solo nombre y contraseña.
 - **`SGBD`** es la capa intermedia. Antes de crear o leer una BD **pregunta al SO si el usuario es válido** y, solo entonces, usa el sistema de archivos.
 
 Un ejemplo de uso mío:
-
 ```python
 so = SistemaOperativo()
 so.agregar_usuario("ana", "1234")
@@ -522,15 +470,11 @@ sgbd.crear_base_de_datos("tienda", "ana", "1234")    # True  → archivo "tienda
 sgbd.crear_base_de_datos("otra", "ana", "mal")       # False → contraseña incorrecta
 sgbd.leer_base_de_datos("tienda", "ana", "1234")     # {}    → la BD, todavía vacía
 ```
-
 Por eso el PDF avisa de que es un ejemplo simplificado. Por ejemplo, aquí las contraseñas se guardan tal cual, y un sistema real las protegería.
 
 ---
-
 ## 8. Instalación de un SGBD de dos capas (págs. 40-41)
-
 "Dos capas" significa **dos partes: cliente y servidor**. Los pasos son:
-
 1. **Servidor de la BD:** el sistema que **alberga el SGBD y las BD**. Ahí instalas el software del SGBD. Durante la instalación puede que tengas que configurar parámetros como el **tamaño máximo** de la BD, la **ubicación de los archivos** de la BD en el sistema de archivos y las **opciones de seguridad**.
 2. **Cliente de la BD:** el sistema o sistemas que **se conectan al servidor** para hacer consultas y otras operaciones. Ahí instalas el software cliente, que da las herramientas para conectarse y operar.
 3. **Conexión cliente-servidor:** configurar la **red** para que ambos se comuniquen y las **opciones de seguridad** para proteger esa comunicación.
@@ -539,9 +483,7 @@ Por eso el PDF avisa de que es un ejemplo simplificado. Por ejemplo, aquí las c
 Los detalles concretos **varían según el SGBD**. Con MySQL, el Server es la capa servidor y Workbench la capa cliente. El host/IP y el puerto 3306 son la conexión, y `root` con su contraseña es el usuario con el que entras (esta relación con MySQL es mía).
 
 ---
-
 ## 9. Relación entre el SGBD y la BD: instancias (pág. 42)
-
 Están muy relacionados, pero cumplen **roles distintos**:
 
 | Concepto | Qué es |
@@ -555,13 +497,9 @@ Están muy relacionados, pero cumplen **roles distintos**:
 Piensa en la instancia como una **"foto" completa** de la BD (más los procesos que la manejan) en un momento concreto. El PDF mezcla esas dos ideas (la foto de los datos y el SGBD en marcha), así que quédate con ambas.
 
 ---
-
 ## 10. Estructura del diccionario de datos (pág. 43)
-
 El **diccionario de datos** (también llamado **catálogo del sistema**) es una estructura esencial de todo SGBD. Guarda **metadatos**, es decir, **datos sobre los datos**, que definen la estructura de la BD. Es como el **catálogo de la biblioteca** (comparación mía): no contiene los libros, sino la información sobre ellos.
-
 El PDF da un esbozo de su estructura, con 10 elementos:
-
 1. **Nombre de la tabla:** cada tabla de la BD.
 2. **Nombre del campo:** cada campo (columna) de cada tabla.
 3. **Tipo de datos:** de cada campo (entero, cadena, fecha…).
@@ -572,60 +510,37 @@ El PDF da un esbozo de su estructura, con 10 elementos:
 8. **Procedimientos almacenados y funciones:** definidos en la BD (pequeños programas guardados dentro de ella).
 9. **Información de seguridad:** roles de usuario y permisos.
 10. **Información de uso:** estadísticas de acceso.
-
 La estructura exacta **varía según el SGBD**.
-
 ---
-
 ## 11. Ficheros LOG en un SGBD (págs. 44-45)
-
 Los **ficheros de registro (logs)** son una parte esencial de la infraestructura: garantizan la **integridad** y la **recuperación** de los datos. Son el "diario" donde el SGBD apunta lo que hace (comparación mía). Sirven para:
-
 - **Registro de transacciones:** cada vez que se hace una operación (inserción, actualización o eliminación), el SGBD **escribe un registro** en el log: el tipo de operación, los datos implicados y el momento.
 - **Recuperación de fallos:** si el sistema falla (un corte de luz o un error de software), el SGBD usa el log para devolver la BD a un **estado consistente**:
     - **Deshace** las operaciones que no se habían completado del todo cuando ocurrió el fallo.
     - **Rehace** las operaciones que sí se habían completado pero aún no se habían escrito en la BD.
 - **Control de concurrencia:** si dos transacciones intentan modificar el mismo dato a la vez, el SGBD puede usar el log para determinar **cuál se ejecutó primero** y resolver el conflicto.
 - **Auditoría y seguimiento:** el log es un **registro histórico** de todas las operaciones hechas en la BD.
-
 > **Importante (PDF):** gestionar los logs es una tarea **compleja** que requiere cuidado para que los datos no se pierdan ni se corrompan. Además pueden **ocupar mucho espacio**, así que suele hacer falta implantar políticas de **rotación y purga**. Es decir (explicación mía), cambiar a ficheros nuevos y archivar los viejos (rotación) y borrar los que ya no hacen falta (purga).
-
 ---
-
 ## 12. Arquitectura del SGBD: archivos en disco, memoria y procesos (págs. 46-47)
-
 Aquí se ve cómo funciona el SGBD **por dentro**. Imagina una oficina (comparación mía): los archivadores son los archivos en disco, la mesa de trabajo es la memoria y los empleados son los procesos.
-
 ### 12.1 Archivos en disco
-
 Los datos de la BD se guardan en archivos. Una BD puede estar formada por **uno o más archivos**, según la configuración. Pueden ser:
-
 - **Archivos de datos:** guardan los **datos reales**. Cada tabla puede tener su propio archivo, o varias tablas pueden compartir uno.
 - **Archivos de índice:** guardan los **índices**. Cada índice es un mapa que va de los valores de una o más columnas a las ubicaciones de los registros que tienen esos valores.
 - **Archivos de log:** guardan los registros de las transacciones que modifican la BD. Sirven para recuperarla a un estado consistente tras un fallo.
-
 ### 12.2 Espacios de memoria
-
 El SGBD usa la memoria del sistema para:
-
 - **Buffer de datos:** región de memoria que guarda **temporalmente** los datos que se están leyendo o escribiendo. Así se minimizan las costosas lecturas y escrituras en disco.
 - **Caché de índices:** guarda temporalmente los índices para **acelerar las consultas**.
 - **Pool de conexiones:** conjunto de conexiones a la BD **que se mantienen abiertas** para que las reutilicen las transacciones.
-
 ### 12.3 Procesos
-
 Un SGBD tiene varios procesos que trabajan juntos:
-
 - **Procesos de usuario:** ejecutan las consultas de los usuarios. **Cada conexión** a la BD se maneja en un proceso de usuario separado.
 - **Procesos de fondo:** hacen tareas de **mantenimiento**, como limpiar la memoria, escribir de vuelta en el disco los datos modificados, gestionar los ficheros de log, etc.
-
 ---
-
-
 ## 13. Resumen (págs. 48-49)
-
 El PDF resume la unidad en 5 puntos:
-
 1. **Funciones del SGBD:** es software para gestionar una BD. Da acceso a los datos, asegura transacciones atómicas, gestiona la seguridad de los usuarios y revisa la integridad, entre otras funciones.
 2. **Componentes:** el Resumen cita el DDL, el DCL, el DML, el diccionario de datos y los objetos de la BD (tablas, vistas…). La lista completa de 8 componentes es la de 1.2.
 3. **Tipos de SGBD:** se clasifican por varios criterios. El modelo lógico (jerárquicos, de red, relacional y orientados a objetos) ya lo vimos. Las otras tres formas solo aparecen aquí, y el PDF no las desarrolla (la explicación es mía):
@@ -638,11 +553,8 @@ El PDF resume la unidad en 5 puntos:
 
 4. **Arquitectura:** tres niveles: **interno** (estructura física), **conceptual** (estructura lógica de la BD para una organización) y **externo** (vistas personalizadas para cada usuario).
 5. **Instalación y configuración:** antes hay que **elegir qué SGBD instalar** según los requerimientos. Una vez instalado y configurado, los usuarios pueden introducir y consultar datos. Cada SGBD tiene requisitos y procesos propios, así que conviene **consultar siempre su documentación técnica**.
-
 ---
-
 ## 14. Glosario (págs. 50-51)
-
 - **Autenticación y autorización:** verificar la identidad de un usuario (autenticación) y definir a qué recursos accede según los permisos que tiene (autorización).
 - **Base de datos (BD):** conjunto organizado de datos interrelacionados, estructurados según ciertos criterios, que permite acceder a ellos, gestionarlos y actualizarlos fácilmente.
 - **Concurrencia:** gestión del acceso simultáneo de varios usuarios, asegurando que las transacciones se ejecuten de forma consistente y sin interferirse.
@@ -653,25 +565,17 @@ El PDF resume la unidad en 5 puntos:
 - **Lenguaje de Manipulación de Datos (DML):** parte de SQL para operar sobre los datos (`SELECT`, `INSERT`, `UPDATE`, `DELETE`).
 - **Sistema Gestor de Bases de Datos (SGBD):** software que facilita crear, manipular y administrar bases de datos, asegurando integridad, seguridad y eficiencia.
 - **Transacción:** secuencia de operaciones que forman **una sola unidad lógica de trabajo** y debe completarse **entera** para que la BD mantenga su integridad.
-
 ---
-
 ## 15. Bibliografía (pág. 52)
-
 Recursos que recomienda el PDF:
-
 - **SQL Tutorial:** para aprender SQL desde lo básico hasta temas avanzados.
 - **Tutorial de MySQL:** guías sobre instalación, configuración y uso de MySQL.
 - **Documentación oficial de PostgreSQL:** completa, con tutoriales y guías técnicas.
 - **MariaDB Knowledge Base:** desde conceptos básicos hasta configuraciones avanzadas.
 - **Oracle DB Documentation.**
-
 ---
-
 ## Erratas y rarezas del PDF
-
 Para que no te confundan al estudiar:
-
 - **"Modelo Relaciona"** (pág. 7) es Modelo **Relacional**. **"Concurrency"** (pág. 13) es **Concurrencia**. **"Pyton"** (pág. 32) es **Python**. **"Comunnity"** (pág. 30) es **Community**.
 - La IP **"0.0.1"** (pág. 35) debe ser **127.0.0.1**.
 - En la pág. 7 se habla de **3 modelos** de BD, pero en 1.4 se explican **4 tipos** (se añade el orientado a objetos).
@@ -679,9 +583,7 @@ Para que no te confundan al estudiar:
 - El Resumen presenta los componentes de forma algo distinta a 1.2. Aprende la lista de 1.2 y ten presente que el Resumen añade DCL.
 - En el esquema de SGBD libres (pág. 23), MongoDB solo aparece con su logo y la descripción de MariaDB está repetida.
 - **MongoDB:** el PDF lo usa como ejemplo de SGBD orientado a objetos. Fuera de este PDF se suele clasificar como base de datos *documental* (NoSQL). Para este temario, usa el ejemplo tal como lo plantea el PDF.
-
 ---
-
 *Fin de la guía de la Unidad 1.*
 
 
