@@ -41,7 +41,7 @@ La industria **no ha evolucionado de forma lineal** (poco a poco). Avanzó a **g
 - **Productividad:** aumento exponencial de la capacidad de producción y reducción de los tiempos de fabricación.
 *(La imagen de la pág. 8 es un dibujo antiguo de una máquina de vapor.)*
 
-### ==1.2 La Segunda Revolución Industrial (págs. 9–11)==
+### ==1.2 La Segunda Revolución Industrial ==
 **Aproximadamente(1870-1914,** inicio de la Primera Guerra Mundial). Fue una **maduración tecnológica** que permitió la **globalización de la economía industrial**.
 **1) Nuevas fuentes de energía y materiales.** Si la primera se basó en carbón y hierro, la segunda se basó en:
 - **Electricidad:** dio más flexibilidad para ubicar las fábricas y permitió la **iluminación nocturna**. Esto alargó las jornadas laborales y mejoró la seguridad.
@@ -55,7 +55,6 @@ La industria **no ha evolucionado de forma lineal** (poco a poco). Avanzó a **g
 - **Especialización del trabajo:** surgieron **departamentos diferenciados** (administración, ventas, producción). Es una estructura que todavía reconoces en muchas empresas.
 - **Concentración empresarial:** aparecieron los grandes **"trusts" y monopolios**, porque montar las infraestructuras eléctricas y petroleras exigía enormes inversiones de capital.
 **Para entenderlo:** *trusts y monopolios* son grandes grupos que concentran el mercado.
-
 **Comparación 1ª vs 2ª**
 
 | Elemento | 1ª Revolución | 2ª Revolución |
@@ -64,3 +63,37 @@ La industria **no ha evolucionado de forma lineal** (poco a poco). Avanzó a **g
 | Material base | Hierro | Acero |
 | Modelo productivo | Taller / fábrica manual | Cadena de montaje (producción en serie) |
 | Comunicación | Ferrocarril / telégrafo | Teléfono / radio |
+### ==1.3 La Tercera Revolución Industrial ==
+Comenzó **aproximadamente en la década de 1970**. El título del PDF dice "mediados del s. XX", pero el texto y la tabla la sitúan en torno a 1970, así que quédate con ese dato. Se caracteriza por el **paso de la tecnología analógica y mecánica a la digital**.
+**1) Elementos tecnológicos clave** (desarrollo de la **electrónica** y de las **tecnologías de la información, IT**):
+- **Microprocesador:** el componente que permitió **miniaturizar la potencia de cálculo** y llevar la computación a **fábricas y oficinas**.
+- **PLC (Controlador Lógico Programable):** el gran hito **en la planta**. Permitió programar las máquinas para hacer **tareas diferentes sin cambiar el hardware físico**, lo que facilitó una **automatización flexible**.
+- **Internet:** a finales del siglo XX permitió **interconectar ordenadores** y cambió para siempre la comunicación entre **empresas, proveedores y clientes**.
+
+**Para entenderlo:** antes, para que una máquina hiciera otra tarea había que cambiarla físicamente. Con un PLC basta con **reprogramarla**.
+
+**2) Impacto en la estructura de la empresa**
+- **Automatización de procesos:** la intervención humana pasa de **ejecutar directamente la tarea** a **programar y supervisar las máquinas**.
+- **Sistemas de gestión (IT):** aparecen los primeros **ERP** (sistemas de planificación de recursos empresariales) para gestionar **contabilidad, inventario y planificación de tareas**.
+- **Telecomunicaciones:** las operaciones se **globalizan** gracias al intercambio rápido de información.
+
+**3) Fuentes de energía.** Hay una **diversificación energética**:
+- **Energía nuclear:** se consolida como fuente de **alta capacidad** para la industria.
+- **Energías renovables:** empiezan a desarrollarse como respuesta a la búsqueda de una **economía más sostenible**.
+
+*(La imagen de la pág. 13 muestra un microchip, un brazo robótico, una central nuclear y un ordenador antiguo.)*
+
+**Evolución hasta la 3ª**
+
+| Elemento | 1ª | 2ª | 3ª |
+|---|---|---|---|
+| Hito principal | Máquina de vapor | Cadena de montaje | Informática / PLC |
+| Motor de cambio | Energía mecánica | Electricidad | Electrónica |
+| Gestión | Taller artesanal | Producción en masa | Automatización programable |
+| Comunicación | Ferrocarril | Teléfono | Internet / PC |
+
+**Ojo, esta idea te hará falta enseguida:** en la 3ª revolución las máquinas se automatizan, pero **cada una va por su lado (aisladas)**. La oficina (IT) y la planta funcionan como **departamentos separados**. La 4ª revolución cambia justo eso.
+
+---
+
+
