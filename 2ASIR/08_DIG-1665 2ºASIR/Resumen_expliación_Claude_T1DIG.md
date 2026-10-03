@@ -24,14 +24,12 @@ La industria **no ha evolucionado de forma lineal** (poco a poco). Avanzó a **g
 ### 1.1 La Primera Revolución Industrial 
 **En una frase:** se pasa de una economía basada en la **agricultura y el trabajo manual** a otra dominada por la **industria y la manufactura mecanizada**.
 **Contexto y origen**
-- **Cuándo:** aprox; entre **1760 y 1840**.
-- **Dónde:** nació en el **Reino Unido** y se extendió poco a poco por **Europa y Estados Unidos**.
-
-**Los tres pilares tecnológicos y económicos**
-1. **La máquina de vapor** es el elemento tecnológico central. Perfeccionada por **James Watt**, convierte **energía térmica (calor) en energía mecánica (movimiento)**. Su gran ventaja es que la producción deja de depender de la **fuerza humana, animal o de las corrientes de agua**.
-2. **El carbón como fuente de energía:** es el combustible principal para las nuevas máquinas y para las **fundiciones de hierro**.
+- **Cuándo:** aprox; **(1760-1840)**.
+- Nació en el **Reino Unido** y se extendió poco a poco por **Europa y Estados Unidos*
+**Los 3 pilares tecnológicos y económicos**
+1. **La máquina de vapor:** elemento tecnológico central. Perfeccionada por **James Watt**, convierte **energía térmica (calor) en energía mecánica (movimiento)**. Su gran ventaja:la producción deja de depender de la **fuerza humana, animal o de las corrientes de agua**.
+2. **El carbón como fuente de energía:** es el combustible principal para nuevas máquinas y para las **fundiciones de hierro**.
 3. **El sistema de fábrica (Factory System):** la producción pasa de **pequeños talleres artesanales** a **grandes instalaciones** donde se concentran máquinas y trabajadores. Aquí están las bases de la organización y los recursos industriales actuales.
-
 **Sectores clave y repercusión**
 - **Industria textil:** fue el **primer sector en mecanizarse**, con **telares mecánicos**.
 - **Siderurgia:** mejoró la producción de hierro, esencial para construir nuevas máquinas y herramientas.
