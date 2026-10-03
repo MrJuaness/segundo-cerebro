@@ -44,7 +44,7 @@ Esta unidad es **la base de todo el módulo**. Al terminarla deberías ser capaz
 3. **Valorar la transformación industrial:** ver las ventajas de digitalizar una empresa "de extremo a extremo" y conocer la cronología de las revoluciones industriales.
 4. **Comprender la empresa digital:** evaluar cómo la digitalización contribuye a la sostenibilidad, a la eficiencia de costes y a la conciliación laboral.
 
-La introducción del PDF divide la unidad en tres bloques:
+La introducción del PDF divide la unidad en 3 bloques:
 - **Bloque 1, la historia y el concepto.** Se analizan las revoluciones industriales para ver cómo se pasó de la mecanización inicial a la cuarta revolución. Esta se define por la **digitalización integral** y la aparición de los **sistemas ciberfísicos**. Después se profundiza en qué es la digitalización y cómo cambia la organización tradicional de las empresas.
 - **Bloque 2, la empresa por dentro.** Se estudia cómo se digitalizan sus unidades esenciales (organización, gestión de recursos y planificación de tareas compartidas). También se ve la "dualidad" IT/OT: diferencias, similitudes y por qué conectarlos es crítico para digitalizar de extremo a extremo. Por último, se ven las THD de cada entorno, planta o gestión de negocio.
 - **Bloque 3, de empresa clásica a empresa digitalizada.** Se evalúa la evolución necesaria y sus ventajas estratégicas: eficiencia en costes, nuevos mecanismos de análisis de datos para decidir mejor y canales de comunicación más ágiles con clientes y proveedores.
