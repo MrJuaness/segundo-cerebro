@@ -8,17 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fb13347ae5a6829e",
+            "id": "ccf13bde39d173da",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2ASIR/07_PYT-316 2ºASIR/01links_Python.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "01links_Python"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -189,9 +185,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fb13347ae5a6829e",
+  "active": "ccf13bde39d173da",
   "lastOpenFiles": [
     "2ASIR/08_DIG-1665 2ºASIR/01_links_Digitalización.md",
+    "2ASIR/08_DIG-1665 2ºASIR/Unidad1_Digitalizacion_sectores_productivos.md",
+    "2ASIR/08_DIG-1665 2ºASIR/DIG_UD1.pdf",
+    "2ASIR/08_DIG-1665 2ºASIR/Resumen_expliación_Claude_T1DIG.md",
     "2ASIR/07_PYT-316 2ºASIR/01links_Python.md",
     "2ASIR/05_SOST-1708 2ºASIR/01links_SOST-1708.md",
     "Sin nombre",
@@ -216,7 +215,6 @@
     "2ASIR/04_IAW-0376 2ºASIR/IAW_UD1.pdf",
     "2ASIR/04_IAW-0376 2ºASIR/lu148867as6p.tmp",
     "2ASIR/04_IAW-0376 2ºASIR/lu148867arza.tmp",
-    "2ASIR/04_IAW-0376 2ºASIR/mi_resumen_deT1_IAW_EUROFORMAC.odt",
     "2ASIR/sistemasOperativos/manualesSOs/El prompt de SOS.md",
     "cosas/instalando visual studio/Instalando Visual Studio Code en Zorin OS.md",
     "cosas/instalando visual studio/Captura desde 2026-09-18 22-50-30.png",
