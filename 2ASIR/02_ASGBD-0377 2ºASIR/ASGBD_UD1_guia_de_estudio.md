@@ -1,4 +1,4 @@
-# Unidad 1 · Instalación y configuración de un sistema gestor de base de datos
+# Unidad 1.Instalación y configuración de un sistema gestor de base de datos
 **Módulo:** Administración de Sistemas Gestores de Bases de Datos (Tech Hub FP · Euroformac)  
 **Material de base:** `ASGBD_UD1.pdf` (52 páginas)
 > **Cómo usar esta guía.** Sigue el **mismo orden y la misma numeración que el PDF** (con las páginas entre paréntesis) para que puedas comparar mientras estudias. Todo está explicado con palabras sencillas y ejemplos. Cuando el PDF solo da un nombre sin explicarlo, te lo aviso y añado una explicación mía. Los ejemplos, analogías y explicaciones marcados como "mío" o "mía" **no están en el PDF**: son ayudas para entender.

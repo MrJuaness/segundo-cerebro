@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD2_Explicacion.md",
+                "file": "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1_guia_de_estudio.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ASGBD_UD2_Explicacion"
+              "title": "ASGBD_UD1_guia_de_estudio"
             }
           }
         ]
@@ -219,8 +219,8 @@
           }
         ],
         "direction": "vertical",
-        "x": 608,
-        "y": 16,
+        "x": 1008,
+        "y": 48,
         "width": 607,
         "height": 980,
         "maximize": false,
@@ -230,9 +230,9 @@
   },
   "active": "6dbca8b0d3cac3e7",
   "lastOpenFiles": [
-    "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD2_Explicacion.md",
-    "2ASIR/02_ASGBD-0377 2ºASIR/Res_de_ASGBD_UD1_guia_de_estudio.md",
     "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1_guia_de_estudio.md",
+    "2ASIR/02_ASGBD-0377 2ºASIR/Res_de_ASGBD_UD1_guia_de_estudio.md",
+    "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD2_Explicacion.md",
     "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf",
     "2ASIR/05_SOST-1708 2ºASIR/01links_SOST-1708.md",
     "2ASIR/05_SOST-1708 2ºASIR/SOST_UD1.pdf",

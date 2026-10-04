@@ -1,4 +1,4 @@
-# ASGBD · Unidad 2 — Acceso a la información
+# ASGBD_U2_Acceso a la información
 
 **Explicación para principiantes**, basada solo en el PDF «ASGBD_UD2» (Tech Hub FP Euroformac, Administración de Sistemas Gestores de Bases de Datos).
 
