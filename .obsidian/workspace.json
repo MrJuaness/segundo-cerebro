@@ -11,14 +11,12 @@
             "id": "4ecdc760aabc544b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "2ASIR/02_ASGBD-0377 2ºASIR/01links_ASGBD.md",
-                "mode": "source",
-                "source": false
+                "file": "2ASIR/05_SOST-1708 2ºASIR/SOST_UD1.pdf"
               },
-              "icon": "lucide-file",
-              "title": "01links_ASGBD"
+              "icon": "lucide-file-text",
+              "title": "SOST_UD1"
             }
           }
         ]
@@ -83,7 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 302.5
   },
   "right": {
     "id": "af690bc8942d8fa7",
@@ -191,8 +189,10 @@
   },
   "active": "4ecdc760aabc544b",
   "lastOpenFiles": [
-    "2ASIR/02_ASGBD-0377 2ºASIR/Res_de_ASGBD_UD1_guia_de_estudio.md",
+    "2ASIR/06_Emple2-1710 2ºASIR/EMPII_UD1.pdf",
+    "2ASIR/06_Emple2-1710 2ºASIR/01links_Empleabilidad2.md",
     "2ASIR/02_ASGBD-0377 2ºASIR/01links_ASGBD.md",
+    "2ASIR/02_ASGBD-0377 2ºASIR/Res_de_ASGBD_UD1_guia_de_estudio.md",
     "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1_guia_de_estudio.md",
     "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD2_Explicacion.md",
     "2ASIR/03_SRI-0375 2ºASIR/01links_SRI.md",
@@ -212,7 +212,6 @@
     "2ASIR/05_SOST-1708 2ºASIR/SOST_UD1.pdf",
     "cosas/python/CLAUDE-Aprender Python desde cero para ASIR.md",
     "2ASIR/07_PYT-316 2ºASIR",
-    "2ASIR/06_Emple2-1710 2ºASIR/01links_Empleabilidad2.md",
     "2ASIR/04_IAW-0376 2ºASIR/01LINKS_IAW_Implantación de Aplicaciones Web.md",
     "2ASIR/04_IAW-0376 2ºASIR/Chuleta_IAW_UD1.pdf",
     "cosas/VM-Ubuntu-Desktop/01LINUX.md",
@@ -235,7 +234,6 @@
     "cosas/VM-Ubuntu-Desktop/VM-fotos/explorador de archivos.png",
     "Pasted image 20260910000419.png",
     "Bienvenido.md",
-    "hola mundo.md",
-    "cree un enlace.md"
+    "hola mundo.md"
   ]
 }
