@@ -68,7 +68,6 @@ Comenzó **aproximadamente en la década de 1970**. El título del PDF dice "med
 - **Microprocesador:** el componente que permitió **miniaturizar la potencia de cálculo** y llevar la computación a **fábricas y oficinas**.
 - **PLC (Controlador Lógico Programable):** el gran hito **en la planta**. Permitió programar las máquinas para hacer **tareas diferentes sin cambiar el hardware físico**, lo que facilitó una **automatización flexible**.
 - **Internet:** a finales del siglo XX permitió **interconectar ordenadores** y cambió para siempre la comunicación entre **empresas, proveedores y clientes**.
-
 **Para entenderlo:** antes, para que una máquina hiciera otra tarea había que cambiarla físicamente. Con un PLC basta con **reprogramarla**.
 **==2) Impacto en la estructura de la empresa**==
 - **Automatización de procesos:** la intervención humana pasa de **ejecutar directamente la tarea** a **programar y supervisar las máquinas**.
@@ -91,10 +90,8 @@ Comenzó **aproximadamente en la década de 1970**. El título del PDF dice "med
 **Ojo:** en la 3ª revolución las máquinas se automatizan, pero **cada una va por su lado (aisladas)**. La oficina (IT) y la planta funcionan como **departamentos separados**. La 4ª revolución cambia justo eso.
 
 ---
-
 ## 2. Cuarta Revolución: Digitalización y sus elementos
 Esta etapa se distingue de las anteriores por la **hiperconectividad** y por la **desaparición de las fronteras entre el mundo físico y el digital**.
-
 ### ==La digitalización==
 Es la **integración de tecnologías digitales en todos los aspectos de una empresa**. Esto supone cambios cruciales en **cómo opera** y en **cómo entrega valor a sus clientes**. 2 ideas cruciales:
 - **No afecta a todas las empresas por igual.** Su aplicación debe tener en cuenta la **actividad específica** de cada empresa. Hay que analizar a fondo cómo las tecnologías pueden optimizar los procesos de **fabricación o de prestación de servicios** de cada sector.
@@ -109,17 +106,14 @@ La digitalización real ocurre cuando se **rompe la barrera entre la oficina y l
 - **IT** (Tecnología de la Información) es el mundo de la oficina y el negocio.
 - **OT** (Tecnología de Operación) es el mundo de la planta.
 - **Digitalizar es conectar ambos mundos** para que los **datos de la planta (OT) sirvan para tomar decisiones de negocio (IT) de forma automática**. En ambos conceptos profundizaremos más adelante.
-
 ### Relación con la economía sostenible
 La digitalización es un **habilitador fundamental de una economía sostenible y eficiente**:
 - **Reduce el desperdicio de recursos** gracias a la **monitorización precisa del consumo**.
 - Facilita **productos y servicios más responsables con el medio ambiente**, gracias a la **optimización de los procesos productivos**.
-
 ### El dato como centro del proceso
 **Digitalizar es transformar procesos analógicos en datos digitales que se puedan procesar.** Para ello hay que distinguir bien:
 - **Dato:** la **unidad mínima**.
 - **Información:** el **dato procesado, con significado**.
-
 **Para entenderlo (ejemplo mío):** el número "75" suelto es un dato. Si sabes que es la temperatura de un motor y que lo normal es menos, ya es información.
 
 *(La imagen de la pág. 16 resume la idea con el mundo IT a un lado, el OT al otro, y un flujo "End-to-End" con Big Data que los une.)*
@@ -128,7 +122,6 @@ La digitalización es un **habilitador fundamental de una economía sostenible y
 - **Inteligencia Artificial (IA).**
 - **Big Data:** convierte los datos en **rentabilidad económica**.
 - **Internet de las Cosas (IoT):** **conecta dispositivos con máquinas** y ayuda a la eficiencia de los sistemas productivos **generando datos**.
-
 ### Diferencias clave: 3ª vs 4ª Revolución
 
 | Característica | 3ª (informática) | 4ª (digitalización) |

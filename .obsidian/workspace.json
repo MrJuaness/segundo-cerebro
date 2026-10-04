@@ -4,59 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "02b4efbbd90027ae",
+        "id": "ef8e031e435508ca",
         "type": "tabs",
-        "dimension": 50,
         "children": [
           {
-            "id": "26960df6758ac7b7",
+            "id": "dd08a312c8f66c33",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2ASIR/08_DIG-1665 2ºASIR/Unidad1_Digitalizacion_sectores_productivos.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Unidad1_Digitalizacion_sectores_productivos"
+              "title": "Nueva pestaña"
             }
           }
         ]
-      },
-      {
-        "id": "cc9d5a6bc9ab9494",
-        "type": "tabs",
-        "dimension": 50,
-        "children": [
-          {
-            "id": "ff1935444693c507",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2ASIR/08_DIG-1665 2ºASIR/Resumen_expliación_Claude_T1DIG.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Resumen_expliación_Claude_T1DIG"
-            }
-          },
-          {
-            "id": "8a1dd331b32504a0",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "2ASIR/08_DIG-1665 2ºASIR/DIG_UD1.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "DIG_UD1"
-            }
-          }
-        ],
-        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -224,55 +185,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "floating": {
-    "id": "f865246d2c98d247",
-    "type": "floating",
-    "children": [
-      {
-        "id": "af46ed947ff6fd30",
-        "type": "window",
-        "children": [
-          {
-            "id": "d727bde0a667815f",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "ccf13bde39d173da",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "2ASIR/08_DIG-1665 2ºASIR/Unidad1_Digitalizacion_sectores_productivos.md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "Unidad1_Digitalizacion_sectores_productivos"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 4,
-        "y": 4,
-        "width": 954,
-        "height": 1020,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "26960df6758ac7b7",
+  "active": "dd08a312c8f66c33",
   "lastOpenFiles": [
+    "2ASIR/02_ASGBD-0377 2ºASIR/01links_ASGBD.md",
+    "2ASIR/08_DIG-1665 2ºASIR/U1_Res_Claude_T1DIG.md",
+    "2ASIR/08_DIG-1665 2ºASIR/01_links_Digitalización.md",
+    "2ASIR/08_DIG-1665 2ºASIR/U1_Digitalizacion_sectores_productivos.md",
     "2ASIR/08_DIG-1665 2ºASIR/DIG_UD1.pdf",
-    "2ASIR/08_DIG-1665 2ºASIR/Resumen_expliación_Claude_T1DIG.md",
-    "2ASIR/08_DIG-1665 2ºASIR/Unidad1_Digitalizacion_sectores_productivos.md",
     "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf",
     "2ASIR/03_SRI-0375 2ºASIR/DNS_de_cero_a_experto_Unidad1.pdf",
     "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1_guia_de_estudio (1).md",
     "2ASIR/05_SOST-1708 2ºASIR/01links_SOST-1708.md",
-    "2ASIR/08_DIG-1665 2ºASIR/01_links_Digitalización.md",
     "2ASIR/07_PYT-316 2ºASIR/01links_Python.md",
     "Sin nombre",
     "2ASIR/08_DIG-1665 2ºASIR",
@@ -285,7 +208,6 @@
     "2ASIR/03_SRI-0375 2ºASIR/01links_SRI.md",
     "2ASIR/06_Emple2-1710 2ºASIR/01links_Empleabilidad2.md",
     "2ASIR/04_IAW-0376 2ºASIR/01LINKS_IAW_Implantación de Aplicaciones Web.md",
-    "2ASIR/02_ASGBD-0377 2ºASIR/01links_ASGBD.md",
     "2ASIR/04_IAW-0376 2ºASIR/Chuleta_IAW_UD1.pdf",
     "cosas/VM-Ubuntu-Desktop/01LINUX.md",
     "cosas/VM-Ubuntu-Desktop/02Comandos - terminal.md",
