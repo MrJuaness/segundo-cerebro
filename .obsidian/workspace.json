@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ef8e031e435508ca",
+        "id": "d678fbcba5310b76",
         "type": "tabs",
         "children": [
           {
-            "id": "dd08a312c8f66c33",
+            "id": "3a77e7669f665878",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -185,8 +185,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dd08a312c8f66c33",
+  "active": "4bb0a85ba2e6e516",
   "lastOpenFiles": [
+    "1ASIR",
     "2ASIR/02_ASGBD-0377 2ºASIR/01links_ASGBD.md",
     "2ASIR/08_DIG-1665 2ºASIR/U1_Res_Claude_T1DIG.md",
     "2ASIR/08_DIG-1665 2ºASIR/01_links_Digitalización.md",
@@ -197,7 +198,6 @@
     "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1_guia_de_estudio (1).md",
     "2ASIR/05_SOST-1708 2ºASIR/01links_SOST-1708.md",
     "2ASIR/07_PYT-316 2ºASIR/01links_Python.md",
-    "Sin nombre",
     "2ASIR/08_DIG-1665 2ºASIR",
     "2ASIR/07_PYT-316 2ºASIR/Nota_Resumen_u1Claude_Python.md",
     "2ASIR/07_PYT-316 2ºASIR/Unidad1_Python_Explicacion_completa.md",
