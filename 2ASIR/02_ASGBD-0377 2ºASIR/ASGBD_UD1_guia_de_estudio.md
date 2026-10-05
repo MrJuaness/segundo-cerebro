@@ -65,7 +65,6 @@ Ejemplo de tabla `Estudiantes`:
 ---
 ## Introducción (págs. 5-6)
 Hoy casi todo funciona con bases de datos: pagos por internet, tiendas online, la agenda del móvil, programas para gestionar clientes, contabilidad… Todos se apoyan en **estructuras de datos**.
-
 Por eso cada vez hace más falta el **Administrador de Sistemas de Bases de Datos**: quien mantiene esos sistemas funcionando y se asegura de que la información esté siempre disponible para quien la necesite. Sus responsabilidades son:
 - **Diseñar, instalar y configurar** SGBD.
 - Hacer **copias de seguridad**.
@@ -78,11 +77,8 @@ El manual quiere desgranar las tareas del administrador. Reconoce que es imposib
 ## 1. Funciones, componentes, usuarios y tipos de SGBD (págs. 7-20)
 Empezamos con las dos piezas clave de toda la asignatura:
 > **Base de datos (BD):** conjunto de datos relacionados entre sí, estructurados y organizados según ciertos criterios. Según esa estructura hay varios modelos. Aquí el PDF cita tres: **relacional, jerárquico y en red**. En el apartado 1.4 añade un cuarto tipo, el orientado a objetos.
->
 > **Sistema Gestor de Bases de Datos (SGBD):** software que ofrece un entorno para **crear, manipular y administrar** bases de datos. Sus funciones son esenciales para garantizar **integridad, seguridad y eficiencia**.
-
 **Imagina una biblioteca (mío).** La BD son los libros bien ordenados. El SGBD es el sistema (y el bibliotecario) que sabe dónde está todo, quién puede llevarse qué y que nada se pierda ni se estropee.
-
 ---
 ### 1.1 Funciones de un SGBD (págs. 7-11)
 Un SGBD debe permitir manejar y administrar tanto **los datos** guardados como **la estructura** de las bases de datos. El PDF enumera 10 funciones:
@@ -119,7 +115,6 @@ Gestiona que **varios usuarios** trabajen a la vez sin estropear los datos. Tamb
 | D | Durabilidad | Lo confirmado queda guardado de forma permanente |
 
 *Ejemplo (mío):* transferir 100 € de la cuenta A a la B son dos pasos: restar a A y sumar a B. Si el sistema falla entre los dos, se perderían 100 €. Con una transacción, o se hacen los dos pasos (`COMMIT`) o se deshace todo (`ROLLBACK`).
-
 #### Función 6. Respaldo y recuperación
 Ofrece copias de seguridad periódicas y la capacidad de volver a un estado anterior si hay fallos o pérdida de datos.
 - **Copia de seguridad (backup):** guarda una copia de la BD en un estado concreto.
