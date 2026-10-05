@@ -162,7 +162,6 @@ Son los distintos perfiles de personas que usan una BD:
 Se clasifican según **cómo organizan los datos**. El PDF explica 4 tipos. En el apartado 13 (Resumen) añade otras formas de clasificarlos, que explico allí.
 #### Tipo 1. SGBD Relacionales
 Son **los más utilizados** y se basan en el modelo relacional. Los datos se guardan en **tablas**, y la relación entre ellos se establece con **claves primarias y foráneas**. Se manejan con consultas y manipulaciones de alto nivel usando **SQL**. Ejemplos: MySQL, Oracle y SQL Server.
-
 Características:
 - **Integridad:** datos precisos y consistentes mediante reglas de integridad.
 - **Seguridad:** control de acceso y **encriptación** (cifrado).
@@ -207,7 +206,6 @@ Un par de palabras para entender esto (explicación mía): una **clase** es un m
 | Orientado a objetos | Objetos con herencia y polimorfismo | Flexible y reutilizable | Complejo | MongoDB |
 
 ### Más info: las Reglas de Codd (pág. 20)
-
 > El PDF dice que las "12 reglas de Codd" son en realidad **13** (numeradas de la 0 a la 12) y que establecen las características que debe tener una BD para poder catalogarse como relacional.
 
 **El PDF solo da los nombres.** La idea sencilla de cada una es explicación mía:
@@ -231,7 +229,6 @@ Un par de palabras para entender esto (explicación mía): una **clase** es un m
 Las reglas 8 y 9 se parecen a la arquitectura de 3 niveles del apartado 2, la 4 al diccionario de datos y la 5 a SQL.
 
 ---
-
 ## 2. Arquitectura del SGBD y arquitectura ANSI/SPARC (págs. 21-22)
 
 La **arquitectura** de un SGBD es la estructura fundamental que define **cómo se organizan y gestionan los datos** en el sistema.

@@ -113,12 +113,10 @@ Son los distintos perfiles de personas que usan una BD:
 Se clasifican según **cómo organizan los datos**. Hay 4 tipos. En el (Resumen) se añaden otras formas de clasificarlos, que explico allí.
 #### Tipo 1. SGBD Relacionales
 Son **los más utilizados** y se basan en el modelo relacional. Los datos se guardan en **tablas**, y la relación entre ellos se establece con **claves primarias y foráneas**. Se manejan con consultas y manipulaciones de alto nivel usando **SQL**. Ejemplos: MySQL, Oracle y SQL Server.
-
 Características:
 - **Integridad:** datos precisos y consistentes mediante reglas de integridad.
 - **Seguridad:** control de acceso y **encriptación** (cifrado).
 - **Eficiencia:** usan **indexación** (índices) y **particionamiento** (dividir tablas enormes en trozos más manejables) para acelerar las consultas.
-
 Ejemplo del PDF (con datos inventados por mí): una tabla `Estudiantes` (ID_Estudiante, Nombre, Apellido, Edad), una tabla `Cursos` (ID_Curso, Nombre_Curso, Profesor) y una tabla `Registro` (ID_Estudiante, ID_Curso) que las relaciona.
 ```
 Estudiantes: (1, Ana, López, 20) · (2, Luis, Pérez, 22)
@@ -126,7 +124,6 @@ Cursos:      (10, Bases de Datos, Marta) · (11, Redes, Pedro)
 Registro:    (1, 10) · (1, 11) · (2, 10)
 ```
 Ana (1) está en Bases de Datos (10) y en Redes (11). Luis (2) solo en Bases de Datos. En `Registro`, los dos campos son claves foráneas que apuntan a las otras tablas.
-
 > **Sabías que:** Edgar Frank "Ted" Codd, informático inglés (1923-2003), fue el creador del actual modelo relacional.
 #### Tipo 2. SGBD de Red
 Los datos se organizan en una **red** donde cada registro se conecta con otros mediante **enlaces**. Permiten representar relaciones muy flexibles, pero son más complejos de diseñar y gestionar.
@@ -143,7 +140,7 @@ Los datos se organizan como un **árbol**: cada **nodo** es un registro y cada *
 #### Tipo 4. SGBD Orientados a Objetos
 Se basan en el **modelo de objetos**. Los datos se representan como **objetos** (instancias de clases) y se aplican conceptos de la programación orientada a objetos, como la **herencia** y el **polimorfismo**. Son útiles cuando hay que representar datos muy complejos y hacer operaciones de alto nivel.
 
-Un par de palabras para entender esto (explicación mía): una **clase** es un molde (p. ej. "Estudiante"), un **objeto** es una pieza concreta hecha con ese molde (p. ej. "Ana"), la **herencia** permite que una clase reutilice lo de otra, y el **polimorfismo** permite que un mismo método se comporte distinto según el objeto.
+==**palabras para entender esto (explicación mía)**==: una **clase** es un molde (p. ej. "Estudiante"), un **objeto** es una pieza concreta hecha con ese molde (p. ej. "Ana"), la **herencia** permite que una clase reutilice lo de otra, y el **polimorfismo** permite que un mismo método se comporte distinto según el objeto.
 - **Flexibilidad:** datos complejos y relaciones entre ellos.
 - **Reutilización y extensibilidad:** gracias a la herencia y el polimorfismo.
 - **Complejidad:** más difíciles de entender y gestionar.
@@ -157,10 +154,8 @@ Un par de palabras para entender esto (explicación mía): una **clase** es un m
 | Jerárquico | Árbol | Simple y eficiente con jerarquías | Poco flexible | IMS (IBM) |
 | Orientado a objetos | Objetos con herencia y polimorfismo | Flexible y reutilizable | Complejo | MongoDB |
 
-### Más info: las Reglas de Codd (pág. 20)
-
-> El PDF dice que las "12 reglas de Codd" son en realidad **13** (numeradas de la 0 a la 12) y que establecen las características que debe tener una BD para poder catalogarse como relacional.
-
+### ==Más info: las Reglas de Codd==
+> las "12 reglas de Codd" son en realidad **13** (numeradas de la 0 a la 12) y que establecen las características que debe tener una BD para poder catalogarse como relacional.
 **El PDF solo da los nombres.** La idea sencilla de cada una es explicación mía:
 
 | Nº | Nombre | Idea sencilla |
@@ -180,3 +175,22 @@ Un par de palabras para entender esto (explicación mía): una **clase** es un m
 | 12 | La regla de la no subversión | Un acceso de bajo nivel no puede usarse para saltarse las reglas de integridad |
 
 Las reglas 8 y 9 se parecen a la arquitectura de 3 niveles del apartado 2, la 4 al diccionario de datos y la 5 a SQL.
+
+---
+## 2. Arquitectura del SGBD y arquitectura ANSI/SPARC 
+
+La **arquitectura** de un SGBD es la estructura crucial que define **cómo se organizan y gestionan los datos** en el sistema.
+
+**ANSI/SPARC** es un modelo conceptual para diseñar y administrar BD. Su nombre viene de sus creadores: **ANSI** (*American National Standards Institute*) y **SPARC** (*Standards Planning And Requirements Committee*). Divide la BD en **3 niveles**:
+```
+ NIVEL EXTERNO      lo que ve cada usuario (vistas)
+       ▲
+ NIVEL CONCEPTUAL   tablas, columnas, relaciones
+       ▲
+ NIVEL INTERNO      cómo se guarda físicamente
+```
+
+1. **Nivel interno (o físico):** es el más bajo. Se ocupa de **cómo se almacenan físicamente** los datos: organización de los archivos, almacenamiento de índices, de metadatos, etc. Por ejemplo, los datos pueden guardarse en discos duros con estructuras como **B-trees** o **hash maps** (formas de organizar datos para encontrarlos rápido; no hace falta profundizar ahora). También gestiona la **compresión** (ahorrar espacio) y la **encriptación** (proteger los datos).
+2. **Nivel conceptual (o lógico):** se ocupa de **cómo se organizan lógicamente** los datos. Define **qué datos** se guardan y **qué relaciones** hay entre ellos. **Oculta los detalles físicos** y da una visión unificada. En una BD relacional define las tablas, las columnas y las relaciones. Los usuarios interactúan a través de este nivel con un lenguaje como SQL.
+3. **Nivel externo (o de vista):** es el nivel superior y se encarga de **presentar los datos a los usuarios finales**. Puede haber **varias vistas externas** adaptadas a distintos usuarios. Por ejemplo, el departamento financiero ve una vista solo con datos financieros, y recursos humanos ve otra solo con información de los empleados.
+**Analogía de la biblioteca (mía):** el nivel interno es en qué estantería y planta está cada libro. El conceptual es el catálogo (qué libros existen y cómo se relacionan). El externo es lo que ve cada tipo de lector.
