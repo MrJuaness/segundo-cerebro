@@ -336,13 +336,11 @@ Consejo previo: ten el **sistema operativo actualizado** para evitar errores de 
 Ejecuta el paquete descargado y arranca el **asistente de instalación**. Para instalar Server y Workbench hay dos opciones:
 - **"Developer Default":** instala automáticamente todo lo necesario para crear y gestionar BD. Es la **recomendada para principiantes**, porque instala MySQL completo con información extra y todo el soporte disponible.
 - **"Custom":** ofrece muchas opciones para elegir. Está pensada para usuarios que ya tienen experiencia con otros gestores de BD.
-
 Opciones principales en Custom:
 - **MySQL Servers:** el recurso fundamental para usar tu equipo como servidor y administrador de BD. Despliega la lista y pulsa la **flecha** para moverlo a la columna de la derecha (lo que se va a instalar).
 - **MySQL Workbench:** está en el apartado **"Applications"** y será nuestro **cliente**. Se mueve igual.
 - **MySQL Connections:** depende de las conexiones que quieras hacer, según los clientes y lenguajes de programación que uses. Lo mejor es instalarlos todos por si los necesitas.
 > **Importante (PDF):** para instalar la conexión a **Python**, tienes que tener instalado en el sistema el paquete de ese lenguaje de programación.
-
 #### 6.1.3 Documentación (págs. 32-33)
 Es el último apartado de Custom. Permite añadir información sobre cómo usar MySQL y ejemplos de ayuda. Después:
 - Con los paquetes elegidos (en Developer Default o en Custom) pulsa **"Next"** y, en la pantalla siguiente, **"Execute"**. Casi todas las aplicaciones necesitan el paquete **Microsoft Visual C++ 2015**, que se instala automáticamente cuando empieza el proceso.
@@ -380,7 +378,6 @@ Si instalaste Workbench, se abre solo tras la instalación. Por defecto aparece 
 
 ---
 ## 7. Integración del SGBD en el sistema operativo (págs. 37-39)
-
 La idea central es que el SGBD es una **capa de software entre los usuarios y el sistema de archivos**:
 ```
 Usuario → SGBD → Sistema de archivos (SO) → Disco duro

@@ -329,7 +329,7 @@ La idea central es que el SGBD es una **capa de software entre los usuarios y el
 ```
 Usuario → SGBD → Sistema de archivos (SO) → Disco duro
 ```
-1. **Sistema de archivos:** es la parte del sistema operativo que gestiona la **lectura y escritura** de datos en el almacenamiento físico (como un disco duro). El SGBD lo usa para guardar las BD físicas. Cada BD puede ser **un archivo o un conjunto de archivos**, y las lecturas y escrituras en la BD se traducen en lecturas y escrituras en esos archivos.
+1. **Sistema de archivos:** parte del sistema operativo que gestiona la **lectura y escritura** de datos en el almacenamiento físico (como un disco duro). El SGBD lo usa para guardar las BD físicas. Cada BD puede ser **un archivo o un conjunto de archivos**, y las lecturas y escrituras en la BD se traducen en lecturas y escrituras en esos archivos.
 2. **Control de usuarios:** es parte esencial de la seguridad. Cada usuario tiene unos **privilegios** que determinan qué operaciones puede hacer (leer o escribir en una BD), y se **verifican cada vez** que intenta una operación. En el ejemplo de código, esto ocurre en los métodos `crear_base_de_datos` y `leer_base_de_datos` del SGBD.
 3. **SGBD:** ofrece una interfaz para que los usuarios interactúen con las BD **sin preocuparse de cómo se guardan** los datos en el sistema de archivos. En el ejemplo, la interfaz son esos dos métodos.
 > **Importante (PDF):** el ejemplo está **muy simplificado**. Un SGBD real tiene muchas más funciones, y su gestión de usuarios y su interacción con el sistema de archivos son mucho más complejas y seguras. Además, debe lidiar con la **concurrencia** (varios usuarios accediendo a la BD a la vez), la **recuperación de errores** y la **optimización de consultas**.
