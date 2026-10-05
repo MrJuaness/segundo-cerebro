@@ -178,7 +178,6 @@ Las reglas 8 y 9 se parecen a la arquitectura de 3 niveles del apartado 2, la 4 
 
 ---
 ## 2. Arquitectura del SGBD y arquitectura ANSI/SPARC 
-
 La **arquitectura** de un SGBD es la estructura crucial que define **cómo se organizan y gestionan los datos** en el sistema.
 
 **ANSI/SPARC** es un modelo conceptual para diseñar y administrar BD. Su nombre viene de sus creadores: **ANSI** (*American National Standards Institute*) y **SPARC** (*Standards Planning And Requirements Committee*). Divide la BD en **3 niveles**:
@@ -194,3 +193,75 @@ La **arquitectura** de un SGBD es la estructura crucial que define **cómo se or
 2. **Nivel conceptual (o lógico):** se ocupa de **cómo se organizan lógicamente** los datos. Define **qué datos** se guardan y **qué relaciones** hay entre ellos. **Oculta los detalles físicos** y da una visión unificada. En una BD relacional define las tablas, las columnas y las relaciones. Los usuarios interactúan a través de este nivel con un lenguaje como SQL.
 3. **Nivel externo (o de vista):** es el nivel superior y se encarga de **presentar los datos a los usuarios finales**. Puede haber **varias vistas externas** adaptadas a distintos usuarios. Por ejemplo, el departamento financiero ve una vista solo con datos financieros, y recursos humanos ve otra solo con información de los empleados.
 **Analogía de la biblioteca (mía):** el nivel interno es en qué estantería y planta está cada libro. El conceptual es el catálogo (qué libros existen y cómo se relacionan). El externo es lo que ve cada tipo de lector.
+---
+## 3. SGBD libres y comerciales o de mercado.
+==**SGBD libres:**== su licencia de código es libre; usarlos **no cuesta dinero**. El esquema:
+- **MySQL:** el gestor de código abierto más popular en la web, usado sobre todo con el lenguaje PHP.
+- **PostgreSQL:** potente gestor de BD relacionales orientado a objetos que amplía las funciones de SQL.
+- **MariaDB:** sistema derivado de MySQL con licencia **GPL** (*General Public License*).
+- **SQLite:** una biblioteca escrita en C que implementa un SGBD.
+- **MongoDB:** aparece en el esquema solo con su logo.
+==**SGBD de mercado:**== están programados con código protegido bajo **licencia propietaria**, usarlos **implica un coste económico**. Los 2 más populares:
+- **Microsoft SQL Server:** gestor desarrollado por Microsoft, basado en el lenguaje SQL.
+- **Oracle Database:** sistema de gestión de BD **objeto-relacional** (mezcla tablas con ideas de objetos), producido y comercializado por Oracle Corporation.
+==*Matiz:*== MySQL lo desarrolla Oracle y tiene licencia pública general **y también comercial**.
+---
+## 4. El administrador de bases de datos (DBA).
+El DBA (*DataBase Administrator*) es **el guardián de la base de datos**: se encarga de que todo funcione bien y de que la información esté segura y accesible para las personas adecuadas. Sus 5 funciones:
+1. **Entender las necesidades de los usuarios:** saber qué información necesita la empresa para organizar la BD de forma eficiente.
+2. **Gestionar la base de datos:** todas las tareas técnicas, como crear tablas, gestionar índices y modificar la estructura de la BD.
+3. **Mantenerla funcionando sin problemas:** monitorizar el rendimiento y hacer ajustes para mejorar la eficiencia.
+4. **Protegerla:** implementar medidas de seguridad para la información almacenada.
+5. **Facilitar el acceso a los datos:** definir políticas de acceso y garantizar que los datos se presenten de forma eficiente y en el formato adecuado.
+> **Ojo:** el DBA es el usuario más importante de la BD. Se encarga de que todo funcione, de que la información esté segura y accesible para las personas adecuadas. **Gestiona, mantiene, protege y facilita el acceso.**
+---
+## 5. Lenguaje estándar de consulta SQL.
+**SQL** *Structured Query Language* (Lenguaje de Consulta Estructurada). Es un lenguaje ("de programación") para **gestionar y manipular bases de datos**, **estandarizado** y lo usa la mayoría de SGBD. Es "el idioma" con el que le hablas al SGBD.
+Se divide en tres grupos, según para qué sirven:
+
+| Grupo | Para qué sirve | Comandos |
+|---|---|---|
+| **DDL** (Definición de Datos) | Definir y modificar la **estructura** | `CREATE` (crear), `ALTER` (modificar), `DROP` (eliminar) |
+| **DML** (Manipulación de Datos) | Insertar, modificar, eliminar y recuperar **datos** | `SELECT`, `INSERT`, `UPDATE`, `DELETE` |
+| **DCL** (Control de Datos) | Controlar el **acceso** a los datos | `GRANT` (dar permisos), `REVOKE` (quitarlos) |
+
+**Truco (mío):** DDL = **D**efinir, DML = **M**anipular, DCL = **C**ontrolar.
+
+Ejemplos del PDF:
+- `CREATE` crea una tabla nueva, `ALTER` modifica la estructura de una tabla existente y `DROP` elimina una tabla.
+- `SELECT` extrae datos, `INSERT` introduce datos nuevos, `UPDATE` cambia datos ya guardados y `DELETE` borra datos.
+- `GRANT` da a un usuario permiso para acceder a una tabla y `REVOKE` se lo quita.
+
+**Para qué se usa SQL (5 tareas del PDF):**
+1. **Crear BD y tablas:** `CREATE DATABASE` y `CREATE TABLE`.
+2. **Insertar datos:** `INSERT INTO`.
+3. **Modificar datos:** `UPDATE`.
+4. **Consultar datos:** `SELECT`.
+5. **Controlar el acceso:** `GRANT`.
+
+El PDF solo nombra los comandos. Aquí tienes un mini ejemplo mío para que los veas escritos:
+```sql
+-- DDL: estructura
+CREATE DATABASE academia;
+USE academia;
+CREATE TABLE estudiantes (
+    id_estudiante INT PRIMARY KEY,
+    nombre        VARCHAR(50),
+    edad          INT
+);
+ALTER TABLE estudiantes ADD COLUMN email VARCHAR(100);
+-- DROP TABLE estudiantes;   ← borraría la tabla entera
+
+-- DML: datos
+INSERT INTO estudiantes (id_estudiante, nombre, edad) VALUES (1, 'Ana', 20);
+SELECT * FROM estudiantes;
+UPDATE estudiantes SET edad = 21 WHERE id_estudiante = 1;
+DELETE FROM estudiantes WHERE id_estudiante = 1;
+
+-- DCL: permisos
+-- (el PDF no lo explica, pero el usuario tiene que existir antes de darle permisos)
+CREATE USER 'ana'@'localhost' IDENTIFIED BY 'clave123';
+GRANT SELECT ON academia.estudiantes TO 'ana'@'localhost';
+REVOKE SELECT ON academia.estudiantes FROM 'ana'@'localhost';
+```
+---

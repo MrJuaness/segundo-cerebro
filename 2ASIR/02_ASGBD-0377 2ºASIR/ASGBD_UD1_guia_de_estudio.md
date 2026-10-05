@@ -230,7 +230,6 @@ Las reglas 8 y 9 se parecen a la arquitectura de 3 niveles del apartado 2, la 4 
 
 ---
 ## 2. Arquitectura del SGBD y arquitectura ANSI/SPARC (págs. 21-22)
-
 La **arquitectura** de un SGBD es la estructura fundamental que define **cómo se organizan y gestionan los datos** en el sistema.
 
 **ANSI/SPARC** es un modelo conceptual para diseñar y administrar BD. Su nombre viene de sus creadores: **ANSI** (*American National Standards Institute*) y **SPARC** (*Standards Planning And Requirements Committee*). Divide la BD en **tres niveles**:
@@ -242,11 +241,9 @@ La **arquitectura** de un SGBD es la estructura fundamental que define **cómo s
  NIVEL INTERNO      cómo se guarda físicamente
 ```
 
-El PDF los numera de abajo arriba:
 1. **Nivel interno (o físico):** es el más bajo. Se ocupa de **cómo se almacenan físicamente** los datos: organización de los archivos, almacenamiento de índices, de metadatos, etc. Por ejemplo, los datos pueden guardarse en discos duros con estructuras como **B-trees** o **hash maps** (formas de organizar datos para encontrarlos rápido; no hace falta profundizar ahora). También gestiona la **compresión** (ahorrar espacio) y la **encriptación** (proteger los datos).
 2. **Nivel conceptual (o lógico):** se ocupa de **cómo se organizan lógicamente** los datos. Define **qué datos** se guardan y **qué relaciones** hay entre ellos. **Oculta los detalles físicos** y da una visión unificada. En una BD relacional define las tablas, las columnas y las relaciones. Los usuarios interactúan a través de este nivel con un lenguaje como SQL.
 3. **Nivel externo (o de vista):** es el nivel superior y se encarga de **presentar los datos a los usuarios finales**. Puede haber **varias vistas externas** adaptadas a distintos usuarios. Por ejemplo, el departamento financiero ve una vista solo con datos financieros, y recursos humanos ve otra solo con información de los empleados.
-
 **Analogía de la biblioteca (mía):** el nivel interno es en qué estantería y planta está cada libro. El conceptual es el catálogo (qué libros existen y cómo se relacionan). El externo es lo que ve cada tipo de lector.
 
 ---
@@ -257,7 +254,6 @@ El PDF los numera de abajo arriba:
 - **MariaDB:** sistema derivado de MySQL con licencia **GPL** (*General Public License*).
 - **SQLite:** una biblioteca escrita en C que implementa un SGBD.
 - **MongoDB:** aparece en el esquema solo con su logo.
-
 **SGBD de mercado:** están programados con código protegido bajo **licencia propietaria**, así que usarlos **implica un coste económico**. El PDF muestra los dos más populares (los llama "Tabla 2"):
 - **Microsoft SQL Server:** gestor desarrollado por Microsoft, basado en el lenguaje SQL.
 - **Oracle Database:** sistema de gestión de BD **objeto-relacional** (mezcla tablas con ideas de objetos), producido y comercializado por Oracle Corporation.
@@ -271,7 +267,7 @@ El DBA (*DataBase Administrator*) es **el guardián de la base de datos**: se en
 3. **Mantenerla funcionando sin problemas:** monitorizar el rendimiento y hacer ajustes para mejorar la eficiencia.
 4. **Protegerla:** implementar medidas de seguridad para la información almacenada.
 5. **Facilitar el acceso a los datos:** definir políticas de acceso y garantizar que los datos se presenten de forma eficiente y en el formato adecuado.
-> **Importante (PDF):** el DBA es el usuario más importante de la BD. Se encarga de que todo funcione, de que la información esté segura y accesible para las personas adecuadas. **Gestiona, mantiene, protege y facilita el acceso.**
+> **Importante:** el DBA es el usuario más importante de la BD. Se encarga de que todo funcione, de que la información esté segura y accesible para las personas adecuadas. **Gestiona, mantiene, protege y facilita el acceso.**
 ---
 ## 5. Lenguaje estándar de consulta SQL (págs. 27-28)
 **SQL** significa *Structured Query Language* (Lenguaje de Consulta Estructurada). Según el PDF es un lenguaje (lo llama "de programación") para **gestionar y manipular bases de datos**. Está **estandarizado** y lo usa la mayoría de SGBD. Es "el idioma" con el que le hablas al SGBD.
