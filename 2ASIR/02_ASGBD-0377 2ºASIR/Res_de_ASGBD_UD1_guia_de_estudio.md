@@ -321,5 +321,188 @@ Si instalaste Workbench, se abre solo tras la instalación. Por defecto aparece 
     - **Usuario:** `root` o el que configuraste.
 3. Pulsa **"OK"** o **"Test connection"** para comprobar que funciona. Te pedirá la clave.
 4. La nueva conexión aparece en la ventana principal de Workbench y te conectas con **un solo clic**. Ya estás dentro del entorno de gestión de MySQL.
-==**Resumen rápido de la instalación:** descargar (8.0.28) → ejecutar → elegir Developer Default o Custom → Next/Execute (requisitos) → Yes/Execute (instalación) → configurar (tipo de equipo, puerto 3306, contraseña de root, servicio) → Execute → conectar con Workbench.
+==**Resumen rápido de la instalación:**== descargar (8.0.28) → ejecutar → elegir Developer Default o Custom → Next/Execute (requisitos) → Yes/Execute (instalación) → configurar (tipo de equipo, puerto 3306, contraseña de root, servicio) → Execute → conectar con Workbench.
 ---
+
+## 7. Integración del SGBD en el sistema operativo
+La idea central es que el SGBD es una **capa de software entre los usuarios y el sistema de archivos**:
+```
+Usuario → SGBD → Sistema de archivos (SO) → Disco duro
+```
+1. **Sistema de archivos:** es la parte del sistema operativo que gestiona la **lectura y escritura** de datos en el almacenamiento físico (como un disco duro). El SGBD lo usa para guardar las BD físicas. Cada BD puede ser **un archivo o un conjunto de archivos**, y las lecturas y escrituras en la BD se traducen en lecturas y escrituras en esos archivos.
+2. **Control de usuarios:** es parte esencial de la seguridad. Cada usuario tiene unos **privilegios** que determinan qué operaciones puede hacer (leer o escribir en una BD), y se **verifican cada vez** que intenta una operación. En el ejemplo de código, esto ocurre en los métodos `crear_base_de_datos` y `leer_base_de_datos` del SGBD.
+3. **SGBD:** ofrece una interfaz para que los usuarios interactúen con las BD **sin preocuparse de cómo se guardan** los datos en el sistema de archivos. En el ejemplo, la interfaz son esos dos métodos.
+> **Importante (PDF):** el ejemplo está **muy simplificado**. Un SGBD real tiene muchas más funciones, y su gestión de usuarios y su interacción con el sistema de archivos son mucho más complejas y seguras. Además, debe lidiar con la **concurrencia** (varios usuarios accediendo a la BD a la vez), la **recuperación de errores** y la **optimización de consultas**.
+### El código del PDF, explicado
+Está en Python (con la sangría reconstruida y comentarios míos). No necesitas dominar Python: lo importante es la idea.
+```python
+class SistemaOperativo:                       # simula el SO
+    def __init__(self):
+        self.usuarios = {}                    # "agenda" de usuarios (nombre → objeto Usuario)
+        self.sistema_de_archivos = SistemaDeArchivos()   # el SO tiene su sistema de archivos
+
+    def agregar_usuario(self, nombre, contraseña):
+        self.usuarios[nombre] = Usuario(nombre, contraseña)   # registra un usuario
+
+    def autenticar_usuario(self, nombre, contraseña):
+        if nombre in self.usuarios and self.usuarios[nombre].contraseña == contraseña:
+            return True                       # existe y la contraseña coincide
+        return False
+
+class SistemaDeArchivos:                      # simula el disco/archivos
+    def __init__(self):
+        self.archivos = {}                    # "carpeta" donde guardar archivos por nombre
+
+    def crear_archivo(self, nombre, contenido):
+        self.archivos[nombre] = contenido
+
+    def leer_archivo(self, nombre):
+        if nombre in self.archivos:
+            return self.archivos[nombre]
+        return None                           # si no existe, devuelve "nada"
+
+class Usuario:                                # una persona con nombre y contraseña
+    def __init__(self, nombre, contraseña):
+        self.nombre = nombre
+        self.contraseña = contraseña
+
+class SGBD:                                   # nuestro gestor, "montado" sobre el SO
+    def __init__(self, sistema_operativo):
+        self.sistema_operativo = sistema_operativo
+
+    def crear_base_de_datos(self, nombre, usuario, contraseña):
+        if self.sistema_operativo.autenticar_usuario(usuario, contraseña):   # 1º: ¿es quien dice ser?
+            self.sistema_operativo.sistema_de_archivos.crear_archivo(nombre, {})  # 2º: crea el archivo (BD vacía)
+            return True
+        return False
+
+    def leer_base_de_datos(self, nombre, usuario, contraseña):
+        if self.sistema_operativo.autenticar_usuario(usuario, contraseña):
+            return self.sistema_operativo.sistema_de_archivos.leer_archivo(nombre)
+        return None
+```
+
+Cada clase representa una pieza:
+- **`SistemaOperativo`** guarda los usuarios y tiene un sistema de archivos. Comprueba la identidad con `autenticar_usuario` (autenticación).
+- **`SistemaDeArchivos`** guarda "archivos" por nombre. Una BD será simplemente uno de esos archivos.
+- **`Usuario`** es solo nombre y contraseña.
+- **`SGBD`** es la capa intermedia. Antes de crear o leer una BD **pregunta al SO si el usuario es válido** y, solo entonces, usa el sistema de archivos.
+
+Un ejemplo de uso mío:
+```python
+so = SistemaOperativo()
+so.agregar_usuario("ana", "1234")
+sgbd = SGBD(so)
+sgbd.crear_base_de_datos("tienda", "ana", "1234")    # True  → archivo "tienda" creado
+sgbd.crear_base_de_datos("otra", "ana", "mal")       # False → contraseña incorrecta
+sgbd.leer_base_de_datos("tienda", "ana", "1234")     # {}    → la BD, todavía vacía
+```
+Por eso el PDF avisa de que es un ejemplo simplificado. Por ejemplo, aquí las contraseñas se guardan tal cual, y un sistema real las protegería.
+
+---
+## 8. Instalación de un SGBD de dos capas (págs. 40-41)
+"Dos capas" significa **dos partes: cliente y servidor**. Los pasos son:
+1. **Servidor de la BD:** el sistema que **alberga el SGBD y las BD**. Ahí instalas el software del SGBD. Durante la instalación puede que tengas que configurar parámetros como el **tamaño máximo** de la BD, la **ubicación de los archivos** de la BD en el sistema de archivos y las **opciones de seguridad**.
+2. **Cliente de la BD:** el sistema o sistemas que **se conectan al servidor** para hacer consultas y otras operaciones. Ahí instalas el software cliente, que da las herramientas para conectarse y operar.
+3. **Conexión cliente-servidor:** configurar la **red** para que ambos se comuniquen y las **opciones de seguridad** para proteger esa comunicación.
+4. **Configuración del SGBD:** con cliente y servidor instalados y conectados, puede hacer falta configurar más: **crear BD**, **configurar usuarios y permisos** y **optimizar el rendimiento**.
+
+Los detalles concretos **varían según el SGBD**. Con MySQL, el Server es la capa servidor y Workbench la capa cliente. El host/IP y el puerto 3306 son la conexión, y `root` con su contraseña es el usuario con el que entras (esta relación con MySQL es mía).
+
+---
+## 9. Relación entre el SGBD y la BD: instancias (pág. 42)
+Están muy relacionados, pero cumplen **roles distintos**:
+
+| Concepto | Qué es |
+|---|---|
+| **SGBD** | El **software** que interactúa con usuarios finales, aplicaciones y la BD para capturar y analizar datos. Permite **crear, leer, actualizar y eliminar** datos. Ej.: MySQL, PostgreSQL, MongoDB |
+| **BD** | Un **conjunto organizado de datos**, esencialmente "un contenedor de datos", que el SGBD puede crear, recuperar, actualizar y eliminar |
+| **Instancia de BD** | Una **representación completa de la BD en un momento específico**. Se crea cuando **se inicia el SGBD** y se mantiene mientras **está en funcionamiento**. Incluye la BD en sí (los datos) **y los procesos del SGBD** que manipulan esos datos |
+
+**Ejemplo del PDF:** en una tienda online, una instancia podría incluir todos los productos, clientes y pedidos hasta el **1 de enero de 2024**. Si el 2 de enero añades un producto o un cliente hace un pedido, eso **no está** en la instancia del 1 de enero, pero **sí** en una nueva instancia creada el 2 de enero.
+
+Piensa en la instancia como una **"foto" completa** de la BD (más los procesos que la manejan) en un momento concreto. El PDF mezcla esas dos ideas (la foto de los datos y el SGBD en marcha), así que quédate con ambas.
+
+---
+## 10. Estructura del diccionario de datos (pág. 43)
+El **diccionario de datos** (también llamado **catálogo del sistema**) es una estructura esencial de todo SGBD. Guarda **metadatos**, es decir, **datos sobre los datos**, que definen la estructura de la BD. Es como el **catálogo de la biblioteca** (comparación mía): no contiene los libros, sino la información sobre ellos.
+El PDF da un esbozo de su estructura, con 10 elementos:
+1. **Nombre de la tabla:** cada tabla de la BD.
+2. **Nombre del campo:** cada campo (columna) de cada tabla.
+3. **Tipo de datos:** de cada campo (entero, cadena, fecha…).
+4. **Restricciones:** condiciones sobre los valores de un campo (si es clave primaria, si puede ser nulo, etc.).
+5. **Relaciones:** entre tablas, como las claves foráneas.
+6. **Índices:** definidos en las tablas para acelerar las consultas.
+7. **Vistas:** las vistas definidas en la BD.
+8. **Procedimientos almacenados y funciones:** definidos en la BD (pequeños programas guardados dentro de ella).
+9. **Información de seguridad:** roles de usuario y permisos.
+10. **Información de uso:** estadísticas de acceso.
+La estructura exacta **varía según el SGBD**.
+---
+## 11. Ficheros LOG en un SGBD (págs. 44-45)
+Los **ficheros de registro (logs)** son una parte esencial de la infraestructura: garantizan la **integridad** y la **recuperación** de los datos. Son el "diario" donde el SGBD apunta lo que hace (comparación mía). Sirven para:
+- **Registro de transacciones:** cada vez que se hace una operación (inserción, actualización o eliminación), el SGBD **escribe un registro** en el log: el tipo de operación, los datos implicados y el momento.
+- **Recuperación de fallos:** si el sistema falla (un corte de luz o un error de software), el SGBD usa el log para devolver la BD a un **estado consistente**:
+    - **Deshace** las operaciones que no se habían completado del todo cuando ocurrió el fallo.
+    - **Rehace** las operaciones que sí se habían completado pero aún no se habían escrito en la BD.
+- **Control de concurrencia:** si dos transacciones intentan modificar el mismo dato a la vez, el SGBD puede usar el log para determinar **cuál se ejecutó primero** y resolver el conflicto.
+- **Auditoría y seguimiento:** el log es un **registro histórico** de todas las operaciones hechas en la BD.
+> **Importante (PDF):** gestionar los logs es una tarea **compleja** que requiere cuidado para que los datos no se pierdan ni se corrompan. Además pueden **ocupar mucho espacio**, así que suele hacer falta implantar políticas de **rotación y purga**. Es decir (explicación mía), cambiar a ficheros nuevos y archivar los viejos (rotación) y borrar los que ya no hacen falta (purga).
+---
+## 12. Arquitectura del SGBD: archivos en disco, memoria y procesos (págs. 46-47)
+Aquí se ve cómo funciona el SGBD **por dentro**. Imagina una oficina (comparación mía): los archivadores son los archivos en disco, la mesa de trabajo es la memoria y los empleados son los procesos.
+### 12.1 Archivos en disco
+Los datos de la BD se guardan en archivos. Una BD puede estar formada por **uno o más archivos**, según la configuración. Pueden ser:
+- **Archivos de datos:** guardan los **datos reales**. Cada tabla puede tener su propio archivo, o varias tablas pueden compartir uno.
+- **Archivos de índice:** guardan los **índices**. Cada índice es un mapa que va de los valores de una o más columnas a las ubicaciones de los registros que tienen esos valores.
+- **Archivos de log:** guardan los registros de las transacciones que modifican la BD. Sirven para recuperarla a un estado consistente tras un fallo.
+### 12.2 Espacios de memoria
+El SGBD usa la memoria del sistema para:
+- **Buffer de datos:** región de memoria que guarda **temporalmente** los datos que se están leyendo o escribiendo. Así se minimizan las costosas lecturas y escrituras en disco.
+- **Caché de índices:** guarda temporalmente los índices para **acelerar las consultas**.
+- **Pool de conexiones:** conjunto de conexiones a la BD **que se mantienen abiertas** para que las reutilicen las transacciones.
+### 12.3 Procesos
+Un SGBD tiene varios procesos que trabajan juntos:
+- **Procesos de usuario:** ejecutan las consultas de los usuarios. **Cada conexión** a la BD se maneja en un proceso de usuario separado.
+- **Procesos de fondo:** hacen tareas de **mantenimiento**, como limpiar la memoria, escribir de vuelta en el disco los datos modificados, gestionar los ficheros de log, etc.
+---
+## 13. Resumen (págs. 48-49)
+El PDF resume la unidad en 5 puntos:
+1. **Funciones del SGBD:** es software para gestionar una BD. Da acceso a los datos, asegura transacciones atómicas, gestiona la seguridad de los usuarios y revisa la integridad, entre otras funciones.
+2. **Componentes:** el Resumen cita el DDL, el DCL, el DML, el diccionario de datos y los objetos de la BD (tablas, vistas…). La lista completa de 8 componentes es la de 1.2.
+3. **Tipos de SGBD:** se clasifican por varios criterios. El modelo lógico (jerárquicos, de red, relacional y orientados a objetos) ya lo vimos. Las otras tres formas solo aparecen aquí, y el PDF no las desarrolla (la explicación es mía):
+
+   | Criterio | Opciones | Significado |
+   |---|---|---|
+   | Número de usuarios | **Monousuario / Multiusuario** | Un solo usuario a la vez / varios a la vez |
+   | Número de sitios donde se alojan | **Centralizados / Distribuidos** | Todo en un solo sitio / repartido en varios |
+   | Ámbito de aplicación | **Propósito general / Propósito específico** | Sirve para cualquier uso / diseñado para una tarea concreta |
+
+4. **Arquitectura:** tres niveles: **interno** (estructura física), **conceptual** (estructura lógica de la BD para una organización) y **externo** (vistas personalizadas para cada usuario).
+5. **Instalación y configuración:** antes hay que **elegir qué SGBD instalar** según los requerimientos. Una vez instalado y configurado, los usuarios pueden introducir y consultar datos. Cada SGBD tiene requisitos y procesos propios, así que conviene **consultar siempre su documentación técnica**.
+---
+## 14. Glosario (págs. 50-51)
+- **Autenticación y autorización:** verificar la identidad de un usuario (autenticación) y definir a qué recursos accede según los permisos que tiene (autorización).
+- **Base de datos (BD):** conjunto organizado de datos interrelacionados, estructurados según ciertos criterios, que permite acceder a ellos, gestionarlos y actualizarlos fácilmente.
+- **Concurrencia:** gestión del acceso simultáneo de varios usuarios, asegurando que las transacciones se ejecuten de forma consistente y sin interferirse.
+- **Copia de seguridad (backup) y recuperación:** crear copias de los datos para restaurarlas si se pierden, y recuperar el sistema a un estado anterior tras un fallo o error.
+- **Diccionario de datos:** base de datos de **metadatos** (datos sobre los datos de la BD principal): nombres de tablas, campos, tipos de datos y restricciones.
+- **Índices:** estructuras que **aceleran la recuperación** de datos, pero pueden **reducir la velocidad** de inserción, actualización y borrado por el mantenimiento extra que requieren.
+- **Lenguaje de Definición de Datos (DDL):** parte de SQL para definir y modificar la estructura de la BD (`CREATE`, `ALTER`, `DROP`).
+- **Lenguaje de Manipulación de Datos (DML):** parte de SQL para operar sobre los datos (`SELECT`, `INSERT`, `UPDATE`, `DELETE`).
+- **Sistema Gestor de Bases de Datos (SGBD):** software que facilita crear, manipular y administrar bases de datos, asegurando integridad, seguridad y eficiencia.
+- **Transacción:** secuencia de operaciones que forman **una sola unidad lógica de trabajo** y debe completarse **entera** para que la BD mantenga su integridad.
+---
+## Erratas y rarezas del PDF
+Para que no te confundan al estudiar:
+- **"Modelo Relaciona"** (pág. 7) es Modelo **Relacional**. **"Concurrency"** (pág. 13) es **Concurrencia**. **"Pyton"** (pág. 32) es **Python**. **"Comunnity"** (pág. 30) es **Community**.
+- La IP **"0.0.1"** (pág. 35) debe ser **127.0.0.1**.
+- En la pág. 7 se habla de **3 modelos** de BD, pero en 1.4 se explican **4 tipos** (se añade el orientado a objetos).
+- El esquema de SQL (pág. 28) no dibuja `DELETE` dentro de DML, pero en el texto sí es un comando DML.
+- El Resumen presenta los componentes de forma algo distinta a 1.2. Aprende la lista de 1.2 y ten presente que el Resumen añade DCL.
+- En el esquema de SGBD libres (pág. 23), MongoDB solo aparece con su logo y la descripción de MariaDB está repetida.
+- **MongoDB:** el PDF lo usa como ejemplo de SGBD orientado a objetos. Fuera de este PDF se suele clasificar como base de datos *documental* (NoSQL). Para este temario, usa el ejemplo tal como lo plantea el PDF.
+---
+*Fin de la guía de la Unidad 1.*
+
+

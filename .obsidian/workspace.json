@@ -190,19 +190,19 @@
     }
   },
   "floating": {
-    "id": "d7ee1da4b36b4439",
+    "id": "9b06a9f057605d7e",
     "type": "floating",
     "children": [
       {
-        "id": "76d029fb2198a3ed",
+        "id": "f1ab340ef8707f5d",
         "type": "window",
         "children": [
           {
-            "id": "b7ba5980c914a455",
+            "id": "b616c423b2cc67c0",
             "type": "tabs",
             "children": [
               {
-                "id": "6dbca8b0d3cac3e7",
+                "id": "de7ccdf4b7a04157",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
@@ -219,16 +219,16 @@
           }
         ],
         "direction": "vertical",
-        "x": 960,
-        "y": 12,
-        "width": 960,
-        "height": 1016,
+        "x": 962,
+        "y": 4,
+        "width": 954,
+        "height": 1020,
         "maximize": false,
         "zoom": 0
       }
     ]
   },
-  "active": "6dbca8b0d3cac3e7",
+  "active": "de7ccdf4b7a04157",
   "lastOpenFiles": [
     "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1_guia_de_estudio.md",
     "2ASIR/02_ASGBD-0377 2ºASIR/Res_de_ASGBD_UD1_guia_de_estudio.md",
