@@ -386,7 +386,6 @@ Usuario → SGBD → Sistema de archivos (SO) → Disco duro
 2. **Control de usuarios:** es parte esencial de la seguridad. Cada usuario tiene unos **privilegios** que determinan qué operaciones puede hacer (leer o escribir en una BD), y se **verifican cada vez** que intenta una operación. En el ejemplo de código, esto ocurre en los métodos `crear_base_de_datos` y `leer_base_de_datos` del SGBD.
 3. **SGBD:** ofrece una interfaz para que los usuarios interactúen con las BD **sin preocuparse de cómo se guardan** los datos en el sistema de archivos. En el ejemplo, la interfaz son esos dos métodos.
 > **Importante (PDF):** el ejemplo está **muy simplificado**. Un SGBD real tiene muchas más funciones, y su gestión de usuarios y su interacción con el sistema de archivos son mucho más complejas y seguras. Además, debe lidiar con la **concurrencia** (varios usuarios accediendo a la BD a la vez), la **recuperación de errores** y la **optimización de consultas**.
-
 ### El código del PDF, explicado
 Está en Python (con la sangría reconstruida y comentarios míos). No necesitas dominar Python: lo importante es la idea.
 ```python
@@ -460,9 +459,7 @@ Por eso el PDF avisa de que es un ejemplo simplificado. Por ejemplo, aquí las c
 2. **Cliente de la BD:** el sistema o sistemas que **se conectan al servidor** para hacer consultas y otras operaciones. Ahí instalas el software cliente, que da las herramientas para conectarse y operar.
 3. **Conexión cliente-servidor:** configurar la **red** para que ambos se comuniquen y las **opciones de seguridad** para proteger esa comunicación.
 4. **Configuración del SGBD:** con cliente y servidor instalados y conectados, puede hacer falta configurar más: **crear BD**, **configurar usuarios y permisos** y **optimizar el rendimiento**.
-
 Los detalles concretos **varían según el SGBD**. Con MySQL, el Server es la capa servidor y Workbench la capa cliente. El host/IP y el puerto 3306 son la conexión, y `root` con su contraseña es el usuario con el que entras (esta relación con MySQL es mía).
-
 ---
 ## 9. Relación entre el SGBD y la BD: instancias (pág. 42)
 Están muy relacionados, pero cumplen **roles distintos**:
