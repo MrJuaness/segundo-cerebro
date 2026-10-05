@@ -280,8 +280,7 @@ Se divide en tres grupos, según para qué sirven:
 | **DCL** (Control de Datos) | Controlar el **acceso** a los datos | `GRANT` (dar permisos), `REVOKE` (quitarlos) |
 
 **Truco (mío):** DDL = **D**efinir, DML = **M**anipular, DCL = **C**ontrolar.
-
-Ejemplos del PDF:
+Ejemplos:
 - `CREATE` crea una tabla nueva, `ALTER` modifica la estructura de una tabla existente y `DROP` elimina una tabla.
 - `SELECT` extrae datos, `INSERT` introduce datos nuevos, `UPDATE` cambia datos ya guardados y `DELETE` borra datos.
 - `GRANT` da a un usuario permiso para acceder a una tabla y `REVOKE` se lo quita.
@@ -292,8 +291,7 @@ Ejemplos del PDF:
 3. **Modificar datos:** `UPDATE`.
 4. **Consultar datos:** `SELECT`.
 5. **Controlar el acceso:** `GRANT`.
-
-El PDF solo nombra los comandos. Aquí tienes un mini ejemplo mío para que los veas escritos:
+Aquí tienes un mini ejemplo mío para que los veas escritos:
 ```sql
 -- DDL: estructura
 CREATE DATABASE academia;
@@ -335,17 +333,14 @@ Se empieza por MySQL Server. Primero, dónde y cómo descargarlo.
 5. Antes de descargar aparece una página para suscribirse o iniciar sesión. **No es necesario**: pulsa el enlace de la zona inferior.
 #### 6.1.2 Proceso de instalación (págs. 31-32)
 Consejo previo: ten el **sistema operativo actualizado** para evitar errores de última hora.
-
 Ejecuta el paquete descargado y arranca el **asistente de instalación**. Para instalar Server y Workbench hay dos opciones:
 - **"Developer Default":** instala automáticamente todo lo necesario para crear y gestionar BD. Es la **recomendada para principiantes**, porque instala MySQL completo con información extra y todo el soporte disponible.
 - **"Custom":** ofrece muchas opciones para elegir. Está pensada para usuarios que ya tienen experiencia con otros gestores de BD.
-
 Opciones principales en Custom:
 - **MySQL Servers:** el recurso fundamental para usar tu equipo como servidor y administrador de BD. Despliega la lista y pulsa la **flecha** para moverlo a la columna de la derecha (lo que se va a instalar).
 - **MySQL Workbench:** está en el apartado **"Applications"** y será nuestro **cliente**. Se mueve igual.
 - **MySQL Connections:** depende de las conexiones que quieras hacer, según los clientes y lenguajes de programación que uses. Lo mejor es instalarlos todos por si los necesitas.
 > **Importante (PDF):** para instalar la conexión a **Python**, tienes que tener instalado en el sistema el paquete de ese lenguaje de programación.
-
 #### 6.1.3 Documentación (págs. 32-33)
 Es el último apartado de Custom. Permite añadir información sobre cómo usar MySQL y ejemplos de ayuda. Después:
 - Con los paquetes elegidos (en Developer Default o en Custom) pulsa **"Next"** y, en la pantalla siguiente, **"Execute"**. Casi todas las aplicaciones necesitan el paquete **Microsoft Visual C++ 2015**, que se instala automáticamente cuando empieza el proceso.
@@ -379,7 +374,6 @@ Si instalaste Workbench, se abre solo tras la instalación. Por defecto aparece 
     - **Usuario:** `root` o el que configuraste.
 3. Pulsa **"OK"** o **"Test connection"** para comprobar que funciona. Te pedirá la clave.
 4. La nueva conexión aparece en la ventana principal de Workbench y te conectas con **un solo clic**. Ya estás dentro del entorno de gestión de MySQL.
-
 **Resumen rápido de la instalación:** descargar (8.0.28) → ejecutar → elegir Developer Default o Custom → Next/Execute (requisitos) → Yes/Execute (instalación) → configurar (tipo de equipo, puerto 3306, contraseña de root, servicio) → Execute → conectar con Workbench.
 
 ---

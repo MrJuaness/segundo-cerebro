@@ -217,7 +217,7 @@ El DBA (*DataBase Administrator*) es **el guardián de la base de datos**: se en
 ---
 ## 5. Lenguaje estándar de consulta SQL.
 **SQL** *Structured Query Language* (Lenguaje de Consulta Estructurada). Es un lenguaje ("de programación") para **gestionar y manipular bases de datos**, **estandarizado** y lo usa la mayoría de SGBD. Es "el idioma" con el que le hablas al SGBD.
-Se divide en tres grupos, según para qué sirven:
+Se divide en 3 grupos, según para qué sirven:
 
 | Grupo | Para qué sirve | Comandos |
 |---|---|---|
@@ -226,8 +226,7 @@ Se divide en tres grupos, según para qué sirven:
 | **DCL** (Control de Datos) | Controlar el **acceso** a los datos | `GRANT` (dar permisos), `REVOKE` (quitarlos) |
 
 **Truco (mío):** DDL = **D**efinir, DML = **M**anipular, DCL = **C**ontrolar.
-
-Ejemplos del PDF:
+Ejemplos:
 - `CREATE` crea una tabla nueva, `ALTER` modifica la estructura de una tabla existente y `DROP` elimina una tabla.
 - `SELECT` extrae datos, `INSERT` introduce datos nuevos, `UPDATE` cambia datos ya guardados y `DELETE` borra datos.
 - `GRANT` da a un usuario permiso para acceder a una tabla y `REVOKE` se lo quita.
@@ -239,7 +238,7 @@ Ejemplos del PDF:
 4. **Consultar datos:** `SELECT`.
 5. **Controlar el acceso:** `GRANT`.
 
-El PDF solo nombra los comandos. Aquí tienes un mini ejemplo mío para que los veas escritos:
+Aquí tienes un mini ejemplo mío para que los veas escritos:
 ```sql
 -- DDL: estructura
 CREATE DATABASE academia;
@@ -264,4 +263,63 @@ CREATE USER 'ana'@'localhost' IDENTIFIED BY 'clave123';
 GRANT SELECT ON academia.estudiantes TO 'ana'@'localhost';
 REVOKE SELECT ON academia.estudiantes FROM 'ana'@'localhost';
 ```
+---
+## 6. Instalación y configuración de un SGBD: MySQL.
+**MySQL:** uno de los gestores más usados, por usuarios individuales y empresas que usan software libre. Lo desarrolla **Oracle**, funciona con una **licencia pública general y también comercial**, y sirve para manejar datos **relacionales**.
+Del paquete, los 2 componentes principales son:
+- **MySQL Server:** el **núcleo**, un gestor relacional robusto y muy reconocido. Sirve para crear BD con tablas, vistas y relaciones, y para editarlas y consultarlas.
+- **MySQL Workbench:** un conjunto avanzado de herramientas para administrar BD relacionales. Permite ejecutar consultas SQL en un **entorno visual interactivo**, con interfaces gráficas intuitivas.
+*Imagina (mío):* el Server es el almacén donde viven los datos y Workbench es el mostrador desde el que le haces peticiones.
+### 6.1 Instalar MySQL en Windows 10
+Se empieza por MySQL Server. Primero, dónde y cómo descargarlo.
+#### 6.1.1 Descargar MySQL 
+1. Entra en la **web oficial de MySQL** (el PDF trae el enlace "Ver enlace") y en la página principal pulsa **"MySQL Community Server"**.
+2. En la zona inferior de la nueva página, **selecciona la plataforma**, que será Windows. Pulsa la opción principal **"MySQL Installer for Windows"**. Este procedimiento es el mismo en cualquier sistema operativo.
+3. En la página siguiente vuelve a elegir el sistema operativo y haz clic en **"Windows (x86, 32-bit), MSI Installer"**. Hay dos versiones: una **descarga ficheros de Internet durante la instalación** y la otra es el **paquete completo**.
+4. La versión que se usa en el curso es la **8.0.28**.
+5. Antes de descargar aparece una página para suscribirse o iniciar sesión. **No es necesario**: pulsa el enlace de la zona inferior.
+#### 6.1.2 Proceso de instalación 
+Consejo previo: ten el **sistema operativo actualizado** para evitar errores de última hora.
+Ejecuta el paquete descargado y arranca el **asistente de instalación**. Para instalar Server y Workbench hay 2 opciones:
+- **"Developer Default":** instala automáticamente todo lo necesario para crear y gestionar BD. Es la **recomendada para principiantes**, porque instala MySQL completo con información extra y todo el soporte disponible.
+- **"Custom":** ofrece muchas opciones para elegir. Está pensada para usuarios que ya tienen experiencia con otros gestores de BD.
+Opciones principales en Custom:
+- **MySQL Servers:** el recurso fundamental para usar tu equipo como servidor y administrador de BD. Despliega la lista y pulsa la **flecha** para moverlo a la columna de la derecha (lo que se va a instalar).
+- **MySQL Workbench:** está en el apartado **"Applications"** y será nuestro **cliente**. Se mueve igual.
+- **MySQL Connections:** depende de las conexiones que quieras hacer, según los clientes y lenguajes de programación que uses. Lo mejor es instalarlos todos por si los necesitas.
+> **Importante :** para instalar la conexión a **Python**, tienes que tener instalado en el sistema el paquete de ese lenguaje de programación.
+#### 6.1.3 Documentación
+Es el último apartado de Custom. Permite añadir información sobre cómo usar MySQL y ejemplos de ayuda. Después:
+- Con los paquetes elegidos (en Developer Default o en Custom) pulsa **"Next"** y, en la pantalla siguiente, **"Execute"**. Casi todas las aplicaciones necesitan el paquete **Microsoft Visual C++ 2015**, que se instala automáticamente cuando empieza el proceso.
+- El PDF dice que la preparación de los paquetes no empieza hasta que aparece el mensaje **"INSTL DONE"**. En la captura se ve que Visual Studio no está instalado, porque es imprescindible tener antes el paquete de Microsoft en el sistema. Se pulsa **"Next"**.
+- En el siguiente paso ya se hace la **instalación real**. Aparece un mensaje emergente: pulsa **"Yes"**. Después sale la lista de programas que se van a instalar: pulsa de nuevo **"Execute"**.
+#### 6.1.4 Configuración de MySQL.
+Al terminar de instalar los módulos hay que hacer una **configuración inicial antes de arrancar los servicios**. Pulsa "Siguiente". La pantalla siguiente es una **fase crítica**: se configuran el **tipo de equipo**, los **protocolos** y los **puertos TCP** para las conexiones remotas. Esto es vital para el correcto funcionamiento y la seguridad.
+Tipos de equipo:
+
+| Opción | Para qué es |
+|---|---|
+| **Development Computer** | Equipo que alberga el servidor SQL y además el cliente para hacer consultas. Si tu equipo es doméstico y trabajas normal en él, **esta es la opción** |
+| **Server Computer** | Ordenadores que hacen de servidor, por ejemplo un servidor web con bases de datos |
+| **Dedicated Computer** | Un equipo solo y exclusivamente para bases de datos, por ejemplo una máquina virtual donde se guardan tus BD |
+
+Después, el resto de pasos:
+- **Puerto TCP:** el de las conexiones remotas. Por defecto es el **3306**. Es el puerto que tendrás que **abrir en el router** para conexiones remotas. (Un puerto es como una puerta numerada por la que el servidor atiende; explicación mía.)
+- **Resto de opciones:** déjalas **por defecto**.
+- **Contraseña:** eliges la contraseña para conectarte al servidor. Puedes cambiarla en cualquier momento desde el propio servidor. No hace falta definir un usuario concreto para administrar, porque por defecto es el usuario **root**.
+- **Nombre del servicio** de MySQL y preferencias generales sobre el **inicio del demonio** (el programa del servidor que queda funcionando en segundo plano, por ejemplo si arranca solo con el sistema) y el **uso de cuentas de usuario**.
+- **Pantalla final:** pulsa **"Execute"** para ejecutar las acciones y activar los servicios. Si algo falla, aparece una **"x" roja** junto al elemento afectado y hay que **consultar el registro de errores** (el log).
+- Si instalaste extras como los ejemplos, **también hay que configurarlos**. Después hay que conectar con el servidor usando **root y la contraseña** definida. Con esto termina la instalación.
+#### 6.1.5 Conectarnos a MySQL Server desde MySQL Workbench.
+Si instalaste Workbench, se abre solo tras la instalación. Por defecto aparece la conexión a tu propio equipo, donde está el server. El PDF supone que no hay ninguna conexión creada, para ver cómo se crea una:
+1. Pulsa el botón **"+"** de **"MySQL Connections"**.
+2. En la ventana que se abre, rellena:
+    - **Nombre de la conexión:** el que quieras.
+    - **Protocolo:** el estándar, **TCP/IP**.
+    - **Hostname:** la IP del servidor. Si es tu propio equipo, la IP del PDF aparece como "0.0.1", que es una errata: la correcta es **127.0.0.1** (la dirección de "este mismo equipo"). Si estás en una red local, será la IP que tenga asignada el servidor en su tarjeta de red. Si es una conexión remota, necesitas la dirección externa de la conexión.
+    - **Puerto:** el que configuraste antes (3306 por defecto).
+    - **Usuario:** `root` o el que configuraste.
+3. Pulsa **"OK"** o **"Test connection"** para comprobar que funciona. Te pedirá la clave.
+4. La nueva conexión aparece en la ventana principal de Workbench y te conectas con **un solo clic**. Ya estás dentro del entorno de gestión de MySQL.
+==**Resumen rápido de la instalación:** descargar (8.0.28) → ejecutar → elegir Developer Default o Custom → Next/Execute (requisitos) → Yes/Execute (instalación) → configurar (tipo de equipo, puerto 3306, contraseña de root, servicio) → Execute → conectar con Workbench.
 ---
