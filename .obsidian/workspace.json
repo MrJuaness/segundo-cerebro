@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1ASIR/exámenes-scorm-resueltos/examen_unidad1_computacion_nube.md",
+                "file": "2ASIR/04_IAW-0376 2ºASIR/IAW_UD1_examen_respuestas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "examen_unidad1_computacion_nube"
+              "title": "IAW_UD1_examen_respuestas"
             }
           }
         ]
@@ -191,8 +191,10 @@
   },
   "active": "4ecdc760aabc544b",
   "lastOpenFiles": [
-    "2ASIR/sistemasOperativos/manualesSOs/ASO_UD3.pdf",
+    "2ASIR/04_IAW-0376 2ºASIR/IAW_UD1.pdf",
+    "2ASIR/04_IAW-0376 2ºASIR/IAW_UD1_examen_respuestas.md",
     "1ASIR/exámenes-scorm-resueltos/examen_unidad1_computacion_nube.md",
+    "2ASIR/sistemasOperativos/manualesSOs/ASO_UD3.pdf",
     "1ASIR/examen_unidad1_computacion_nube.md",
     "examen_unidad1_computacion_nube.md",
     "file:/home/admin-net/Descargas/examen_unidad1_computacion_nube.md",
@@ -210,8 +212,7 @@
     "2ASIR/02_ASGBD-0377 2ºASIR/01links_ASGBD.md",
     "VM",
     "2ASIR/05_SOST-1708 2ºASIR/01links_SOST-1708.md",
-    "2ASIR/05_SOST-1708 2ºASIR/SOST_UD1.pdf",
-    "2ASIR/04_IAW-0376 2ºASIR/06_Emple2-1710 2ºASIR/01links_Empleabilidad2.md",
+    "2ASIR/06_Emple2-1710 2ºASIR/01links_Empleabilidad2.md",
     "2ASIR/02_ASGBD-0377 2ºASIR/T1 CLAUDE ASGB, esta explicación la dió claude apartir de mi documento resumen del PDFT1 de ASGBD.Hasta el punto ...1.3. usuarios...md",
     "2ASIR/08_DIG-1665 2ºASIR/U1_Res_Claude_T1DIG.md",
     "2ASIR/08_DIG-1665 2ºASIR/01_links_Digitalización.md",
@@ -225,7 +226,6 @@
     "cosas/VM-Ubuntu-Desktop/02Comandos - terminal.md",
     "cosas/VM-Ubuntu-Desktop/Temario01.md",
     "cosas/VM-Ubuntu-Desktop/Práctica01-CLI-VM-Ubuntu-Desktop.md",
-    "2ASIR/sistemasOperativos/manualesSOs/El prompt de SOS.md",
     "cosas/instalando visual studio/Captura desde 2026-09-18 22-50-30.png",
     "cosas/instalando visual studio/Pasted image 20260918225129.png",
     "cosas/instalando visual studio/Pasted image 20260918224236.png",
