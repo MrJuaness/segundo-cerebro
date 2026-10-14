@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2ASIR/02_ASGBD-0377 2ºASIR/Unidad 1 – Resumen instalación y configuración de un SGBD.md",
+                "file": "guia_supervivencia_helpdesk_asir (1).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Unidad 1 – Resumen instalación y configuración de un SGBD"
+              "title": "guia_supervivencia_helpdesk_asir (1)"
             }
           }
         ]
@@ -191,13 +191,14 @@
   },
   "active": "4ecdc760aabc544b",
   "lastOpenFiles": [
-    "2ASIR/02_ASGBD-0377 2ºASIR/Res_de_ASGBD_UD1_guia_de_estudio.md",
-    "2ASIR/02_ASGBD-0377 2ºASIR/Unidad 1 – Resumen instalación y configuración de un SGBD.md",
+    "1ASIR/exámenes-scorm-resueltos/examen_unidad1_computacion_nube.md",
+    "guia_supervivencia_helpdesk_asir (1).md",
+    "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf",
     "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD2_Explicacion.md",
     "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1_guia_de_estudio.md",
-    "2ASIR/02_ASGBD-0377 2ºASIR/ASGBD_UD1.pdf",
     "2ASIR/02_ASGBD-0377 2ºASIR/01links_ASGBD.md",
-    "1ASIR/exámenes-scorm-resueltos/examen_unidad1_computacion_nube.md",
+    "2ASIR/02_ASGBD-0377 2ºASIR/Unidad 1 – Resumen instalación y configuración de un SGBD.md",
+    "2ASIR/02_ASGBD-0377 2ºASIR/Res_de_ASGBD_UD1_guia_de_estudio.md",
     "2ASIR/04_IAW-0376 2ºASIR/IAW_UD1_examen_respuestas.md",
     "2ASIR/04_IAW-0376 2ºASIR/IAW_UD1.pdf",
     "2ASIR/sistemasOperativos/manualesSOs/ASO_UD3.pdf",
@@ -226,7 +227,6 @@
     "cosas/VM-Ubuntu-Desktop/01LINUX.md",
     "cosas/VM-Ubuntu-Desktop/02Comandos - terminal.md",
     "cosas/VM-Ubuntu-Desktop/Temario01.md",
-    "cosas/VM-Ubuntu-Desktop/Práctica01-CLI-VM-Ubuntu-Desktop.md",
     "cosas/instalando visual studio/Captura desde 2026-09-18 22-50-30.png",
     "cosas/instalando visual studio/Pasted image 20260918225129.png",
     "cosas/instalando visual studio/Pasted image 20260918224236.png",
