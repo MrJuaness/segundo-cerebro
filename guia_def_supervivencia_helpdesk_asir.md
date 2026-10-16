@@ -43,7 +43,6 @@ No vas a salir sabiendo "de todo". Vas a salir **sabiendo hacer, explicar y docu
 8. Trabajar con **tickets**: prioridad, escalado, documentación.
 9. **Documentar** lo que haces (eso es tu portafolio).
 10. **Comunicarte** con un usuario enfadado sin perder la calma.
-
 ### Las 6 reglas del maestro
 
 | # | Regla | Por qué |
@@ -61,15 +60,6 @@ Docker/Kubernetes · Proxmox/ESXi anidados · GNS3 avanzado · OSPF/BGP · IPv6 
 
 ---
 
-## 1. Lo que dice el mercado 
-
-### 1.1 Qué se ve en tus 24 ofertas
-
-- **6 de las 8 tarjetas visibles son prácticas** (FCT/Dual) para ASIR/SMR. Las otras dos parecen empleo: un *Técnico informático* (telecomunicaciones, Córdoba) y *Técnicos Post Venta* (Alcorcón). **Tu puerta de entrada más realista es la FCT/Dual**, y de ahí al contrato.
-- Etiquetas de "Conocimientos" que más se repiten (el número entre paréntesis es el nº de ofertas con esa etiqueta; compruébalo en el enlace "¿Qué significan los números?"): **Sistemas operativos (5)**, **Soporte a usuarios finales (4)**, **Administración de bases de datos (4)**, **Informática (3)**, **SaaS (3)**. Es decir: Windows/Linux, soporte, **SQL** y **Microsoft 365/SaaS** no son opcionales.
-- Ubicación: dominan **Madrid (13)** y **remoto (6)**.
-- Tu compatibilidad de *Conocimientos* ronda el **55–58 %** y la de *Competencias* es **0 %** en todas las tarjetas (casi seguro porque no has rellenado esa parte del perfil o no coincide con lo que piden).
-
 | Empresa | Puesto | Tipo / jornada | Zona | Prepárate sobre todo en… |
 |---|---|---|---|---|
 | DIUSFRAMI SA | Administración de Sistemas Informáticos en Red (estudiantes ASIR) | Prácticas · media jornada | Madrid | AD / Windows Server, Linux básico, redes |
@@ -82,32 +72,20 @@ Docker/Kubernetes · Proxmox/ESXi anidados · GNS3 avanzado · OSPF/BGP · IPv6 
 | Korporate Technologies | Técnicos Post Venta (SPV) | Empleo (probable) · completa | Alcorcón | Hardware, atención al cliente, soporte en campo |
 
 > La última columna es una **inferencia** a partir de lo visible en la captura. Abre cada oferta, copia sus requisitos literales y pásalos por el **Prompt 14**.
-
 ### 1.2 Contexto del mercado (verificado en octubre de 2026)
-
 - **Windows 10** perdió el soporte estándar el 14/10/2025, pero el programa de actualizaciones de seguridad extendidas (ESU) sigue: en consumo se amplió hasta el 12/10/2027 y en empresas puede llegar hasta 3 años (octubre de 2028). Resultado: vas a ver **Windows 10 y 11 mezclados** y muchas migraciones, que son trabajo de helpdesk.
 - **Windows Server 2016** termina su soporte el 12/01/2027: migraciones a Server 2022/2025 (trabajo de operador de sistemas).
 - Active Directory sigue siendo muy habitual y cada vez va acompañado de **Microsoft 365 / Entra ID** (entorno híbrido). Por eso la sección 8 existe.
-
 ### 1.3 Acciones de hoy (30–45 min, antes de estudiar nada)
-
-1. **Rellena "Competencias" en tu perfil** (por ejemplo: comunicación, resolución de problemas, atención al cliente, trabajo en equipo, aprendizaje continuo, organización). Es la mejora más rápida de tu porcentaje.
-2. **Completa "Conocimientos"** solo con lo que puedas demostrar en un laboratorio. Ve añadiendo etiquetas según terminas módulos: *Active Directory, Windows Server, Windows 10/11, Linux, redes TCP/IP, DHCP/DNS, soporte técnico, SQL, virtualización, Microsoft 365*.
-3. **Habla con tu tutor de FCT**: en FCT/Dual el convenio con la empresa normalmente lo firma el centro. Pregúntale si ya existe con esas empresas, o si puede firmarlo, qué jornada (media o completa) encaja con tu calendario y **si el centro acepta FCT en remoto** (mira 1.4).
-4. **Inscríbete ya en 3–5 ofertas** con mejor encaje. Las tarjetas muestran fechas (20/10, 02/11, 03/11, 24/11 y 01/12 de 2026, y 21/05/2027): confirma en cada oferta si son fechas límite o de inicio. Si son límites, la de Inmho (20/10) es la primera en vencer (martes 20/10).
-5. **Crea la carpeta de trabajo** `~/ASIR-Lab` con subcarpetas `isos/`, `vms/`, `docs/` y `capturas/`.
-6. **Haz el Prompt 13** (CV) en su versión inicial. Lo mejorarás cuando tengas el laboratorio documentado.
+1. **Completa "Conocimientos"** solo con lo que puedas demostrar en un laboratorio. Ve añadiendo etiquetas según terminas módulos: *Active Directory, Windows Server, Windows 10/11, Linux, redes TCP/IP, DHCP/DNS, soporte técnico, SQL, virtualización, Microsoft 365*.
+2. **Crea la carpeta de trabajo** `~/ASIR-Lab` con subcarpetas `isos/`, `vms/`, `docs/` y `capturas/`.
 
 ### 1.4 Si necesitas trabajar a distancia (tus ofertas son de Madrid)
 
-Una de tus capturas lleva la nota de que las ofertas son de Madrid y tú necesitas remoto. Cuatro cosas que te sirven:
-
-**a) Cómo filtrar de verdad.** En tu captura estaban marcadas varias casillas a la vez (Informática, Soporte a usuarios finales, dos áreas laborales y *Modalidad: remoto*) y el botón activo era *Ofertas que cumplen con algún filtro*. Por su nombre, devuelve las ofertas que cumplan **cualquiera** de ellas, y por eso salen tantas de Madrid: ninguna de las 8 tarjetas visibles lleva etiqueta de remoto, todas muestran una localidad. Para ver solo las remotas, deja marcada únicamente *Modalidad: remoto* y pulsa *Ofertas que cumplen todos los filtros*; si salen muy pocas, añade un filtro de conocimientos cada vez. (Es una deducción a partir de los textos de los botones: compruébala en tu pantalla.)
-
+4 cosas que te sirven:
 **b) Expectativas realistas.** Remoto sin experiencia es la combinación más disputada: en general, un junior aprende más y más rápido con alguien al lado. En FCT/Dual, además, **decide el centro** si acepta una modalidad remota: pregunta a tu tutor *antes* de inscribirte. Si no la acepta, valora un híbrido o una presencial en una zona a la que puedas llegar; la FCT es la vía más corta hacia el primer contrato.
 
 **c) Qué suma para remoto**
-
 - **Puesto en casa:** Ethernet por cable (tu portátil tiene puerto Gigabit), auriculares con micro, webcam (la tienes), un sitio sin ruido, datos del móvil como plan B de conexión y el portátil siempre enchufado.
 - **Herramientas:** asistencia remota (8.4), VPN (ticket 11 de la sección 7), videollamadas (Teams, Meet, Zoom) y ticketing. En remoto pesa más Microsoft 365 / Entra ID (sección 8).
 - **Escribir bien:** sin ver al usuario, tu ticket y tus mensajes de seguimiento son tu trabajo. Practica con la plantilla de 12.2.
@@ -116,14 +94,12 @@ Una de tus capturas lleva la nota de que las ofertas son de Madrid y tú necesit
 - **Inglés técnico básico:** documentación y mensajes de error; con Professor Messer lo practicas a la vez.
 
 **d) Practica el remoto en el laboratorio**
-
 1. **Soporte a ciegas:** no toques el equipo del "usuario"; dirígelo solo con preguntas e instrucciones (Prompt 19). Después, dale asistencia a `PC-CLI01` por RDP y por Asistencia rápida.
 2. **Un screencast de 3 minutos** resolviendo "cuenta bloqueada" y explicándolo en voz alta (OBS Studio sirve en Zorin): es práctica de videollamada y una pieza más para tu portafolio.
 
 **e) Cuidado con las ofertas falsas.** Desconfía de cualquier "trabajo o prácticas remotas" que te pida pagar una formación o una fianza por el equipo, te solicite DNI o IBAN antes de una entrevista, o te contacte solo por WhatsApp o Telegram. Unas prácticas FCT van siempre con convenio del centro y un contrato real no se paga. Si dudas, enséñasela a tu tutor.
 
 ---
-
 ## 2. Mapa de habilidades: qué dominar y hasta dónde
 
 | Nivel | Bloque | "Lo sé" significa… | Sección |
@@ -144,9 +120,7 @@ Una de tus capturas lleva la nota de que las ofertas son de Madrid y tú necesit
 ## 3. Tu laboratorio (receta cerrada para tu portátil)
 
 ### 3.1 Lo que tu equipo permite
-
 Ryzen 7 7435HS (8 núcleos / 16 hilos, AMD-V activo), 32 GB DDR5 y NVMe de 1 TB: el laboratorio completo cabe con holgura. Solo recuerda tu regla: **deja al host (Zorin) al menos 4 hilos y 6–8 GB de RAM**. Los detalles de hardware ya están en `resumen_portatil_ASIR.md`.
-
 ### 3.2 Máquinas virtuales
 
 | VM | Sistema | vCPU | RAM | Disco (dinámico) | Red |
@@ -166,7 +140,6 @@ Con las tres VM principales usas unos **10 GB de RAM y 5 vCPU**: te quedan ~22 G
 - Si creas un invitado **Linux con escritorio** y kernel 7.0 o superior, usa el controlador gráfico **VMSVGA** (el módulo `vboxvideo` de las Guest Additions está obsoleto para esos kernels).
 - Instala las **Guest Additions** en las VM con escritorio (Dispositivos → Insertar imagen de CD de las Guest Additions).
 - **No mezcles VirtualBox y KVM/virt-manager** en la misma sesión. Plan B si VirtualBox da guerra: virt-manager (KVM), aunque con Windows exige drivers virtio (más trabajo).
-
 ### 3.4 Descargas
 
 | Qué | Dónde | Notas |
@@ -189,7 +162,6 @@ Con las tres VM principales usas unos **10 GB de RAM y 5 vCPU**: te quedan ~22 G
 > ⚠️ **Regla de oro:** mientras trabajes con el dominio, **desconecta el cable virtual del adaptador NAT** de `DC01` y `PC-CLI01` (VirtualBox: Dispositivos → Red → desmarca el adaptador NAT). Con los dos conectados, el cliente puede usar el DNS del NAT y no encontrará el dominio. Conéctalo solo para actualizar, activar o descargar.
 
 No necesitas modo puente en este plan (así evitas el problema del Wi-Fi que ya anotaste en tu resumen del portátil).
-
 ### 3.6 Snapshots (instantáneas)
 
 `00-limpio` (SO recién instalado) · `01-base` (nombre + IP fija) · `02-ad-listo` · `03-dominio-ok` · `04-gpo-carpetas` · `99-antes-de-romper` (antes de las averías de la sección 6.4). Exporta a `.ova` cuando algo quede estable.
